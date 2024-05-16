@@ -10,14 +10,15 @@ You'll see the following folders and files:
 .
 ├── assurance/
 │   └── 1115-waiver/ahc-hrsn/screening/regression-test-prime/
-│       └── fhir-service-prime/
-│           └── src/
+│       ├── fhir-service-prime/
+│       │   └── src/
+│       │       └── YYYY-MM-DD/
+|       └── regression-test.sh
 ├── public/
 │   └── assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/
 │       ├── results/
-│       │   ├── YYYY-MM/YYYY-MM-DD-HH-MM-SS/
-│       │   └── latest/                      (symlink)
-|       └── regression-test.sh
+│           ├── YYYY-MM/YYYY-MM-DD-HH-MM-SS/
+│           └── latest/                      (symlink to most recent execution)
 ├── src/
 │   ├── assets/
 │   ├── content/

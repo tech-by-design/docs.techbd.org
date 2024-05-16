@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "gen-regression-test-results": "./public/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/regression-test.sh"
+    "gen-regression-test-results": "./assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/regression-test.sh"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
