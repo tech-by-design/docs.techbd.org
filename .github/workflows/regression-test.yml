@@ -1,7 +1,7 @@
 name: Regression Test Pipeline
 
 on:
-  push:
+  workflow_dispatch:
 
 jobs:
   Regression-Test-Prime:
