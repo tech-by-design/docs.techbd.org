@@ -26,7 +26,7 @@ jobs:
           python-version: '3.12'
       
       - name: Install httpyac
-        run: pip install junit2htmlreport
+        run: pip install junit2html
   
       - name: Run regression tests and generate results files
         run: pnpm gen-regression-test-results
