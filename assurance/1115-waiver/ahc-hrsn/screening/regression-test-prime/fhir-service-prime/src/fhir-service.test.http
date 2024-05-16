@@ -41,7 +41,7 @@ TECH_BD_FHIR_SERVICE_QE_IDENTIFIER: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
   });
   test.hasResponseBody();
   test('Check Resource Type', () => {
-      equal(JSON.parse(response.body).version, '0.23.0');
+      equal(JSON.parse(response.body).version, '0.23.1');
   });
 }}
 
