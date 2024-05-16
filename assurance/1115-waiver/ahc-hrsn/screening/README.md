@@ -11,7 +11,7 @@ To run the regression tests, you can trigger the manual GitHub Actions workflow 
 
 Below is a screenshot illustrating how to manually execute this workflow:
 
-![Execution Screenshot](docs/images/regression-test-screenshot.png)
+![Execution Screenshot](regression-test-prime/fhir-service-prime/docs/images/regression-test-screenshot.png)
 
 This screenshot provides a visual guide to running the regression tests, showing the necessary steps and expected outputs.
 
