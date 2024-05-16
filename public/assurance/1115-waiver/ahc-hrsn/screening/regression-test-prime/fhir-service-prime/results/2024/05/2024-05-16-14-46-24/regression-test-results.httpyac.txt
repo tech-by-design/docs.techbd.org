@@ -1,0 +1,301 @@
+
+---------------------
+
+=== Test that your server is running by fetching its CapabilityStatement: ===
+
+GET https://synthetic.fhir.api.devl.techbd.org/metadata
+accept-encoding: gzip, deflate, br
+accept: */*
+content-type: application/json
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 2156
+content-type: text/plain;charset=UTF-8
+date: Thu, 16 May 2024 18:46:23 GMT
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <status value="active"></status>
+    <date value=2024-05-16 18:46 UTC></date>
+    <publisher value="TechBD"></publisher>
+    <kind value="instance"></kind>
+    <software>
+        <name value="1115-Hub FHIR Server"></name>
+        <version value="0.23.1"></version>
+    </software>
+    <implementation>
+        <description value="1115-Hub FHIR"></description>
+        <url value=https://synthetic.fhir.api.devl.techbd.org></url>
+    </implementation>
+    <fhirVersion value="4.0.1"></fhirVersion>
+    <format value="application/fhir+xml"></format>
+    <format value="application/fhir+json"></format>
+    <rest>
+        <mode value="server"></mode>
+        <resource>
+            <type value="Bundle"></type>
+            <profile value="https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json"></profile>
+            <interaction>
+                <code value="create"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+            <searchParam>
+                <name value="name"></name>
+                <type value="string"></type>
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="OperationDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+        </resource>
+        <resource>
+            <type value="StructureDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+        </resource>
+        <operation>
+            <name value="validate"></name>
+            <definition value=http://10.0.165.83:8080/OperationDefinition/Bundle--validate"></definition>
+        </operation>
+    </rest>
+</CapabilityStatement>
+✓ status code 200
+✓ Check content-type
+✓ response body exists
+
+---------------------
+
+=== Validating a bundle resource from your server - happy path ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: application/fhir+json;charset=utf-8
+content-length: 12899
+content-type: application/json
+tech_bd_fhir_service_qe_identifier: HEALTHELINK
+user-agent: httpyac
+
+HTTP/1.1 500  - Internal Server Error
+connection: keep-alive
+content-type: application/fhir+json;charset=utf-8
+date: Thu, 16 May 2024 18:46:26 GMT
+transfer-encoding: chunked
+
+{
+  "timestamp": "2024-05-16T18:46:26.338+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/Bundle/$validate"
+}
+✓ Check content-type
+✓ response body exists
+
+---------------------
+
+=== Validating a bundle resource from your server - unhappy path ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: application/fhir+json;charset=utf-8
+content-length: 12900
+content-type: application/json
+tech_bd_fhir_service_qe_identifier: HEALTHELINK
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 524
+content-type: application/fhir+json;charset=utf-8
+date: Thu, 16 May 2024 18:46:26 GMT
+
+{
+  "orchSessionId": "5483c9e5-11db-4f18-a214-18d6e599f314",
+  "deviceId": "device123",
+  "version": "0.23.1",
+  "orchStartedAt": "Thu May 16 18:46:26 UTC 2024",
+  "shinnyDataLakeSubmissionStatus": "NOT_SUBMITTED",
+  "shinnyDataLakeSubmissionStartTime": 0,
+  "shinnyDataLakeSubmissionEndTime": 0,
+  "shinnyDataLakeSubmissionProcessTIme": 0,
+  "entries": [
+    {
+      "exceptions": [
+        "Invalid JSON content detected, missing required element: 'resourceType'"
+      ]
+    }
+  ],
+  "orchFinishedAt": "Thu May 16 18:46:26 UTC 2024"
+}
+✓ status code 200
+✓ Check content-type
+✓ response body exists
+✓ check Result
+
+---------------------
+
+=== Validating a bundle resource from bronx QE - unhappy path ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: application/fhir+json;charset=utf-8
+content-length: 85418
+content-type: application/json
+tech_bd_fhir_service_qe_identifier: HEALTHELINK
+user-agent: httpyac
+
+HTTP/1.1 500  - Internal Server Error
+connection: keep-alive
+content-type: application/fhir+json;charset=utf-8
+date: Thu, 16 May 2024 18:46:29 GMT
+transfer-encoding: chunked
+
+{
+  "timestamp": "2024-05-16T18:46:29.625+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/Bundle/$validate"
+}
+✓ Check content-type
+✓ response body exists
+
+---------------------
+
+=== Validating a bundle resource from healtheconnections QE - unhappy path ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: application/fhir+json;charset=utf-8
+content-length: 39593
+content-type: application/json
+tech_bd_fhir_service_qe_identifier: HEALTHELINK
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 641
+content-type: application/fhir+json;charset=utf-8
+date: Thu, 16 May 2024 18:46:29 GMT
+
+{
+  "orchSessionId": "ecec14e8-0954-4206-ab28-ac0e59ba7e9a",
+  "deviceId": "device123",
+  "version": "0.23.1",
+  "orchStartedAt": "Thu May 16 18:46:29 UTC 2024",
+  "shinnyDataLakeSubmissionStatus": "NOT_SUBMITTED",
+  "shinnyDataLakeSubmissionStartTime": 0,
+  "shinnyDataLakeSubmissionEndTime": 0,
+  "shinnyDataLakeSubmissionProcessTIme": 0,
+  "entries": [
+    {
+      "exceptions": [
+        "[element=\"lastUpdated\"] Invalid attribute value \"2023-10-28 10:07:42.9149210\": Invalid date/time format: \"2023-10-28 10:07:42.9149210\": Expected character 'T' at index 10 but found  "
+      ]
+    }
+  ],
+  "orchFinishedAt": "Thu May 16 18:46:29 UTC 2024"
+}
+✓ status code 200
+✓ Check content-type
+✓ response body exists
+✓ check Result
+✓ check Diagnostics
+
+---------------------
+
+=== Submit a bundle to Datalake ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/?qe=HEALTHELINK
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 12899
+content-type: application/json
+user-agent: httpyac
+
+HTTP/1.1 500  - Internal Server Error
+connection: keep-alive
+content-type: application/json
+date: Thu, 16 May 2024 18:46:32 GMT
+transfer-encoding: chunked
+
+{
+  "timestamp": "2024-05-16T18:46:32.902+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/Bundle/"
+}
+✓ status code 201
+✓ response body exists
+
+---------------------
+
+=== Get the details of a specific session ===
+
+GET https://synthetic.fhir.api.devl.techbd.org/admin/diagnostics/b872aefe-57a8-4f2c-9115-a17fcaf75ea5
+accept-encoding: gzip, deflate, br
+accept: */*
+content-type: application/json
+tech_bd_fhir_service_qe_identifier: HEALTHELINK
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 856
+content-type: text/plain;charset=UTF-8
+date: Thu, 16 May 2024 18:46:32 GMT
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details of Session</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Details of Session</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td>No matching session</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+✓ status code 201
+✓ Check content-type
+
+7 requests processed (4 succeeded, 3 failed)

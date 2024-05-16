@@ -1,7 +1,4 @@
 #!/bin/bash
-set -euo pipefail
-IFS=$'\n\t'
-
 # requires NodeJS, httypyac, pip, Python, and junit2htmlreport
 # npm install -g httpyac
 # pip install junit2htmlreport
@@ -13,6 +10,9 @@ RESULTS_DIR=$SCRIPT_DIR/results
 LATEST_RESULTS_DIR=$RESULTS_DIR/$TIMESTAMP
 
 mkdir -p $LATEST_RESULTS_DIR
+
+printf "NodeJS " && node --version
+printf "httpyac " && httpyac --version
 
 httpyac $SRC_DIR/fhir-service.test.http --all > $LATEST_RESULTS_DIR/regression-test-results.httpyac.txt
 httpyac $SRC_DIR/fhir-service.test.http --all --junit > $LATEST_RESULTS_DIR/regression-test-results.httpyac.junit.xml

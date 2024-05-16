@@ -12,13 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js 21
+      - name: Use Node.js 20 LTS
         uses: actions/setup-node@v3
         with:
-          node-version: 21
+          node-version: 20
 
       - name: Install httpyac
-        run: npm install -g httpyac
+        run: npm install -g httpyac && node --version && httpyac --version
 
       - name: Install Python 3.12
         uses: actions/setup-python@v5

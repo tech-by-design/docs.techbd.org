@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regression-test-results.httpyac.junit.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : regression-test-results.httpyac.junit.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>Test that your server is running by fetching its CapabilityStatement:
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#670ef314-7fae-4a4a-9ae1-9d04e1fdc2f5">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#8fe0270a-33c1-4884-95fd-c01379bb1858">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#bb5c0dd7-099f-4b6a-bb66-4f9b614937ae">response body exists</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Validating a bundle resource from your server - happy path
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#0afaf63d-a7a2-4d86-93a4-11d3d4383658">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#681ad233-ab3e-4f18-bccc-8c72810da9eb">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#27be80b1-981a-4c08-895a-3bcb282ac4fb">response body exists</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#e896ecf5-15c5-43bd-9ad1-5e2629d724d9">Check Resource Type</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Validating a bundle resource from your server - unhappy path
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#e993f16a-d77e-4894-8de5-0ab69a1132c5">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#cfa3169b-4147-4fb1-9e5c-132d205ecf3c">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#4b46a3b5-b841-470a-ac9a-1d5bd48bfbae">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#1e129bb3-f409-4276-9df7-b4215214c19b">check Result</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Validating a bundle resource from bronx QE - unhappy path
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#bbc175f1-f1ca-451e-8fe7-0c392e548728">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#f50e0bd3-9e09-457e-a5c5-28ce55488d88">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#95dfcb6b-dc73-4391-9846-d789278d922c">response body exists</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#b60ca590-36fc-40f4-b813-8c48e006b6f6">check Result</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#f1375568-38ce-460b-9534-eeafef0292ce">check Diagnostics</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Validating a bundle resource from healtheconnections QE - unhappy path
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#a7fbc2c3-c47c-4647-8bb0-839a4af60458">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#78500555-e89a-411c-8a55-151b2e2f26dc">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#ab9ec475-61d7-40a3-9579-91675bca620f">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#e6cb063f-dd0b-4432-8add-11424d06036f">check Result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#230b0ece-97f1-43bf-aff3-ede65ddd5b83">check Diagnostics</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Submit a bundle to Datalake
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#b3008ad7-f9c8-4348-b249-b590165d64b1">status code 201</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#9bebd8e1-901d-4fcb-95b6-a9b6664508e3">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#940f00bf-2ec9-4617-97b2-be202b4b9368">response body exists</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#ae97d20b-c25a-4e75-8925-bf935638b5e6">check Result</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Get the details of a specific session
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#6f966cb0-a5c7-4faf-a869-c7f2d3ba36c7">status code 201</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#4b87a23f-a19f-46bf-9fc6-fe826c3f09e9">Check content-type</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#0afaf63d-a7a2-4d86-93a4-11d3d4383658">[F] Validating a bundle resource from your server - happy path : status code 200</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#e896ecf5-15c5-43bd-9ad1-5e2629d724d9">[F] Validating a bundle resource from your server - happy path : Check Resource Type</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#bbc175f1-f1ca-451e-8fe7-0c392e548728">[F] Validating a bundle resource from bronx QE - unhappy path : status code 200</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#b60ca590-36fc-40f4-b813-8c48e006b6f6">[F] Validating a bundle resource from bronx QE - unhappy path : check Result</a></li>
+                    
+                    
+                    
+                    <li><a href="#f1375568-38ce-460b-9534-eeafef0292ce">[F] Validating a bundle resource from bronx QE - unhappy path : check Diagnostics</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    <li><a href="#9bebd8e1-901d-4fcb-95b6-a9b6664508e3">[F] Submit a bundle to Datalake : Check content-type</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#ae97d20b-c25a-4e75-8925-bf935638b5e6">[F] Submit a bundle to Datalake : check Result</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: Test that your server is running by fetching its CapabilityStatement:</h2>
+        <a id="e3345ff2-a88a-4901-92bd-b17a727c0950"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Test that your server is running by fetching its CapabilityStatement:</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>12</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T18:46:34.925Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.082 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>3</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Test that your server is running by fetching its CapabilityStatement:</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="670ef314-7fae-4a4a-9ae1-9d04e1fdc2f5"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.027 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8fe0270a-33c1-4884-95fd-c01379bb1858"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.027 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="bb5c0dd7-099f-4b6a-bb66-4f9b614937ae"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.027 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Validating a bundle resource from your server - happy path</h2>
+        <a id="c534a549-6d65-48b9-adc8-57b13a1ab580"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Validating a bundle resource from your server - happy path</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>27</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T18:46:35.007Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>3.246 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>4</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>2</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Validating a bundle resource from your server - happy path</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="0afaf63d-a7a2-4d86-93a4-11d3d4383658"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.811 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status code 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;500 == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: 500 == 200\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:37:5\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:36:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: 500 == 200 - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:37:5</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>37</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>5</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>500 == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="681ad233-ab3e-4f18-bccc-8c72810da9eb"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.811 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="27be80b1-981a-4c08-895a-3bcb282ac4fb"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.811 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="e896ecf5-15c5-43bd-9ad1-5e2629d724d9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check Resource Type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.811 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>Check Resource Type</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;undefined == &#39;0.23.1&#39;&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: undefined == &#39;0.23.1&#39;\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:44:7\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:43:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: undefined == &#39;0.23.1&#39; - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:44:7</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>44</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>7</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>undefined == &#39;0.23.1&#39;</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Validating a bundle resource from your server - unhappy path</h2>
+        <a id="d517fff4-d13d-4484-98bf-7aad5b9617c9"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Validating a bundle resource from your server - unhappy path</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>50</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T18:46:38.253Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.017 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>4</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Validating a bundle resource from your server - unhappy path</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e993f16a-d77e-4894-8de5-0ab69a1132c5"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="cfa3169b-4147-4fb1-9e5c-132d205ecf3c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="4b46a3b5-b841-470a-ac9a-1d5bd48bfbae"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="1e129bb3-f409-4276-9df7-b4215214c19b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Validating a bundle resource from bronx QE - unhappy path</h2>
+        <a id="876a715d-1eb3-4849-8801-4e74da14d410"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Validating a bundle resource from bronx QE - unhappy path</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>75</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T18:46:38.271Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>3.276 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>3</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Validating a bundle resource from bronx QE - unhappy path</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="bbc175f1-f1ca-451e-8fe7-0c392e548728"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.655 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status code 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;500 == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: 500 == 200\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:85:5\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:84:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: 500 == 200 - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:85:5</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>85</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>5</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>500 == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f50e0bd3-9e09-457e-a5c5-28ce55488d88"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.655 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="95dfcb6b-dc73-4391-9846-d789278d922c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.655 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="b60ca590-36fc-40f4-b813-8c48e006b6f6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.655 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>check Result</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;0&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;0&#39;)\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:92:44\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:91:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;0&#39;) - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:92:44</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>92</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>44</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;0&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="f1375568-38ce-460b-9534-eeafef0292ce"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Diagnostics</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.655 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>check Diagnostics</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;0&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;0&#39;)\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:95:44\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:94:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;0&#39;) - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:95:44</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>95</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>44</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;0&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Validating a bundle resource from healtheconnections QE - unhappy path</h2>
+        <a id="5a5661b0-9cbf-4c14-9324-35096764270f"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Validating a bundle resource from healtheconnections QE - unhappy path</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>102</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T18:46:41.548Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.026 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Validating a bundle resource from healtheconnections QE - unhappy path</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="a7fbc2c3-c47c-4647-8bb0-839a4af60458"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.005 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="78500555-e89a-411c-8a55-151b2e2f26dc"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.005 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="ab9ec475-61d7-40a3-9579-91675bca620f"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.005 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e6cb063f-dd0b-4432-8add-11424d06036f"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.005 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="230b0ece-97f1-43bf-aff3-ede65ddd5b83"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Diagnostics</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.005 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Submit a bundle to Datalake</h2>
+        <a id="f2e332ac-f1be-4d87-8374-6634b159ba82"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Submit a bundle to Datalake</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>128</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T18:46:41.574Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>3.246 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>4</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>2</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Submit a bundle to Datalake</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b3008ad7-f9c8-4348-b249-b590165d64b1"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 201</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.812 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="9bebd8e1-901d-4fcb-95b6-a9b6664508e3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.812 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>Check content-type</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;&#39;application/json&#39; == &#39;text/plain;charset=UTF-8&#39;&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: &#39;application/json&#39; == &#39;text/plain;charset=UTF-8&#39;\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:138:5\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:137:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: &#39;application/json&#39; == &#39;text/plain;charset=UTF-8&#39; - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:138:5</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>138</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>5</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>&#39;application/json&#39; == &#39;text/plain;charset=UTF-8&#39;</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="940f00bf-2ec9-4617-97b2-be202b4b9368"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.812 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="ae97d20b-c25a-4e75-8925-bf935638b5e6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.812 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>check Result</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;&#39;{\&#34;timestamp\&#34;:\&#34;2024-05-16T18:46:43.132+00:00\&#34;,\&#34;status\&#34;:500,\&#34;error\&#34;:\&#34;Internal Server Error\&#34;,\&#34;path\&#34;:\&#34;/Bundle/\&#34;}&#39; == &#39;API invoked&#39;&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: &#39;{\&#34;timestamp\&#34;:\&#34;2024-05-16T18:46:43.132+00:00\&#34;,\&#34;status\&#34;:500,\&#34;error\&#34;:\&#34;Internal Server Error\&#34;,\&#34;path\&#34;:\&#34;/Bundle/\&#34;}&#39; == &#39;API invoked&#39;\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:142:5\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:141:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: &#39;{&#34;timestamp&#34;:&#34;2024-05-16T18:46:43.132+00:00&#34;,&#34;status&#34;:500,&#34;error&#34;:&#34;Internal Server Error&#34;,&#34;path&#34;: &#34;/Bundle/&#34;}&#39; == &#39;API invoked&#39; - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:142:5</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>142</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>5</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]: &#39;{&#34;timestamp&#34;:&#34;2024-05-16T18:46:43.132+00:00&#34;,&#34;status&#34;:500,&#34;error&#34;:&#34;Internal Server Error&#34;,&#34;path&#34;</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>&#34;/Bundle/&#34;}&#39; == &#39;API invoked&#39;</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Get the details of a specific session</h2>
+        <a id="40e624f0-dc84-480f-85e3-cc430912faf3"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Get the details of a specific session</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>148</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T18:46:44.820Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.013 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>2</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Get the details of a specific session</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6f966cb0-a5c7-4faf-a869-c7f2d3ba36c7"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 201</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.007 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="4b87a23f-a19f-46bf-9fc6-fe826c3f09e9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.007 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>
