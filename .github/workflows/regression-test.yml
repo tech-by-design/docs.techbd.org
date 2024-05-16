@@ -28,11 +28,8 @@ jobs:
       - name: Install httpyac
         run: pip install junit2html
   
-      - name: Use latest PNPM
-        uses: pnpm/action-setup@v4
-
       - name: Run regression tests and generate results files
-        run: pnpm gen-regression-test-results
+        run: npm gen-regression-test-results
           
       - name: Set up environment variables
         run: |
