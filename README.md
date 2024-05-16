@@ -10,9 +10,14 @@ You'll see the following folders and files:
 .
 ├── assurance/
 │   └── 1115-waiver/ahc-hrsn/screening/regression-test-prime/
-│       ├── src/
-│       └── results/
+│       └── fhir-service-prime/
+│           └── src/
 ├── public/
+│   └── assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/
+│       ├── results/
+│       │   ├── YYYY-MM/YYYY-MM-DD-HH-MM-SS/
+│       │   └── latest/                      (symlink)
+|       └── regression-test.sh
 ├── src/
 │   ├── assets/
 │   ├── content/
@@ -43,6 +48,12 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run astro check`     | Validate documentation build artifacts           |
 | `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm run astro -- --help` | Get help using the Astro CLI                     |
+
+Special commands
+
+| Command                                 | Action                                           |
+| :-------------------------------------- | :----------------------------------------------- |
+| `pnpm pnpm gen-regression-test-results` | Generate all regression test results             |
 
 ## 👀 Want to learn more?
 

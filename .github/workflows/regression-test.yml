@@ -20,25 +20,25 @@ jobs:
       - name: Install httpyac
         run: npm install -g httpyac
 
-      - name: Run httpyac test
-        run: |
-          cd assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src
-          httpyac send fhir-service.test.http --all > fhir-service-result.txt
+      - name: Install Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Install httpyac
+        run: pip install junit2htmlreport
+  
+      - name: Run regression tests and generate results files
+        run: pnpm gen-regression-test-results
           
-      - name: Set up timestamp
+      - name: Set up environment variables
         run: |
-          echo "TIMESTAMP=$(date +'%Y/%m/%Y-%m-%d-%H-%M-%S')" >> $GITHUB_ENV
           echo "DATETIME=$(date +'%Y-%m-%d-%H-%M-%S')" >> $GITHUB_ENV
-
-      - name: Create directories and move the result file
-        run: |
-          mkdir -p assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/${{ env.TIMESTAMP }}
-          mv assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service-result.txt assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/${{ env.TIMESTAMP }}
 
       - name: Commit and push result
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/${{ env.TIMESTAMP }}/fhir-service-result.txt
-          git commit -m "add: regression test result at ${{ env.DATETIME }}"
+          git add .
+          git commit -m "test: introduce ${{ env.DATETIME }} regression test results"
           git push
