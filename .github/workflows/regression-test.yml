@@ -28,6 +28,7 @@ jobs:
       - name: Set up timestamp
         run: |
           echo "TIMESTAMP=$(date +'%Y/%m/%Y-%m-%d-%H-%M-%S')" >> $GITHUB_ENV
+          echo "DATETIME=$(date +'%Y-%m-%d-%H-%M-%S')" >> $GITHUB_ENV
 
       - name: Create directories and move the result file
         run: |
@@ -39,5 +40,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/${{ env.TIMESTAMP }}/fhir-service-result.txt
-          git commit -m "Add regression test result at ${{ env.TIMESTAMP }}"
+          git commit -m "add: regression test result at ${{ env.DATETIME }}"
           git push
