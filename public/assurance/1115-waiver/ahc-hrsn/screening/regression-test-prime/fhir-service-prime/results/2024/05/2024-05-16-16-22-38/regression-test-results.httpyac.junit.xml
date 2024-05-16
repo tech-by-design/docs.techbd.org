@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="httpyac" tests="26" errors="0" disabled="0" failures="7" time="10.595">
+  <testsuite name="/metadata endpoint should return FHIR CapabilityStatement" tests="3" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.081">
+    <properties>
+      <property name="title" value="/metadata endpoint should return FHIR CapabilityStatement"/>
+      <property name="line" value="11"/>
+      <property name="timestamp" value="2024-05-16T20:22:50.873Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.027" assertions="1"/>
+    <testcase name="Check content-type" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.027" assertions="1"/>
+    <testcase name="response body exists" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.027" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json" tests="4" errors="0" failures="2" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="4.096">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json"/>
+      <property name="line" value="26"/>
+      <property name="timestamp" value="2024-05-16T20:22:50.954Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json" time="1.024" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: 500 == 200 - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:35:5"/>
+        <property name="file" value="/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+        <property name="line" value="35"/>
+        <property name="offset" value="5"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="500 == 200"/>
+      </properties>
+      <failure message="status code 200" type="AssertionError [ERR_ASSERTION]">{"message":"500 == 200","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: 500 == 200\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:35:5\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:34:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)"}</failure>
+    </testcase>
+    <testcase name="Check content-type" classname="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json" time="1.024" assertions="1"/>
+    <testcase name="response body exists" classname="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json" time="1.024" assertions="1"/>
+    <testcase name="Check Resource Type" classname="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json" time="1.024" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: undefined == '0.23.1' - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:42:7"/>
+        <property name="file" value="/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+        <property name="line" value="42"/>
+        <property name="offset" value="7"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="undefined == '0.23.1'"/>
+      </properties>
+      <failure message="Check Resource Type" type="AssertionError [ERR_ASSERTION]">{"message":"undefined == '0.23.1'","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: undefined == '0.23.1'\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:42:7\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:41:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)"}</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json" tests="4" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.015">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json"/>
+      <property name="line" value="48"/>
+      <property name="timestamp" value="2024-05-16T20:22:55.051Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json" time="0.004" assertions="1"/>
+    <testcase name="Check content-type" classname="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json" time="0.004" assertions="1"/>
+    <testcase name="response body exists" classname="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json" time="0.004" assertions="1"/>
+    <testcase name="check Result" classname="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json" time="0.004" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" tests="5" errors="0" failures="3" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="3.210">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json"/>
+      <property name="line" value="72"/>
+      <property name="timestamp" value="2024-05-16T20:22:55.066Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" time="0.642" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: 500 == 200 - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:81:5"/>
+        <property name="file" value="/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+        <property name="line" value="81"/>
+        <property name="offset" value="5"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="500 == 200"/>
+      </properties>
+      <failure message="status code 200" type="AssertionError [ERR_ASSERTION]">{"message":"500 == 200","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: 500 == 200\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:81:5\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:80:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)"}</failure>
+    </testcase>
+    <testcase name="Check content-type" classname="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" time="0.642" assertions="1"/>
+    <testcase name="response body exists" classname="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" time="0.642" assertions="1"/>
+    <testcase name="check Result" classname="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" time="0.642" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of undefined (reading '0') - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:88:44"/>
+        <property name="file" value="/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+        <property name="line" value="88"/>
+        <property name="offset" value="44"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of undefined (reading '0')"/>
+      </properties>
+      <failure message="check Result" type="TypeError">{"message":"Cannot read properties of undefined (reading '0')","name":"TypeError","stack":"TypeError: Cannot read properties of undefined (reading '0')\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:88:44\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:87:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)"}</failure>
+    </testcase>
+    <testcase name="check Diagnostics" classname="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" time="0.642" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of undefined (reading '0') - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:91:44"/>
+        <property name="file" value="/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+        <property name="line" value="91"/>
+        <property name="offset" value="44"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of undefined (reading '0')"/>
+      </properties>
+      <failure message="check Diagnostics" type="TypeError">{"message":"Cannot read properties of undefined (reading '0')","name":"TypeError","stack":"TypeError: Cannot read properties of undefined (reading '0')\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:91:44\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:90:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)"}</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" tests="5" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.025">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json"/>
+      <property name="line" value="98"/>
+      <property name="timestamp" value="2024-05-16T20:22:58.276Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" time="0.005" assertions="1"/>
+    <testcase name="Check content-type" classname="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" time="0.005" assertions="1"/>
+    <testcase name="response body exists" classname="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" time="0.005" assertions="1"/>
+    <testcase name="check Result" classname="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" time="0.005" assertions="1"/>
+    <testcase name="check Diagnostics" classname="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" time="0.005" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK" tests="4" errors="0" failures="2" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="3.142">
+    <properties>
+      <property name="title" value="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK"/>
+      <property name="line" value="123"/>
+      <property name="timestamp" value="2024-05-16T20:22:58.301Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 201" classname="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK" time="0.786" assertions="1"/>
+    <testcase name="Check content-type" classname="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK" time="0.786" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: 'application/json' == 'text/plain;charset=UTF-8' - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:133:5"/>
+        <property name="file" value="/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+        <property name="line" value="133"/>
+        <property name="offset" value="5"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="'application/json' == 'text/plain;charset=UTF-8'"/>
+      </properties>
+      <failure message="Check content-type" type="AssertionError [ERR_ASSERTION]">{"message":"'application/json' == 'text/plain;charset=UTF-8'","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: 'application/json' == 'text/plain;charset=UTF-8'\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:133:5\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:132:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)"}</failure>
+    </testcase>
+    <testcase name="response body exists" classname="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK" time="0.786" assertions="1"/>
+    <testcase name="check Result" classname="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK" time="0.786" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: '{&quot;timestamp&quot;:&quot;2024-05-16T20:22:59.525+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;: &quot;/Bundle/&quot;}' == 'API invoked' - /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:137:5"/>
+        <property name="file" value="/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+        <property name="line" value="137"/>
+        <property name="offset" value="5"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]: '{&quot;timestamp&quot;:&quot;2024-05-16T20:22:59.525+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;"/>
+        <property name="message" value="&quot;/Bundle/&quot;}' == 'API invoked'"/>
+      </properties>
+      <failure message="check Result" type="AssertionError [ERR_ASSERTION]: '{&quot;timestamp&quot;:&quot;2024-05-16T20:22:59.525+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;">{"message":"'{\"timestamp\":\"2024-05-16T20:22:59.525+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/Bundle/\"}' == 'API invoked'","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: '{\"timestamp\":\"2024-05-16T20:22:59.525+00:00\",\"status\":500,\"error\":\"Internal Server Error\",\"path\":\"/Bundle/\"}' == 'API invoked'\n    at /home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:137:5\n    at Object.o [as test] (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:40904)\n    at Object.userJS (/home/snshah/workspaces/github.com/tech-by-design/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http:136:3)\n    at rr (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Pt (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:6140)\n    at Object.action (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:5411)\n    at n.trigger (/home/snshah/.local/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async t.execute (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:2:52877)\n    at async mu (/home/snshah/.local/lib/node_modules/httpyac/dist/index.js:119:32215)"}</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="/admin/diagnostics endpoint should be an HTML page" tests="1" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.026">
+    <properties>
+      <property name="title" value="/admin/diagnostics endpoint should be an HTML page"/>
+      <property name="line" value="143"/>
+      <property name="timestamp" value="2024-05-16T20:23:01.443Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/admin/diagnostics endpoint should be an HTML page" time="0.026" assertions="1"/>
+  </testsuite>
+</testsuites>

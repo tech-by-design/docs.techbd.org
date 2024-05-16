@@ -4,12 +4,11 @@
 # * requires a `.env` file with HOST, PORT
 # * this service has 2 endpoints /Bundle/$validate & /Bundle/
 
-@hostName = {{$dotenv HOST}}
+@hostName = {{$processEnv HOST}}
 @contentType = application/json
 @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER = HEALTHELINK
-@sessionId = b872aefe-57a8-4f2c-9115-a17fcaf75ea5
 
-### Test that your server is running by fetching its CapabilityStatement:
+### /metadata endpoint should return FHIR CapabilityStatement
 
 GET {{hostName}}/metadata HTTP/1.1
 Content-Type: {{contentType}}
@@ -24,8 +23,7 @@ Content-Type: {{contentType}}
   test.hasResponseBody();
 }}
 
-### Validating a bundle resource from your server - happy path
-
+### /Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json
 
 POST {{hostName}}/Bundle/$validate HTTP/1.1 
 Content-Type: {{contentType}}
@@ -47,8 +45,7 @@ TECH_BD_FHIR_SERVICE_QE_IDENTIFIER: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
 
 < fhir-fixture-shinny-impl-guide-sample.json
 
-###  Validating a bundle resource from your server - unhappy path
-
+### /Bundle/$validate should validate fhir-fixture-unhappy-path-01.json
 
 POST {{hostName}}/Bundle/$validate HTTP/1.1
 Content-Type: {{contentType}}
@@ -72,8 +69,7 @@ TECH_BD_FHIR_SERVICE_QE_IDENTIFIER: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
 < fhir-fixture-unhappy-path-01.json
 
 
-###  Validating a bundle resource from bronx QE - unhappy path
-
+### /Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json
 
 POST {{hostName}}/Bundle/$validate HTTP/1.1
 Content-Type: {{contentType}}
@@ -99,8 +95,7 @@ TECH_BD_FHIR_SERVICE_QE_IDENTIFIER: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
 
 < fhir-fixture-shinny-bronx-unhappy-path.json
 
-###  Validating a bundle resource from healtheconnections QE - unhappy path
-
+### /Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json
 
 POST {{hostName}}/Bundle/$validate HTTP/1.1
 Content-Type: {{contentType}}
@@ -125,7 +120,7 @@ TECH_BD_FHIR_SERVICE_QE_IDENTIFIER: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
 
 < fhir-fixture-shinny-healtheconnections-unhappy-path.json
 
-### Submit a bundle to Datalake
+### /Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK
 
 POST {{hostName}}/Bundle/?qe=HEALTHELINK HTTP/1.1
 Content-Type: application/json
@@ -145,17 +140,14 @@ Content-Type: application/json
 
 < fhir-fixture-shinny-impl-guide-sample.json  
 
-### Get the details of a specific session
+### /admin/diagnostics endpoint should be an HTML page
 
-GET {{hostName}}/admin/diagnostics/{{sessionId}} HTTP/1.1
+GET {{hostName}}/admin/diagnostics HTTP/1.1
 Content-Type: application/json
 TECH_BD_FHIR_SERVICE_QE_IDENTIFIER: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
 {{
   const { equal, notEqual } = require('assert');
-  test('status code 201', () => {
-    notEqual(response.statusCode, 201); // Use equal for this specific test case
-  });
-  test('Check content-type', () => {
-    equal(response.contentType.contentType, 'text/plain;charset=UTF-8');
+  test('status code 200', () => {
+    equal(response.statusCode, 200); // Use equal for this specific test case
   });
 }}
