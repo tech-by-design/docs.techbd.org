@@ -1,0 +1,5 @@
+
+---------------------
+
+=== Test that your server is running by fetching its CapabilityStatement: ===
+
