@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://tech-by-design.github.io',
+	base: 'docs.techbd.org',
 	integrations: [
 		starlight({
 			title: 'TechBD Docs',
