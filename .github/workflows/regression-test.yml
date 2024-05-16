@@ -1,0 +1,40 @@
+name: Regression Test Pipeline
+
+on:
+  push:
+
+jobs:
+  Regression-Test-Prime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install httpyac
+        run: npm install -g httpyac
+
+      - name: Run httpyac test
+        run: |
+          cd assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src
+          httpyac send fhir-service.test.http --all > fhir-service-result.txt
+          
+      - name: Set up timestamp
+        run: |
+          echo "TIMESTAMP=$(date +'%Y/%m/%Y-%m-%d-%H-%M-%S')" >> $GITHUB_ENV
+
+      - name: Create directories and move the result file
+        run: |
+          mkdir -p assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/${{ env.TIMESTAMP }}
+          mv assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service-result.txt assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/${{ env.TIMESTAMP }}
+
+      - name: Commit and push result
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/${{ env.TIMESTAMP }}/fhir-service-result.txt
+          git commit -m "Add regression test result at ${{ env.TIMESTAMP }}"
+          git push
