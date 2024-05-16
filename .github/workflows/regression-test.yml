@@ -25,11 +25,11 @@ jobs:
         with:
           python-version: '3.12'
       
-      - name: Install httpyac
+      - name: Install https://github.com/inorton/junit2html
         run: pip install junit2html
   
       - name: Run regression tests and generate results files
-        run: npm gen-regression-test-results
+        run: npm run gen-regression-test-results
           
       - name: Set up environment variables
         run: |
