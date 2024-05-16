@@ -7,13 +7,15 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "gen-regression-test-results": "./public/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/regression-test.sh"
   },
   "dependencies": {
+    "@astrojs/check": "^0.7.0",
     "@astrojs/starlight": "^0.22.3",
     "astro": "^4.3.5",
+    "httpyac": "^6.13.3",
     "sharp": "^0.32.5",
-    "@astrojs/check": "^0.7.0",
     "typescript": "^5.4.5"
   }
 }

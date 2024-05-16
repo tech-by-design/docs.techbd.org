@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regression-test-results.httpyac.junit.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : regression-test-results.httpyac.junit.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>Test that your server is running by fetching its CapabilityStatement:
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#216647e5-5be1-413f-ac7a-2d913a2e40f1">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#231afd13-1305-412e-9d84-fe99ce3ce81a">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#0f2db4be-6910-44d6-b6b5-75cf65dfbaf7">response body exists</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Validating a bundle resource from your server - happy path
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#c6333f11-761d-4301-8b1c-dd81fc260534">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2b8709af-a094-43df-8e2a-1121e4863d20">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#01033a12-78b4-4d0f-a13f-d811d7b7209a">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#b71613ab-59e8-4f62-8b68-67926e89ae0b">Check Resource Type</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Validating a bundle resource from your server - unhappy path
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#6a1c1bc2-f981-4133-83f1-77da5e3e6bf7">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#f17da4ce-d073-4427-b325-50a653b2754d">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#dcc21740-c081-48f2-bd30-053702599f75">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#98784069-bfaf-4429-ab64-c155c0d89752">check Result</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Validating a bundle resource from bronx QE - unhappy path
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#0dc38eea-9ca6-467a-a8ab-550818af57d8">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#dcc5e1d6-0d01-4120-b07e-dba77b2ab8da">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#0572a5a8-038c-4d74-9c87-49d5ae025a7c">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2fa1da66-9d9a-4eb3-9bd2-53f0c2cd25fe">check Result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#3ad5c2d9-7075-4e00-9c9a-08fba7dd8c1f">check Diagnostics</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Validating a bundle resource from healtheconnections QE - unhappy path
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#7fa3b995-e9de-4e9f-9b72-5473d79c8800">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#af93fb6b-1cd3-4c27-8369-47472916a897">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#95acac88-f8b2-498e-9559-154c46c9bc64">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#aee7bc4c-f74f-4366-bf5d-6b789e0b5c42">check Result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#8afe6115-af84-4cdc-a78a-6cacccc6a9ff">check Diagnostics</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Submit a bundle to Datalake
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#5fed5f0d-2013-47cf-81ff-00465afc9810">status code 201</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#d1530749-48ec-414a-a712-5d55d3a4e327">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#821a9435-0dfc-41b5-82f5-6e07f2be0de3">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#cf0a3f44-ae4d-4c59-9f9f-e3d31c8cde19">check Result</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Get the details of a specific session
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#cf1296c1-5b0f-4589-8f3c-7022987bbc06">status code 201</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#ab79dd0c-eaad-49f0-ba94-756776a70adf">Check content-type</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: Test that your server is running by fetching its CapabilityStatement:</h2>
+        <a id="6c613e17-9b9f-4416-83a6-403ba6024fe9"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Test that your server is running by fetching its CapabilityStatement:</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>12</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T15:33:15.135Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.083 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>3</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Test that your server is running by fetching its CapabilityStatement:</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="216647e5-5be1-413f-ac7a-2d913a2e40f1"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.028 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="231afd13-1305-412e-9d84-fe99ce3ce81a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.028 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0f2db4be-6910-44d6-b6b5-75cf65dfbaf7"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.028 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Validating a bundle resource from your server - happy path</h2>
+        <a id="ee80c79f-e812-4f80-8e16-9415af91504e"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Validating a bundle resource from your server - happy path</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>27</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T15:33:15.218Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.421 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>4</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Validating a bundle resource from your server - happy path</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c6333f11-761d-4301-8b1c-dd81fc260534"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.105 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2b8709af-a094-43df-8e2a-1121e4863d20"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.105 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="01033a12-78b4-4d0f-a13f-d811d7b7209a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.105 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b71613ab-59e8-4f62-8b68-67926e89ae0b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check Resource Type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.105 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Validating a bundle resource from your server - unhappy path</h2>
+        <a id="185cb5ab-1df8-4f2e-aa10-8bd6ecedaf1a"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Validating a bundle resource from your server - unhappy path</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>50</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T15:33:15.639Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.015 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>4</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Validating a bundle resource from your server - unhappy path</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6a1c1bc2-f981-4133-83f1-77da5e3e6bf7"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f17da4ce-d073-4427-b325-50a653b2754d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="dcc21740-c081-48f2-bd30-053702599f75"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="98784069-bfaf-4429-ab64-c155c0d89752"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Validating a bundle resource from bronx QE - unhappy path</h2>
+        <a id="3032cefc-9eef-4fa2-a269-430d71f062fa"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Validating a bundle resource from bronx QE - unhappy path</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>75</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T15:33:15.654Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.443 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Validating a bundle resource from bronx QE - unhappy path</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0dc38eea-9ca6-467a-a8ab-550818af57d8"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.089 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="dcc5e1d6-0d01-4120-b07e-dba77b2ab8da"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.089 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0572a5a8-038c-4d74-9c87-49d5ae025a7c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.089 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2fa1da66-9d9a-4eb3-9bd2-53f0c2cd25fe"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.089 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="3ad5c2d9-7075-4e00-9c9a-08fba7dd8c1f"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Diagnostics</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.089 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Validating a bundle resource from healtheconnections QE - unhappy path</h2>
+        <a id="92cffc3e-1117-4bbb-9a25-95849cfcf005"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Validating a bundle resource from healtheconnections QE - unhappy path</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>102</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T15:33:16.097Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.022 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Validating a bundle resource from healtheconnections QE - unhappy path</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7fa3b995-e9de-4e9f-9b72-5473d79c8800"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="af93fb6b-1cd3-4c27-8369-47472916a897"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="95acac88-f8b2-498e-9559-154c46c9bc64"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="aee7bc4c-f74f-4366-bf5d-6b789e0b5c42"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8afe6115-af84-4cdc-a78a-6cacccc6a9ff"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Diagnostics</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Submit a bundle to Datalake</h2>
+        <a id="0b5f7728-770c-4f2c-83ea-47f67a948ea5"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Submit a bundle to Datalake</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>128</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T15:33:16.119Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.314 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>4</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Submit a bundle to Datalake</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5fed5f0d-2013-47cf-81ff-00465afc9810"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 201</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.078 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="d1530749-48ec-414a-a712-5d55d3a4e327"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.078 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="821a9435-0dfc-41b5-82f5-6e07f2be0de3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.078 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="cf0a3f44-ae4d-4c59-9f9f-e3d31c8cde19"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.078 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Get the details of a specific session</h2>
+        <a id="8f297c29-c68f-4160-b239-443783e206fd"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Get the details of a specific session</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>148</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-16T15:33:16.433Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.008 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>2</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Get the details of a specific session</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="cf1296c1-5b0f-4589-8f3c-7022987bbc06"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 201</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="ab79dd0c-eaad-49f0-ba94-756776a70adf"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.004 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>
