@@ -9,6 +9,6 @@ This project uses the [SHIN-NY SDoH FHIR Implementation Guide v0.3.0](https://dj
 <!-- <iframe src="https://djq7jdt8kb490.cloudfront.net/1115/index.html" width="800" height="900">
 </iframe> -->
 
-### SHIN-NY SDoH IG v0.2.0 Validation Engines Comparison 
+### SHIN-NY SDoH IG Validation Engines Comparison 
 
 - [Latest Validation Comparison Results](https://github.com/tech-by-design/docs.techbd.org/tree/main/public/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/2024/05)
