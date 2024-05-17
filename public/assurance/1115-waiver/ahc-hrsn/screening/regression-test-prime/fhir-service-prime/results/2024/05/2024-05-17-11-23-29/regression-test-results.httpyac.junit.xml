@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="httpyac" tests="26" errors="0" disabled="0" failures="0" time="1.174">
+  <testsuite name="/metadata endpoint should return FHIR CapabilityStatement" tests="3" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.286">
+    <properties>
+      <property name="title" value="/metadata endpoint should return FHIR CapabilityStatement"/>
+      <property name="line" value="11"/>
+      <property name="timestamp" value="2024-05-17T11:23:32.034Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.095" assertions="1"/>
+    <testcase name="Check content-type" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.095" assertions="1"/>
+    <testcase name="response body exists" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.095" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json" tests="4" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.207">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json"/>
+      <property name="line" value="26"/>
+      <property name="timestamp" value="2024-05-17T11:23:32.320Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json" time="0.052" assertions="1"/>
+    <testcase name="Check content-type" classname="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json" time="0.052" assertions="1"/>
+    <testcase name="response body exists" classname="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json" time="0.052" assertions="1"/>
+    <testcase name="Check Resource Type" classname="/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json" time="0.052" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json" tests="4" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.014">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json"/>
+      <property name="line" value="48"/>
+      <property name="timestamp" value="2024-05-17T11:23:32.527Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json" time="0.004" assertions="1"/>
+    <testcase name="Check content-type" classname="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json" time="0.004" assertions="1"/>
+    <testcase name="response body exists" classname="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json" time="0.004" assertions="1"/>
+    <testcase name="check Result" classname="/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json" time="0.004" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" tests="5" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.392">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json"/>
+      <property name="line" value="72"/>
+      <property name="timestamp" value="2024-05-17T11:23:32.542Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" time="0.078" assertions="1"/>
+    <testcase name="Check content-type" classname="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" time="0.078" assertions="1"/>
+    <testcase name="response body exists" classname="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" time="0.078" assertions="1"/>
+    <testcase name="check Result" classname="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" time="0.078" assertions="1"/>
+    <testcase name="check Diagnostics" classname="/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json" time="0.078" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" tests="5" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.018">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json"/>
+      <property name="line" value="98"/>
+      <property name="timestamp" value="2024-05-17T11:23:32.934Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" time="0.004" assertions="1"/>
+    <testcase name="Check content-type" classname="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" time="0.004" assertions="1"/>
+    <testcase name="response body exists" classname="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" time="0.004" assertions="1"/>
+    <testcase name="check Result" classname="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" time="0.004" assertions="1"/>
+    <testcase name="check Diagnostics" classname="/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json" time="0.004" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK" tests="4" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.245">
+    <properties>
+      <property name="title" value="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK"/>
+      <property name="line" value="123"/>
+      <property name="timestamp" value="2024-05-17T11:23:32.953Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 201" classname="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK" time="0.061" assertions="1"/>
+    <testcase name="Check content-type" classname="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK" time="0.061" assertions="1"/>
+    <testcase name="response body exists" classname="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK" time="0.061" assertions="1"/>
+    <testcase name="check Result" classname="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK" time="0.061" assertions="1"/>
+  </testsuite>
+  <testsuite name="/admin/diagnostics endpoint should be an HTML page" tests="1" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http" time="0.011">
+    <properties>
+      <property name="title" value="/admin/diagnostics endpoint should be an HTML page"/>
+      <property name="line" value="143"/>
+      <property name="timestamp" value="2024-05-17T11:23:33.198Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-16/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status code 200" classname="/admin/diagnostics endpoint should be an HTML page" time="0.011" assertions="1"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,1758 @@
+
+---------------------
+
+=== /metadata endpoint should return FHIR CapabilityStatement ===
+
+GET https://synthetic.fhir.api.devl.techbd.org/metadata
+accept-encoding: gzip, deflate, br
+accept: */*
+content-type: application/json
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 2156
+content-type: text/plain;charset=UTF-8
+date: Fri, 17 May 2024 11:23:30 GMT
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <status value="active"></status>
+    <date value=2024-05-17 11:23 UTC></date>
+    <publisher value="TechBD"></publisher>
+    <kind value="instance"></kind>
+    <software>
+        <name value="1115-Hub FHIR Server"></name>
+        <version value="0.23.1"></version>
+    </software>
+    <implementation>
+        <description value="1115-Hub FHIR"></description>
+        <url value=https://synthetic.fhir.api.devl.techbd.org></url>
+    </implementation>
+    <fhirVersion value="4.0.1"></fhirVersion>
+    <format value="application/fhir+xml"></format>
+    <format value="application/fhir+json"></format>
+    <rest>
+        <mode value="server"></mode>
+        <resource>
+            <type value="Bundle"></type>
+            <profile value="https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json"></profile>
+            <interaction>
+                <code value="create"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+            <searchParam>
+                <name value="name"></name>
+                <type value="string"></type>
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="OperationDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+        </resource>
+        <resource>
+            <type value="StructureDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+        </resource>
+        <operation>
+            <name value="validate"></name>
+            <definition value=http://10.0.165.83:8080/OperationDefinition/Bundle--validate"></definition>
+        </operation>
+    </rest>
+</CapabilityStatement>
+✓ status code 200
+✓ Check content-type
+✓ response body exists
+
+---------------------
+
+=== /Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: application/fhir+json;charset=utf-8
+content-length: 12899
+content-type: application/json
+tech_bd_fhir_service_qe_identifier: HEALTHELINK
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 1907
+content-type: application/fhir+json;charset=utf-8
+date: Fri, 17 May 2024 11:23:30 GMT
+
+{
+  "orchSessionId": "6781120d-5adb-4445-b965-4620f1654b53",
+  "deviceId": "device123",
+  "version": "0.23.1",
+  "orchStartedAt": "Fri May 17 11:23:30 UTC 2024",
+  "shinnyDataLakeSubmissionStatus": "NOT_SUBMITTED",
+  "shinnyDataLakeSubmissionStartTime": 0,
+  "shinnyDataLakeSubmissionEndTime": 0,
+  "shinnyDataLakeSubmissionProcessTIme": 0,
+  "entries": [
+    {
+      "result": {
+        "isSuccessful": false
+      },
+      "operationOutcome": {
+        "outcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'observationResponseQuestion_1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[6147]",
+                "Line 1, Col 6147"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'observationResponseQuestion_1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[6147]",
+                "Line 1, Col 6147"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'observationResponseQuestion_2' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[7981]",
+                "Line 1, Col 7981"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'observationResponseQuestion_2' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[7981]",
+                "Line 1, Col 7981"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "orchFinishedAt": "Fri May 17 11:23:30 UTC 2024"
+}
+✓ status code 200
+✓ Check content-type
+✓ response body exists
+✓ Check Resource Type
+
+---------------------
+
+=== /Bundle/$validate should validate fhir-fixture-unhappy-path-01.json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: application/fhir+json;charset=utf-8
+content-length: 12900
+content-type: application/json
+tech_bd_fhir_service_qe_identifier: HEALTHELINK
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 524
+content-type: application/fhir+json;charset=utf-8
+date: Fri, 17 May 2024 11:23:31 GMT
+
+{
+  "orchSessionId": "0b16fa3a-a989-476a-885a-d80eb3dfc7d5",
+  "deviceId": "device123",
+  "version": "0.23.1",
+  "orchStartedAt": "Fri May 17 11:23:31 UTC 2024",
+  "shinnyDataLakeSubmissionStatus": "NOT_SUBMITTED",
+  "shinnyDataLakeSubmissionStartTime": 0,
+  "shinnyDataLakeSubmissionEndTime": 0,
+  "shinnyDataLakeSubmissionProcessTIme": 0,
+  "entries": [
+    {
+      "exceptions": [
+        "Invalid JSON content detected, missing required element: 'resourceType'"
+      ]
+    }
+  ],
+  "orchFinishedAt": "Fri May 17 11:23:31 UTC 2024"
+}
+✓ status code 200
+✓ Check content-type
+✓ response body exists
+✓ check Result
+
+---------------------
+
+=== /Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: application/fhir+json;charset=utf-8
+content-length: 85418
+content-type: application/json
+tech_bd_fhir_service_qe_identifier: HEALTHELINK
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 33607
+content-type: application/fhir+json;charset=utf-8
+date: Fri, 17 May 2024 11:23:31 GMT
+
+{
+  "orchSessionId": "d3945eae-5e30-4662-8fc4-8be43f32d808",
+  "deviceId": "device123",
+  "version": "0.23.1",
+  "orchStartedAt": "Fri May 17 11:23:31 UTC 2024",
+  "shinnyDataLakeSubmissionStatus": "NOT_SUBMITTED",
+  "shinnyDataLakeSubmissionStartTime": 0,
+  "shinnyDataLakeSubmissionEndTime": 0,
+  "shinnyDataLakeSubmissionProcessTIme": 0,
+  "entries": [
+    {
+      "result": {
+        "isSuccessful": false
+      },
+      "operationOutcome": {
+        "outcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '0978bab8-c510-455c-8f10-f6772c0143f6_1793' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[91]",
+                "Line 1, Col 91"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '0978bab8-c510-455c-8f10-f6772c0143f6_1793' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[91]",
+                "Line 1, Col 91"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'CNYSCN~bronx-20240417-testcase1-MRN' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[876]",
+                "Line 1, Col 876"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'CNYSCN~bronx-20240417-testcase1-MRN' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[876]",
+                "Line 1, Col 876"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'cnyscn~bronxxbgu1so3y4' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[4117]",
+                "Line 1, Col 4117"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'cnyscn~bronxxbgu1so3y4' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[4117]",
+                "Line 1, Col 4117"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'Consent_CNYSCN~bronx-20240417-testcase1-MRN' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[5711]",
+                "Line 1, Col 5711"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'Consent_CNYSCN~bronx-20240417-testcase1-MRN' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[5711]",
+                "Line 1, Col 5711"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[6762]",
+                "Line 1, Col 6762"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[6762]",
+                "Line 1, Col 6762"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[8431]",
+                "Line 1, Col 8431"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[8431]",
+                "Line 1, Col 8431"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_2' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[9024]",
+                "Line 1, Col 9024"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_2' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[9024]",
+                "Line 1, Col 9024"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[10670]",
+                "Line 1, Col 10670"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[10670]",
+                "Line 1, Col 10670"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_3' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[11252]",
+                "Line 1, Col 11252"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_3' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[11252]",
+                "Line 1, Col 11252"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[12806]",
+                "Line 1, Col 12806"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[12806]",
+                "Line 1, Col 12806"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_4' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[13386]",
+                "Line 1, Col 13386"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_4' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[13386]",
+                "Line 1, Col 13386"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[14926]",
+                "Line 1, Col 14926"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[14926]",
+                "Line 1, Col 14926"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_5' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[15517]",
+                "Line 1, Col 15517"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_5' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[15517]",
+                "Line 1, Col 15517"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[17071]",
+                "Line 1, Col 17071"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[17071]",
+                "Line 1, Col 17071"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_6' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[17660]",
+                "Line 1, Col 17660"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_6' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[17660]",
+                "Line 1, Col 17660"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[19372]",
+                "Line 1, Col 19372"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[19372]",
+                "Line 1, Col 19372"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_7' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[19965]",
+                "Line 1, Col 19965"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_7' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[19965]",
+                "Line 1, Col 19965"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[21711]",
+                "Line 1, Col 21711"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[21711]",
+                "Line 1, Col 21711"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_8' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[22291]",
+                "Line 1, Col 22291"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_8' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[22291]",
+                "Line 1, Col 22291"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[24011]",
+                "Line 1, Col 24011"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[24011]",
+                "Line 1, Col 24011"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_9' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[24591]",
+                "Line 1, Col 24591"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_9' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[24591]",
+                "Line 1, Col 24591"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[26329]",
+                "Line 1, Col 26329"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[26329]",
+                "Line 1, Col 26329"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_10' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[26910]",
+                "Line 1, Col 26910"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_10' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[26910]",
+                "Line 1, Col 26910"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[28821]",
+                "Line 1, Col 28821"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[28821]",
+                "Line 1, Col 28821"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_11' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[29404]",
+                "Line 1, Col 29404"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_11' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[29404]",
+                "Line 1, Col 29404"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[30931]",
+                "Line 1, Col 30931"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[30931]",
+                "Line 1, Col 30931"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_12' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[31529]",
+                "Line 1, Col 31529"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_12' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[31529]",
+                "Line 1, Col 31529"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[33160]",
+                "Line 1, Col 33160"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[33160]",
+                "Line 1, Col 33160"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_13' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[33764]",
+                "Line 1, Col 33764"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_13' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[33764]",
+                "Line 1, Col 33764"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[35293]",
+                "Line 1, Col 35293"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[35293]",
+                "Line 1, Col 35293"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_14' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[35902]",
+                "Line 1, Col 35902"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_14' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[35902]",
+                "Line 1, Col 35902"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[37434]",
+                "Line 1, Col 37434"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[37434]",
+                "Line 1, Col 37434"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_15' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[37947]",
+                "Line 1, Col 37947"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_15' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[37947]",
+                "Line 1, Col 37947"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[39520]",
+                "Line 1, Col 39520"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[39520]",
+                "Line 1, Col 39520"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_16' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[40109]",
+                "Line 1, Col 40109"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_16' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[40109]",
+                "Line 1, Col 40109"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[41808]",
+                "Line 1, Col 41808"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[41808]",
+                "Line 1, Col 41808"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_17' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[42397]",
+                "Line 1, Col 42397"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_17' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[42397]",
+                "Line 1, Col 42397"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[44215]",
+                "Line 1, Col 44215"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[44215]",
+                "Line 1, Col 44215"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_18' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[44810]",
+                "Line 1, Col 44810"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_18' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[44810]",
+                "Line 1, Col 44810"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[46553]",
+                "Line 1, Col 46553"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[46553]",
+                "Line 1, Col 46553"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_19' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[47158]",
+                "Line 1, Col 47158"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_19' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[47158]",
+                "Line 1, Col 47158"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '1969-12-31T19:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[48685]",
+                "Line 1, Col 48685"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '1969-12-31T19:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[48685]",
+                "Line 1, Col 48685"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_Grouper1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[49429]",
+                "Line 1, Col 49429"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_Grouper1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[49429]",
+                "Line 1, Col 49429"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '2005-02-18T00:00:00' is not facet-valid with respect to pattern '([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?' for type 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[52402]",
+                "Line 1, Col 52402"
+              ]
+            },
+            {
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '2005-02-18T00:00:00' of attribute 'value' on element 'effectiveDateTime' is not valid with respect to its type, 'dateTime-primitive'.",
+              "location": [
+                "Line[1] Col[52402]",
+                "Line 1, Col 52402"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "orchFinishedAt": "Fri May 17 11:23:31 UTC 2024"
+}
+✓ status code 200
+✓ Check content-type
+✓ response body exists
+✓ check Result
+✓ check Diagnostics
+
+---------------------
+
+=== /Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: application/fhir+json;charset=utf-8
+content-length: 39593
+content-type: application/json
+tech_bd_fhir_service_qe_identifier: HEALTHELINK
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 641
+content-type: application/fhir+json;charset=utf-8
+date: Fri, 17 May 2024 11:23:31 GMT
+
+{
+  "orchSessionId": "baf48ae1-1982-4333-b9d4-0400a538f45f",
+  "deviceId": "device123",
+  "version": "0.23.1",
+  "orchStartedAt": "Fri May 17 11:23:31 UTC 2024",
+  "shinnyDataLakeSubmissionStatus": "NOT_SUBMITTED",
+  "shinnyDataLakeSubmissionStartTime": 0,
+  "shinnyDataLakeSubmissionEndTime": 0,
+  "shinnyDataLakeSubmissionProcessTIme": 0,
+  "entries": [
+    {
+      "exceptions": [
+        "[element=\"lastUpdated\"] Invalid attribute value \"2023-10-28 10:07:42.9149210\": Invalid date/time format: \"2023-10-28 10:07:42.9149210\": Expected character 'T' at index 10 but found  "
+      ]
+    }
+  ],
+  "orchFinishedAt": "Fri May 17 11:23:31 UTC 2024"
+}
+✓ status code 200
+✓ Check content-type
+✓ response body exists
+✓ check Result
+✓ check Diagnostics
+
+---------------------
+
+=== /Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/?qe=HEALTHELINK
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 12899
+content-type: application/json
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 11
+content-type: text/plain;charset=UTF-8
+date: Fri, 17 May 2024 11:23:31 GMT
+
+API invoked
+✓ status code 201
+✓ Check content-type
+✓ response body exists
+✓ check Result
+
+---------------------
+
+=== /admin/diagnostics endpoint should be an HTML page ===
+
+GET https://synthetic.fhir.api.devl.techbd.org/admin/diagnostics
+accept-encoding: gzip, deflate, br
+accept: */*
+content-type: application/json
+tech_bd_fhir_service_qe_identifier: HEALTHELINK
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+connection: keep-alive
+content-length: 26501
+content-type: text/plain;charset=UTF-8
+date: Fri, 17 May 2024 11:23:31 GMT
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Diagnostics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Diagnostics</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Session Id</th>
+                <th>QE Identifier</th>
+                <th>Device Id</th>
+                <th>Version</th>
+                <th>Started At</th>
+                <th>DataLake Submission Status</th>
+                <th>DataLake Submission Start Time</th>
+                <th>DataLake Submission End Time</th>
+                <th>DataLake Submission Process TIme (ms)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="/admin/diagnostics/115ad94f-4ee7-4667-a339-8286b1a935a9">115ad94f-4ee7-4667-a339-8286b1a935a9</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:23:31 UTC 2024</td>
+                <td>ASYNC_IN_PROGRESS</td>
+                <td>2024-05-17 11:23:31</td>
+                <td>1970-01-01 00:00:00</td>
+                <td>-1715945011554 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/e95b4bd1-c33e-489d-bd7c-cd22c4334804">e95b4bd1-c33e-489d-bd7c-cd22c4334804</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:07:55 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/4675b48a-85d3-4553-9109-28f4ab9f9d1a">4675b48a-85d3-4553-9109-28f4ab9f9d1a</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:15:44 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/2a466844-ce7e-403d-997c-37656947476e">2a466844-ce7e-403d-997c-37656947476e</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:07:55 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/baf48ae1-1982-4333-b9d4-0400a538f45f">baf48ae1-1982-4333-b9d4-0400a538f45f</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:23:31 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/d3945eae-5e30-4662-8fc4-8be43f32d808">d3945eae-5e30-4662-8fc4-8be43f32d808</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:23:31 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/25810314-30eb-4fc1-b865-ce5f56df2d73">25810314-30eb-4fc1-b865-ce5f56df2d73</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:07:55 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/74440138-9995-4f23-bc08-0b3ac16df782">74440138-9995-4f23-bc08-0b3ac16df782</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:16:52 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/c708b531-996e-4cf4-9aa6-9dacf1f45e12">c708b531-996e-4cf4-9aa6-9dacf1f45e12</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:00:09 UTC 2024</td>
+                <td>ASYNC_FAILED</td>
+                <td>2024-05-17 11:00:09</td>
+                <td>2024-05-17 11:00:09</td>
+                <td>17 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/e22490c1-9db3-47cf-ac21-72b3e1ed8fd2">e22490c1-9db3-47cf-ac21-72b3e1ed8fd2</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:07:57 UTC 2024</td>
+                <td>ASYNC_FAILED</td>
+                <td>2024-05-17 11:07:57</td>
+                <td>2024-05-17 11:07:57</td>
+                <td>10 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/b08df4f6-d4c7-466d-b133-ba7ceb05417a">b08df4f6-d4c7-466d-b133-ba7ceb05417a</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 10:19:48 UTC 2024</td>
+                <td>ASYNC_FAILED</td>
+                <td>2024-05-17 10:19:48</td>
+                <td>2024-05-17 10:19:48</td>
+                <td>14 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/aabbfa97-0c23-41e6-b855-8308b136c678">aabbfa97-0c23-41e6-b855-8308b136c678</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:16:52 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/cb8feffd-03fc-4753-aa28-b5e8c908db90">cb8feffd-03fc-4753-aa28-b5e8c908db90</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 10:19:45 UTC 2024</td>
+                <td>ASYNC_FAILED</td>
+                <td>2024-05-17 10:19:46</td>
+                <td>2024-05-17 10:19:46</td>
+                <td>524 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/4de84148-5be6-4a3a-8437-8b0dc8fd611c">4de84148-5be6-4a3a-8437-8b0dc8fd611c</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:00:08 UTC 2024</td>
+                <td>ASYNC_FAILED</td>
+                <td>2024-05-17 11:00:08</td>
+                <td>2024-05-17 11:00:08</td>
+                <td>44 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/a7126a12-22d2-4bdf-a270-bc52ec23f39d">a7126a12-22d2-4bdf-a270-bc52ec23f39d</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:16:53 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/62de1471-7a63-44e5-8085-69aff5b1554c">62de1471-7a63-44e5-8085-69aff5b1554c</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:15:44 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/02d9efca-a49e-4744-8971-f583f6a7a6b4">02d9efca-a49e-4744-8971-f583f6a7a6b4</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:15:46 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/da36f319-e327-4b3c-adb0-2142a2042fe4">da36f319-e327-4b3c-adb0-2142a2042fe4</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 10:19:44 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/4a936a0e-1237-4fba-987a-c109bc012ece">4a936a0e-1237-4fba-987a-c109bc012ece</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:16:54 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/850ac472-6d5e-495e-82a0-8d18d0b0f0a7">850ac472-6d5e-495e-82a0-8d18d0b0f0a7</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 10:19:47 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/f25cd14b-84ac-4123-8c80-31b855f66d37">f25cd14b-84ac-4123-8c80-31b855f66d37</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 10:19:47 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/31cbb660-103a-4abc-ac80-98474f92a11c">31cbb660-103a-4abc-ac80-98474f92a11c</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:15:44 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/8833b7db-b7c0-42b6-9024-a6b2f3b2deca">8833b7db-b7c0-42b6-9024-a6b2f3b2deca</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:16:54 UTC 2024</td>
+                <td>ASYNC_FAILED</td>
+                <td>2024-05-17 11:16:55</td>
+                <td>2024-05-17 11:16:55</td>
+                <td>8 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/6624af51-592f-4e43-a54c-f082961a65ad">6624af51-592f-4e43-a54c-f082961a65ad</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:07:57 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/04f75662-b782-4494-84af-36001370166b">04f75662-b782-4494-84af-36001370166b</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:15:46 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/a8a27b7b-25b2-462c-be2e-d346b30c2c7c">a8a27b7b-25b2-462c-be2e-d346b30c2c7c</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 10:19:45 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/80d4fa3d-7a77-4432-816a-75e71e01f267">80d4fa3d-7a77-4432-816a-75e71e01f267</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:07:56 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/f3d19e7b-0efd-446b-8a9e-29eb647bef99">f3d19e7b-0efd-446b-8a9e-29eb647bef99</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:15:46 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/6d1b5dbc-c411-40d5-b7f0-16edb611d52f">6d1b5dbc-c411-40d5-b7f0-16edb611d52f</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 09:58:04 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/a9705dde-7ec5-4c28-a93b-8b24405a10d1">a9705dde-7ec5-4c28-a93b-8b24405a10d1</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 09:57:15 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/e4b2cb94-ee4f-44b3-9f68-306ad0be060f">e4b2cb94-ee4f-44b3-9f68-306ad0be060f</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:07:55 UTC 2024</td>
+                <td>ASYNC_FAILED</td>
+                <td>2024-05-17 11:07:55</td>
+                <td>2024-05-17 11:07:55</td>
+                <td>55 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/f2ee7bef-818e-4eee-b1a1-eecf67185ba1">f2ee7bef-818e-4eee-b1a1-eecf67185ba1</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:07:56 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/fb168a78-6e0a-499a-a3aa-5f7d9e95bc89">fb168a78-6e0a-499a-a3aa-5f7d9e95bc89</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:16:54 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/0b16fa3a-a989-476a-885a-d80eb3dfc7d5">0b16fa3a-a989-476a-885a-d80eb3dfc7d5</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:23:31 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/b31a58b4-c194-428d-a62b-2727a073d4c2">b31a58b4-c194-428d-a62b-2727a073d4c2</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:00:07 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/d024ec6b-e859-401e-866d-f468d2f3f1c2">d024ec6b-e859-401e-866d-f468d2f3f1c2</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:07:56 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/a1ae543a-5ffd-4e71-a116-1e53402de3b8">a1ae543a-5ffd-4e71-a116-1e53402de3b8</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:16:54 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/514a8ddd-21eb-4851-b214-ba96be72b8e8">514a8ddd-21eb-4851-b214-ba96be72b8e8</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 10:19:48 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/af885895-9d89-45ae-b583-9be1eb1dab61">af885895-9d89-45ae-b583-9be1eb1dab61</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:00:09 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/629dfb46-1bbb-4dac-a710-f397ad883d1a">629dfb46-1bbb-4dac-a710-f397ad883d1a</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:15:45 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/38f18127-dbf3-4ff1-b7db-9160f9d13009">38f18127-dbf3-4ff1-b7db-9160f9d13009</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:00:08 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/c99e8580-b9b8-46eb-a7c6-bc4d6a100717">c99e8580-b9b8-46eb-a7c6-bc4d6a100717</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:15:46 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/b98c3694-72df-4e84-9424-e37e106c59fd">b98c3694-72df-4e84-9424-e37e106c59fd</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:00:09 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/c9860398-598b-4d11-bca1-459df11a1311">c9860398-598b-4d11-bca1-459df11a1311</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:16:54 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/c3efbf60-6d34-4911-9085-7c3ffdc849f2">c3efbf60-6d34-4911-9085-7c3ffdc849f2</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 10:19:45 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/873e813e-f4bc-45c2-9cd5-1347c0278598">873e813e-f4bc-45c2-9cd5-1347c0278598</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:16:52 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/e4112c75-f503-40ab-97d2-ea4d50f65150">e4112c75-f503-40ab-97d2-ea4d50f65150</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:16:53 UTC 2024</td>
+                <td>ASYNC_FAILED</td>
+                <td>2024-05-17 11:16:53</td>
+                <td>2024-05-17 11:16:53</td>
+                <td>14 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/63bc08d0-1329-4f09-b79b-5c64200f92b6">63bc08d0-1329-4f09-b79b-5c64200f92b6</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 10:19:47 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/c76d211e-fad1-4e75-ad5f-fc61ceb06047">c76d211e-fad1-4e75-ad5f-fc61ceb06047</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:15:46 UTC 2024</td>
+                <td>ASYNC_FAILED</td>
+                <td>2024-05-17 11:15:47</td>
+                <td>2024-05-17 11:15:47</td>
+                <td>10 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/a8b16928-9922-4452-8257-26e2386de086">a8b16928-9922-4452-8257-26e2386de086</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:00:07 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/7573827e-cc6d-431b-ac18-a5ac0a00044a">7573827e-cc6d-431b-ac18-a5ac0a00044a</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:00:07 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/6781120d-5adb-4445-b965-4620f1654b53">6781120d-5adb-4445-b965-4620f1654b53</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:23:30 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/e60181ea-a7dd-46fa-99f5-58baf29bed45">e60181ea-a7dd-46fa-99f5-58baf29bed45</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:15:45 UTC 2024</td>
+                <td>ASYNC_FAILED</td>
+                <td>2024-05-17 11:15:45</td>
+                <td>2024-05-17 11:15:45</td>
+                <td>26 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/a8fcd743-ff06-4f4d-8377-98cd3b9d3a30">a8fcd743-ff06-4f4d-8377-98cd3b9d3a30</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:07:55 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/f6ab2bff-24ec-4632-b696-aed437b95730">f6ab2bff-24ec-4632-b696-aed437b95730</a></td>
+                <td>GRRHIO</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 09:57:05 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/18ea2001-39f6-44ff-a3ed-b2e528df05d5">18ea2001-39f6-44ff-a3ed-b2e528df05d5</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 10:19:45 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/9a6ce598-2b09-46d5-8c43-25580f8ca77c">9a6ce598-2b09-46d5-8c43-25580f8ca77c</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:00:09 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+            <tr>
+                <td><a href="/admin/diagnostics/575a6030-6264-4235-a520-df65d490427f">575a6030-6264-4235-a520-df65d490427f</a></td>
+                <td>HEALTHELINK</td>
+                <td>device123</td>
+                <td>0.23.1</td>
+                <td>Fri May 17 11:00:07 UTC 2024</td>
+                <td>NOT_SUBMITTED</td>
+                <td></td>
+                <td></td>
+                <td>0 ms</td>
+        </tbody>
+    </table>
+</body>
+</html>
+
+✓ status code 200
+
+7 requests processed (7 succeeded, 0 failed)
