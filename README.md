@@ -52,9 +52,9 @@ All commands are run from the root of the project, from a terminal:
 
 Special commands
 
-| Command                                 | Action                                           |
-| :-------------------------------------- | :----------------------------------------------- |
-| `pnpm pnpm gen-regression-test-results` | Generate all regression test results             |
+| Command                            | Action                                                      |
+| :--------------------------------- | :---------------------------------------------------------- |
+| `pnpm gen-regression-test-results` | Generate all regression test results in `public/assurance`  |
 
 ## 👀 Want to learn more?
 
