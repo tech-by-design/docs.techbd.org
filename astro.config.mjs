@@ -21,6 +21,9 @@ export default defineConfig({
 						querySelector: 'pre[data-language="mermaid"]',
 				  	});`
 			}],
+			editLink: {
+				baseUrl: 'https://github.com/tech-by-design/docs.techbd.org/edit/main/',
+			},		
 			social: {
 				github: 'https://github.com/tech-by-design/docs.techbd.org',
 			},
