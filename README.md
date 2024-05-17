@@ -1,7 +1,5 @@
 # TechBD's public documentation site
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
-
 ## 🚀 Project Structure
 
 You'll see the following folders and files:
@@ -15,10 +13,12 @@ You'll see the following folders and files:
 │       │       └── YYYY-MM-DD/
 |       └── regression-test.sh
 ├── public/
-│   └── assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/
-│       ├── results/
-│           ├── YYYY-MM/YYYY-MM-DD-HH-MM-SS/
-│           └── latest/                      (symlink to most recent execution)
+│   └── assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/
+│       └── fhir-service-prime/
+│           └── results/
+│               ├── YYYY-MM/YYYY-MM-DD-HH-MM-SS/
+│               |   └── src -> /assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/YYYY-MM-DD/ (symlink to test scripts and fixtures) 
+│               └── latest -> YYYY-MM/YYYY-MM-DD-HH-MM-SS/ (symlink to most recent execution)
 ├── src/
 │   ├── assets/
 │   ├── content/
@@ -59,3 +59,5 @@ Special commands
 ## 👀 Want to learn more?
 
 Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+
+[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
