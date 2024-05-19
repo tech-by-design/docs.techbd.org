@@ -44,6 +44,10 @@ export default defineConfig({
 						}]
 				},
 				{
+					label: 'Developer Experience',
+					autogenerate: { directory: 'dx' },
+				},
+				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
