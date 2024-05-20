@@ -3,7 +3,7 @@ title: API Endpoints
 ---
 
 - **FHIR Server Base URL**: [`https://synthetic.fhir.api.devl.techbd.org`](https://synthetic.fhir.api.devl.techbd.org/metadata)
-- **Swagger API Documentation URL**:[https://synthetic.fhir.api.devl.techbd.org/dx/docs/api/swagger-v3/swagger-ui/index.html](https://synthetic.fhir.api.devl.techbd.org/dx/docs/api/swagger-v3/swagger-ui/index.html)
+- **Swagger API Documentation URL**: [`https://synthetic.fhir.api.devl.techbd.org/dx/docs/api/swagger-v3/swagger-ui/index.html`](https://synthetic.fhir.api.devl.techbd.org/dx/docs/api/swagger-v3/swagger-ui/index.html)
 - **FHIR Server Capabilities**: [`https://synthetic.fhir.api.devl.techbd.org/metadata`](https://synthetic.fhir.api.devl.techbd.org/metadata) (returns XML)
 - **Authentication**: None at this time, will be defined and deployed soon.
 - **Bundle Endpoints**:
