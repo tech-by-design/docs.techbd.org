@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regression-test-results.httpyac.junit.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : regression-test-results.httpyac.junit.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>/metadata endpoint should return FHIR CapabilityStatement
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#d7281c3d-3ae1-4e0a-9db5-d04f304170c1">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#3055aec6-4ac6-4ed4-8b1b-15dac805aa33">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#44277e2a-98f7-4f3d-a45b-1531e1290dec">response body exists</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#7b83666d-5707-436d-886f-a6776596cbc9">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#bfe89332-00c4-4553-9dd6-c050a15b303c">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2ef51f6d-8aec-48e4-a9b8-f3f570f62f33">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#7bdf2b15-8041-4f14-b64d-73a0988b7af3">Check Resource Type</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#c47ee102-b58d-47c2-8954-10ee1e7aa567">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#aff6d3f4-7b46-438c-9812-d5610c59bcd0">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#3ec3c33c-71f8-4a57-9293-257218a121d9">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#b5ffa301-47a0-4b3f-99c7-ce22fd4e32c3">check Result</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#badf9b22-a23a-47b3-9bfd-55e06c5d351f">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#18be73d7-2874-4a65-a91f-864a4247adac">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#6a6a1d47-cb8b-4b94-bb7d-ab9690c1429c">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#c46bb40e-a5f8-47de-afc2-56784499c704">check Result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#8f45642e-5cf6-48b1-a411-0f27c6d8d9e5">check Diagnostics</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#d1ab54e9-cfff-409b-8d08-799bb55d16e5">status code 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2a8bb407-a2d9-41e7-9304-c47651eff284">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#291da9f9-c14d-4157-82c1-cb6501f54f74">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#3d927924-2112-4b4f-b583-35fb444d3a75">check Result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#e9840e5a-e4db-43d3-849c-8bf3a467bf6a">check Diagnostics</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#11221149-4132-4b56-a41c-fb1d9f2e52ba">status code 201</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#0413e0ff-a350-4b97-9e0e-880e26c7adae">Check content-type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#81276ae9-490a-4061-bc50-ba1e56b9d405">response body exists</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#50fc0a76-9f89-4cec-87cf-327d644dff32">check Result</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/admin/diagnostics endpoint should be an HTML page
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#1171dde7-200d-466a-812b-089e10936915">status code 200</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: /metadata endpoint should return FHIR CapabilityStatement</h2>
+        <a id="6bc401c6-ed28-4cc3-b8fa-2eeb1904585a"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/metadata endpoint should return FHIR CapabilityStatement</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>12</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-24T12:13:37.713Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.36 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>3</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/metadata endpoint should return FHIR CapabilityStatement</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="d7281c3d-3ae1-4e0a-9db5-d04f304170c1"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.12 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="3055aec6-4ac6-4ed4-8b1b-15dac805aa33"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.12 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="44277e2a-98f7-4f3d-a45b-1531e1290dec"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.12 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json</h2>
+        <a id="2409acd1-6bd4-4c25-9afe-5c42e36a25dd"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>27</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-24T12:13:38.073Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.283 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>4</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate fhir-fixture-shinny-impl-guide-sample.json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7b83666d-5707-436d-886f-a6776596cbc9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.071 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="bfe89332-00c4-4553-9dd6-c050a15b303c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.071 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2ef51f6d-8aec-48e4-a9b8-f3f570f62f33"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.071 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7bdf2b15-8041-4f14-b64d-73a0988b7af3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check Resource Type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.071 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate fhir-fixture-unhappy-path-01.json</h2>
+        <a id="ab398e02-f0b5-4aa1-94ef-20d920c05e3a"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>49</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-24T12:13:38.357Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.078 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>4</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate fhir-fixture-unhappy-path-01.json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c47ee102-b58d-47c2-8954-10ee1e7aa567"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.019 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="aff6d3f4-7b46-438c-9812-d5610c59bcd0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.019 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="3ec3c33c-71f8-4a57-9293-257218a121d9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.019 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b5ffa301-47a0-4b3f-99c7-ce22fd4e32c3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.019 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json</h2>
+        <a id="ccb7dc5b-205a-42e0-81a0-da8325808679"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>73</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-24T12:13:38.435Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.456 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate fhir-fixture-shinny-bronx-unhappy-path.json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="badf9b22-a23a-47b3-9bfd-55e06c5d351f"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.091 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="18be73d7-2874-4a65-a91f-864a4247adac"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.091 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6a6a1d47-cb8b-4b94-bb7d-ab9690c1429c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.091 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="c46bb40e-a5f8-47de-afc2-56784499c704"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.091 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8f45642e-5cf6-48b1-a411-0f27c6d8d9e5"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Diagnostics</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.091 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json</h2>
+        <a id="7783b3ff-d80b-411d-a6d9-34b5cb84b5b8"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>99</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-24T12:13:38.892Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.083 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate fhir-fixture-shinny-healtheconnections-unhappy-path.json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="d1ab54e9-cfff-409b-8d08-799bb55d16e5"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.017 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2a8bb407-a2d9-41e7-9304-c47651eff284"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.017 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="291da9f9-c14d-4157-82c1-cb6501f54f74"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.017 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="3d927924-2112-4b4f-b583-35fb444d3a75"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.017 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e9840e5a-e4db-43d3-849c-8bf3a467bf6a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Diagnostics</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.017 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK</h2>
+        <a id="16f4fdaf-9520-44d7-82eb-571ac02ef199"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>124</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-24T12:13:38.975Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.344 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>4</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="11221149-4132-4b56-a41c-fb1d9f2e52ba"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 201</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.086 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0413e0ff-a350-4b97-9e0e-880e26c7adae"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>Check content-type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.086 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="81276ae9-490a-4061-bc50-ba1e56b9d405"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response body exists</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.086 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="50fc0a76-9f89-4cec-87cf-327d644dff32"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>check Result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.086 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /admin/diagnostics endpoint should be an HTML page</h2>
+        <a id="65c8f268-08e0-4180-83df-a25ef877be47"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/admin/diagnostics endpoint should be an HTML page</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>144</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-05-24T12:13:39.319Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-22/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.077 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>1</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/admin/diagnostics endpoint should be an HTML page</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="1171dde7-200d-466a-812b-089e10936915"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status code 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.077 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>
