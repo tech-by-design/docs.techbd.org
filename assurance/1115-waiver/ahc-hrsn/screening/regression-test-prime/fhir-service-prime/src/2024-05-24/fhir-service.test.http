@@ -43,9 +43,9 @@ GET {{hostName}}/admin/observe/interaction/recent.json HTTP/1.1
 POST {{hostName}}/Bundle/$validate HTTP/1.1 
 Content-Type: {{contentType}}
 Accept : application/fhir+json;charset=utf-8
-TECH_BD_FHIR_SERVICE_QE_IDENTIFIER: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
-TECH_BD_INTERACTION_PERSISTENCE: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
-TECH_BD_FHIR_SERVICE_STRUCT_DEFN_PROFILE_URI: {{TECH_BD_FHIR_SERVICE_STRUCT_DEFN_PROFILE_URI_SHINNY_SDOH}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
+X-TechBD-FHIR-Profile-URI: {{TECH_BD_FHIR_SERVICE_STRUCT_DEFN_PROFILE_URI_SHINNY_SDOH}}
 ?? status == 200
 ?? header content-type == application/fhir+json;charset=utf-8
 ?? response.body  != null
@@ -63,8 +63,8 @@ TECH_BD_FHIR_SERVICE_STRUCT_DEFN_PROFILE_URI: {{TECH_BD_FHIR_SERVICE_STRUCT_DEFN
 POST {{hostName}}/Bundle/$validate HTTP/1.1
 Content-Type: {{contentType}}
 Accept : application/fhir+json;charset=utf-8
-TECH_BD_FHIR_SERVICE_QE_IDENTIFIER: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
-TECH_BD_INTERACTION_PERSISTENCE: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
 ?? status == 200
 ?? header content-type == application/fhir+json;charset=utf-8
 ?? response.body  != null
@@ -82,8 +82,8 @@ TECH_BD_INTERACTION_PERSISTENCE: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
 POST {{hostName}}/Bundle/$validate HTTP/1.1
 Content-Type: {{contentType}}
 Accept : application/fhir+json;charset=utf-8
-TECH_BD_FHIR_SERVICE_QE_IDENTIFIER: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
-TECH_BD_INTERACTION_PERSISTENCE: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
 ?? status == 200
 ?? header content-type == application/fhir+json;charset=utf-8
 ?? response.body  != null
@@ -100,8 +100,8 @@ TECH_BD_INTERACTION_PERSISTENCE: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
 POST {{hostName}}/Bundle/$validate HTTP/1.1
 Content-Type: {{contentType}}
 Accept : application/fhir+json;charset=utf-8
-TECH_BD_FHIR_SERVICE_QE_IDENTIFIER: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
-TECH_BD_INTERACTION_PERSISTENCE: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
 ?? status == 200
 ?? header content-type == application/fhir+json;charset=utf-8
 ?? response.body  != null
@@ -115,7 +115,7 @@ TECH_BD_INTERACTION_PERSISTENCE: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
 ### /Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK
 
 POST {{hostName}}/Bundle/?qe=HEALTHELINK HTTP/1.1
-TECH_BD_INTERACTION_PERSISTENCE: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
 ?? status != 201
 ?? response.body  != null
 
