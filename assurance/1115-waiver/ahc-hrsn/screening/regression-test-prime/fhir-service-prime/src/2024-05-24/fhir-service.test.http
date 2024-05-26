@@ -16,11 +16,13 @@
 @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER = HEALTHELINK
 
 # ${cwd()} means "current working directory" ($MAVEN_ROOT)
-@TECH_BD_INTERACTION_PERSISTENCE_FS = { "nature": "fs", "basePath": "${cwd()}/TECHBD_INTERACTIONS" }
+@TECH_BD_INTERACTION_PERSISTENCE_FS = { "nature": "fs", "fsPath": "${cwd()}/TECHBD_INTERACTIONS/${formattedDateNow('yyyy/MM/dd/HH')}/${artifactId}.json" }
 
 # VFS allows all providers from https://commons.apache.org/proper/commons-vfs/
-# If you want to see where the tmp:// file is use `$ find /tmp -name "*tempfs*"` to find the root
+# If you want to see where the tmp:// file is use `$ find /tmp -name "*tempfs*"` to find the root on the server;
+# If you want to use SFTP, put in the proper username and password where it says *****:*****
 @TECH_BD_INTERACTION_PERSISTENCE_VFS_TMP = { "nature": "vfs", "vfsUri": "tmp://techbd.org/interaction-artifacts/${formattedDateNow('yyyy/MM/dd/HH')}/${artifactId}.json" }
+@TECH_BD_INTERACTION_PERSISTENCE_VFS_SFTP = { "nature": "vfs", "vfsUri": "sftp://*****:******@synthetic.sftp.techbd.org:22/log/synthetic.fhir.api.techbd.org/{{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}/interaction-artifacts/${formattedDateNow('yyyy/MM/dd/HH')}/${artifactId}.json" }
 @TECH_BD_INTERACTION_PERSISTENCE_VFS_LOCAL = { "nature": "vfs", "vfsUri": "file://${cwd()}/techbd.org/interaction-artifacts/${formattedDateNow('yyyy/MM/dd/HH')}/${artifactId}.json" }
 
 @TECH_BD_FHIR_SERVICE_STRUCT_DEFN_PROFILE_URI_SHINNY_SDOH = https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json
@@ -29,7 +31,7 @@
 
 GET {{hostName}}/metadata
 Content-Type: {{contentType}}
-X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_VFS_LOCAL}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_VFS_TMP}}
 ?? status == 200
 ?? header content-type == text/html;charset=UTF-8
 ?? response.body  != null
