@@ -26,6 +26,7 @@
 @TECH_BD_INTERACTION_PERSISTENCE_VFS_LOCAL = { "nature": "vfs", "vfsUri": "file://${cwd()}/techbd.org/interaction-artifacts/${formattedDateNow('yyyy/MM/dd/HH')}/${artifactId}.json" }
 
 @TECH_BD_INTERACTION_PERSISTENCE_EMAIL = { "nature": "email", "from": "toroj11859@qiradio.com", "to": "toroj11859@qiradio.com", "subject": "test FHIR email" }
+@TECH_BD_INTERACTION_PERSISTENCE_DUCKDB = { "nature": "duckdb", "motherDuck": { "db": "interactions", "token": "PUT TOKEN VALUE HERE" } }
 
 @TECH_BD_FHIR_SERVICE_STRUCT_DEFN_PROFILE_URI_SHINNY_SDOH = https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json
 
