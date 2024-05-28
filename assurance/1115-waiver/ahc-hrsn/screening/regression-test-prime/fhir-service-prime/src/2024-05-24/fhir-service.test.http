@@ -29,13 +29,17 @@
 @TECH_BD_INTERACTION_PERSISTENCE_DUCKDB = { "nature": "duckdb", "motherDuck": { "db": "interactions", "token": "*** TOKEN *** " } }
 @TECH_BD_INTERACTION_PERSISTENCE_DUCKDB_LOCAL = { "nature": "duckdb" }
 
+@TECH_BD_INTERACTION_PERSISTENCE_POSTGRES_NEON = { "nature": "postgres", "url": "jdbc:postgresql://2.aws.neon.tech/persistence?user=persistence&password=persistence&sslmode=require" }
+
 @TECH_BD_FHIR_SERVICE_STRUCT_DEFN_PROFILE_URI_SHINNY_SDOH = https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json
+
+@TECH_BD_INTERACTION_PERSISTENCE_STRATEGY = [{{TECH_BD_INTERACTION_PERSISTENCE_POSTGRES_NEON}}, {{TECH_BD_INTERACTION_PERSISTENCE_DUCKDB}}]
 
 ### /metadata endpoint should return FHIR CapabilityStatement
 
 GET {{hostName}}/metadata
 Content-Type: {{contentType}}
-X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_VFS_TMP}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_STRATEGY}}
 ?? status == 200
 ?? header content-type == text/html;charset=UTF-8
 ?? response.body  != null
@@ -55,7 +59,7 @@ POST {{hostName}}/Bundle/$validate HTTP/1.1
 Content-Type: {{contentType}}
 Accept : application/fhir+json;charset=utf-8
 X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
-X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_STRATEGY}}
 X-TechBD-Interaction-Provenance: { "nature": "integration-test", "test-case": "fhir-fixture-shinny-impl-guide-sample.json" }
 X-TechBD-FHIR-Profile-URI: {{TECH_BD_FHIR_SERVICE_STRUCT_DEFN_PROFILE_URI_SHINNY_SDOH}}
 ?? status == 200
@@ -76,7 +80,7 @@ POST {{hostName}}/Bundle/$validate HTTP/1.1
 Content-Type: {{contentType}}
 Accept : application/fhir+json;charset=utf-8
 X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
-X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_STRATEGY}}
 ?? status == 200
 ?? header content-type == application/fhir+json;charset=utf-8
 ?? response.body  != null
@@ -95,7 +99,7 @@ POST {{hostName}}/Bundle/$validate HTTP/1.1
 Content-Type: {{contentType}}
 Accept : application/fhir+json;charset=utf-8
 X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
-X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_STRATEGY}}
 ?? status == 200
 ?? header content-type == application/fhir+json;charset=utf-8
 ?? response.body  != null
@@ -113,7 +117,7 @@ POST {{hostName}}/Bundle/$validate HTTP/1.1
 Content-Type: {{contentType}}
 Accept : application/fhir+json;charset=utf-8
 X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
-X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_STRATEGY}}
 ?? status == 200
 ?? header content-type == application/fhir+json;charset=utf-8
 ?? response.body  != null
@@ -127,7 +131,7 @@ X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}
 ### /Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK
 
 POST {{hostName}}/Bundle/?qe=HEALTHELINK HTTP/1.1
-X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_FS}}
+X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_STRATEGY}}
 ?? status != 201
 ?? response.body  != null
 
