@@ -1,11 +1,11 @@
 ## File evaluation against various validators
 
-* Validate against legacy public inferno site SHIN-NY IG Version 4.0 (Local Instance).
-* Validate against new official public site SHIN-NY IG Version 4.0 (Local Instance).
-* Validate against new official local docker site SHIN-NY IG Version 4.0 (Local Instance).
-* Validate against custom 1115 FHIR server  SHIN-NY IG Version 4.0 (Local Instance).
-
-### updates from SHIN-NY IG Version 3.0 and SHIN-NY IG Version 4.0(draft)
+* Validate the FHIR document on the [Legacy Public Inferno Site](https://inferno.healthit.gov/validator/) using SHIN-NY IG Version 0.4.0.
+* Validate the FHIR document on the [Official Public Site](https://validator.fhir.org/) using SHIN-NY IG Version 0.4.0.
+* Validate the FHIR document on the Official Local Docker Site using SHIN-NY IG Version 0.4.0.
+* Validate the FHIR document on the Custom 1115 FHIR Server using SHIN-NY IG Version 0.4.0.
+  
+### updates from SHIN-NY IG Version 0.3.0 and SHIN-NY IG Version 0.4.0
 
 * Added more bundle constraints.
 * bundle.total - max value is set to 1 from 0.
@@ -19,3 +19,4 @@
 * bundle.entry.response.etag  - max value is set to 1 from 0.
 * bundle.signature  -  max value is set to 1 from 0.
 * bundle.entry.responselastModified - max value is set to 1 from 0.
+  
