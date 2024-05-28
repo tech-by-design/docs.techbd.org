@@ -3,7 +3,7 @@
 * Validate the FHIR document on the [Legacy Public Inferno Site](https://inferno.healthit.gov/validator/) using SHIN-NY IG Version 0.4.0.
 * Validate the FHIR document on the [Official Public Site](https://validator.fhir.org/) using SHIN-NY IG Version 0.4.0.
 * Validate the FHIR document on the Official Local Docker Site using SHIN-NY IG Version 0.4.0.
-* Validate the FHIR document on the Custom 1115 FHIR Server using SHIN-NY IG Version 0.4.0.
+* Validate the FHIR document on the [Custom 1115 FHIR Server](https://n9r2j0ii52.execute-api.ap-south-1.amazonaws.com/Prod/Bundle/$validate) using SHIN-NY IG Version 0.4.0.
   
 ### updates from SHIN-NY IG Version 0.3.0 and SHIN-NY IG Version 0.4.0
 
