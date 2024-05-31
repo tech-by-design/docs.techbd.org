@@ -22,7 +22,7 @@ printf "NodeJS " && node --version
 printf "httpyac " && httpyac --version
 
 # needed by fhir-service.test.http
-export HOST="${HOST:-https://synthetic.fhir.api.stage.techbd.org}"
+export HOST="${HOST:-https://synthetic.fhir.api.techbd.org}"
 echo "HOST $HOST"
 
 httpyac $ASSURANCE_FHIR_SRC_DIR/fhir-service.test.http --all > $TIMESTAMPPED_ASSURANCE_FHIR_RESULTS_DIR/regression-test-results.httpyac.txt
