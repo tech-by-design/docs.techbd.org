@@ -7,10 +7,10 @@ title: Regression Test Results
 ### TechBD FHIR API test scripts and results
 
 Learn about API endpoints by reviewing [TechBD's FHIR API Test Script](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/src/fhir-service.test.http). 
-- [Latest Test Fixtures](https://github.com/tech-by-design/docs.techbd.org/tree/main/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-05-24) (generated test cases)
+- [Latest Test Fixtures](https://github.com/tech-by-design/docs.techbd.org/tree/main/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-10) (generated test cases)
 - [Latest Test Results (HTML from httpYac)](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/regression-test-results.httpyac.junit.xml.html)
 - [Latest Test Results (httpYac raw output)](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/regression-test-results.httpyac.txt)
-- [Previous Test Results](https://github.com/tech-by-design/docs.techbd.org/tree/main/public/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/2024/05)
+- [Previous Test Results](https://github.com/tech-by-design/docs.techbd.org/tree/main/public/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/2024/06)
 
 
 #### Postman-based API test scripts
