@@ -4,7 +4,7 @@ title: CSV Validation Results
 
 ### CSV Validation
 
-- [Files Used](https://github.com/tech-by-design/docs.techbd.org/tree/main/public/assurance/1115-waiver/ahc-hrsn/screening/csv-schema/datapackage/data)
+- [Files Used](https://github.com/tech-by-design/docs.techbd.org/tree/main/assurance/1115-waiver/ahc-hrsn/screening/csv-schema/datapackage/data)
 
 #### CSV Validation Using frictionless-py  
 
