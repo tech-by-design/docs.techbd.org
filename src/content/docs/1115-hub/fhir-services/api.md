@@ -11,6 +11,9 @@ title: API Endpoints
   -	[https://synthetic.fhir.api.devl.techbd.org/docs/api/interactive/swagger-ui/index.html](https://synthetic.fhir.api.devl.techbd.org/docs/api/interactive/swagger-ui/index.html)  (development environment)
   - [https://synthetic.fhir.api.stage.techbd.org/docs/api/interactive/swagger-ui/index.html](https://synthetic.fhir.api.stage.techbd.org/docs/api/interactive/swagger-ui/index.html) (staging environment)
   - [https://synthetic.fhir.api.techbd.org/docs/api/interactive/swagger-ui/index.html](https://synthetic.fhir.api.techbd.org/docs/api/interactive/swagger-ui/index.html)  (production environment)
+  
+- **Instructions for Using Swagger API Documentation For API Testing**:
+  -	[Instruction Video for Using Swagger API Documentation For API Testing](https://github.com/tech-by-design/docs.techbd.org/tree/main/src/content/docs/1115-hub/fhir-services/support/)
 
 - **FHIR Server Capabilities**: [`https://synthetic.fhir.api.techbd.org/metadata`](https://synthetic.fhir.api.techbd.org/metadata) (returns XML)
 - **Authentication**: None at this time, will be defined and deployed soon.
