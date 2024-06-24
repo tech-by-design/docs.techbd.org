@@ -102,12 +102,12 @@ X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_STR
 
 ### /Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as HEALTHeLINK
 
-POST {{hostName}}/Bundle/ HTTP/1.1
+POST {{hostName}}/Bundle HTTP/1.1
 Content-Type: {{contentType}}
 X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
 X-TechBD-DataLake-API-URL: https://40lafnwsw7.execute-api.us-east-1.amazonaws.com/dev
 X-TechBD-Interaction-Persistence-Strategy: {{TECH_BD_INTERACTION_PERSISTENCE_STRATEGY}}
-?? status != 200
+?? status == 200
 ?? response.body  != null
 
 < TestCase300.json
