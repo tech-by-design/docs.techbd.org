@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="httpyac" tests="26" errors="0" disabled="0" failures="9" time="1.596">
+  <testsuite name="/metadata endpoint should return FHIR CapabilityStatement" tests="3" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http" time="0.548">
+    <properties>
+      <property name="title" value="/metadata endpoint should return FHIR CapabilityStatement"/>
+      <property name="line" value="18"/>
+      <property name="timestamp" value="2024-06-24T17:14:28.173Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.183" assertions="1"/>
+    <testcase name="content-type == text/html;charset=UTF-8" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.183" assertions="1"/>
+    <testcase name="response.body != null" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.183" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TestCase300.json" tests="7" errors="0" failures="4" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http" time="0.210">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TestCase300.json"/>
+      <property name="line" value="27"/>
+      <property name="timestamp" value="2024-06-24T17:14:28.721Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TestCase300.json" time="0.030" assertions="1"/>
+    <testcase name="content-type == application/fhir+json;charset=utf-8" classname="/Bundle/$validate should validate TestCase300.json" time="0.030" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8 - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="content-type (application/json) == application/fhir+json;charset=utf-8"/>
+      </properties>
+      <failure message="content-type == application/fhir+json;charset=utf-8" type="AssertionError [ERR_ASSERTION]">{"message":"content-type (application/json) == application/fhir+json;charset=utf-8","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TestCase300.json" time="0.030" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TestCase300.json" time="0.030" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == ERROR" classname="/Bundle/$validate should validate TestCase300.json" time="0.030" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (FATAL) == ERROR - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (FATAL) == ERROR"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == ERROR" type="AssertionError [ERR_ASSERTION]">{"message":"response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (FATAL) == ERROR","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (FATAL) == ERROR\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == 1" classname="/Bundle/$validate should validate TestCase300.json" time="0.030" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (null) == 1 - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (null) == 1"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == 1" type="AssertionError [ERR_ASSERTION]">{"message":"response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (null) == 1","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (null) == 1\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == 91" classname="/Bundle/$validate should validate TestCase300.json" time="0.030" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (null) == 91 - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (null) == 91"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == 91" type="AssertionError [ERR_ASSERTION]">{"message":"response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (null) == 91","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (null) == 91\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TestCase301.json" tests="7" errors="0" failures="4" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http" time="0.329">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TestCase301.json"/>
+      <property name="line" value="42"/>
+      <property name="timestamp" value="2024-06-24T17:14:28.932Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TestCase301.json" time="0.047" assertions="1"/>
+    <testcase name="content-type == application/fhir+json;charset=utf-8" classname="/Bundle/$validate should validate TestCase301.json" time="0.047" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8 - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="content-type (application/json) == application/fhir+json;charset=utf-8"/>
+      </properties>
+      <failure message="content-type == application/fhir+json;charset=utf-8" type="AssertionError [ERR_ASSERTION]">{"message":"content-type (application/json) == application/fhir+json;charset=utf-8","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TestCase301.json" time="0.047" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TestCase301.json" time="0.047" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" classname="/Bundle/$validate should validate TestCase301.json" time="0.047" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (ERROR) == FATAL - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (ERROR) == FATAL"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" type="AssertionError [ERR_ASSERTION]">{"message":"response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (ERROR) == FATAL","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (ERROR) == FATAL\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" classname="/Bundle/$validate should validate TestCase301.json" time="0.047" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (1) == - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (1) =="/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" type="AssertionError [ERR_ASSERTION]">{"message":"response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (1) ==","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (1) ==\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" classname="/Bundle/$validate should validate TestCase301.json" time="0.047" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (91) == - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (91) =="/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" type="AssertionError [ERR_ASSERTION]">{"message":"response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (91) ==","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (91) ==\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TestCase302.json" tests="7" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http" time="0.165">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TestCase302.json"/>
+      <property name="line" value="58"/>
+      <property name="timestamp" value="2024-06-24T17:14:29.261Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TestCase302.json" time="0.024" assertions="1"/>
+    <testcase name="content-type == application/fhir+json;charset=utf-8" classname="/Bundle/$validate should validate TestCase302.json" time="0.024" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8 - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="content-type (application/json) == application/fhir+json;charset=utf-8"/>
+      </properties>
+      <failure message="content-type == application/fhir+json;charset=utf-8" type="AssertionError [ERR_ASSERTION]">{"message":"content-type (application/json) == application/fhir+json;charset=utf-8","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TestCase302.json" time="0.024" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TestCase302.json" time="0.024" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" classname="/Bundle/$validate should validate TestCase302.json" time="0.024" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" classname="/Bundle/$validate should validate TestCase302.json" time="0.024" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" classname="/Bundle/$validate should validate TestCase302.json" time="0.024" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER" tests="2" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http" time="0.344">
+    <properties>
+      <property name="title" value="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER"/>
+      <property name="line" value="73"/>
+      <property name="timestamp" value="2024-06-24T17:14:29.426Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER" time="0.172" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER" time="0.172" assertions="1"/>
+  </testsuite>
+</testsuites>

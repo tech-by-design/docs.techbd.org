@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regression-test-results.httpyac.junit.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : regression-test-results.httpyac.junit.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>/metadata endpoint should return FHIR CapabilityStatement
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#4e75c3a6-e475-4c93-8f08-92d8eef0106a">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#cbf46a07-628d-4ee7-a7a8-11e13af89327">content-type == text/html;charset=UTF-8</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#ec6355ca-28ab-4c90-8a62-4dcb0e9248d7">response.body != null</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate TestCase300.json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#96c88d31-c45a-48f3-b083-2cd4b8786464">status == 200</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#c05a58af-3695-4652-802e-8b19b0e3defd">content-type == application/fhir+json;charset=utf-8</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#054f1386-9f50-4ff0-9e4a-d5d443f05b3b">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2a3e24be-5e87-4551-a415-b84fb9845654">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#7277041e-6900-4f46-946e-923e9defd394">response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == ERROR</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#12b0f13c-6454-4e08-b850-0d09db667ab3">response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == 1</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#56dc5aaf-e714-43fd-8e84-8d0ef73e96de">response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == 91</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate TestCase301.json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#0c93d90e-13ed-49ae-a4a2-c6e0083a03fb">status == 200</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#af6c6786-752c-4a99-958e-eb0ac5c9af4e">content-type == application/fhir+json;charset=utf-8</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#95a2902e-239f-445b-8b85-16770e98cfe4">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#9be94a89-741f-4f5b-bdc1-976be015e39a">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#fb95dd63-2779-47a6-b51c-8fa55e675cf5">response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#57b1c08e-2338-4296-9b25-665b1e5aa4b9">response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#61d7ad99-bce1-4ae0-8d3a-00dc6716253f">response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate TestCase302.json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#74d9f685-8b9d-496a-a57b-9a11c645c2a8">status == 200</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#5b4ad375-b995-49a9-a173-1908792eebf3">content-type == application/fhir+json;charset=utf-8</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#8e31185a-7168-4684-8d67-c0cf6e6a4359">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#a0feb24b-4100-4b9c-98b4-674120da1516">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#370e4ee8-c2a4-4541-bd99-d85bb81f21d2">response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#1b136b8c-22cb-42e7-a32b-d80fcf13da7e">response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#f0498b6f-a5a9-4500-bec5-9b226288da21">response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#fe79f007-1b37-453c-82e5-389bc94e6aa0">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#a2465561-dc4d-46e0-a0da-5a874c326062">response.body != null</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    <li><a href="#c05a58af-3695-4652-802e-8b19b0e3defd">[F] /Bundle/$validate should validate TestCase300.json : content-type == application/fhir+json;charset=utf-8</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#7277041e-6900-4f46-946e-923e9defd394">[F] /Bundle/$validate should validate TestCase300.json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == ERROR</a></li>
+                    
+                    
+                    
+                    <li><a href="#12b0f13c-6454-4e08-b850-0d09db667ab3">[F] /Bundle/$validate should validate TestCase300.json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == 1</a></li>
+                    
+                    
+                    
+                    <li><a href="#56dc5aaf-e714-43fd-8e84-8d0ef73e96de">[F] /Bundle/$validate should validate TestCase300.json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == 91</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    <li><a href="#af6c6786-752c-4a99-958e-eb0ac5c9af4e">[F] /Bundle/$validate should validate TestCase301.json : content-type == application/fhir+json;charset=utf-8</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#fb95dd63-2779-47a6-b51c-8fa55e675cf5">[F] /Bundle/$validate should validate TestCase301.json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</a></li>
+                    
+                    
+                    
+                    <li><a href="#57b1c08e-2338-4296-9b25-665b1e5aa4b9">[F] /Bundle/$validate should validate TestCase301.json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</a></li>
+                    
+                    
+                    
+                    <li><a href="#61d7ad99-bce1-4ae0-8d3a-00dc6716253f">[F] /Bundle/$validate should validate TestCase301.json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    <li><a href="#5b4ad375-b995-49a9-a173-1908792eebf3">[F] /Bundle/$validate should validate TestCase302.json : content-type == application/fhir+json;charset=utf-8</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: /metadata endpoint should return FHIR CapabilityStatement</h2>
+        <a id="037b94b5-5237-49f4-99d6-8869d1bca6cf"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/metadata endpoint should return FHIR CapabilityStatement</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>18</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-06-24T17:14:28.173Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.548 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>3</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/metadata endpoint should return FHIR CapabilityStatement</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="4e75c3a6-e475-4c93-8f08-92d8eef0106a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.183 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="cbf46a07-628d-4ee7-a7a8-11e13af89327"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>content-type == text/html;charset=UTF-8</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.183 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="ec6355ca-28ab-4c90-8a62-4dcb0e9248d7"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.183 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate TestCase300.json</h2>
+        <a id="f0db239c-4e25-4230-885f-0fd1645c6fdb"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate TestCase300.json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>27</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-06-24T17:14:28.721Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.21 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>7</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>4</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate TestCase300.json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="96c88d31-c45a-48f3-b083-2cd4b8786464"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="c05a58af-3695-4652-802e-8b19b0e3defd"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>content-type == application/fhir+json;charset=utf-8</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>content-type == application/fhir+json;charset=utf-8</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;content-type (application/json) == application/fhir+json;charset=utf-8&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8 - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>content-type (application/json) == application/fhir+json;charset=utf-8</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="054f1386-9f50-4ff0-9e4a-d5d443f05b3b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2a3e24be-5e87-4551-a415-b84fb9845654"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="7277041e-6900-4f46-946e-923e9defd394"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == ERROR</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == ERROR</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (FATAL) == ERROR&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (FATAL) == ERROR\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (FATAL) == ERROR - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (FATAL) == ERROR</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="12b0f13c-6454-4e08-b850-0d09db667ab3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == 1</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == 1</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (null) == 1&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (null) == 1\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (null) == 1 - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (null) == 1</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="56dc5aaf-e714-43fd-8e84-8d0ef73e96de"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == 91</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == 91</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (null) == 91&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (null) == 91\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (null) == 91 - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (null) == 91</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate TestCase301.json</h2>
+        <a id="f2b7fc82-a82e-4d06-b0b3-73beecb3283b"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate TestCase301.json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>42</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-06-24T17:14:28.932Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.329 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>7</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>4</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate TestCase301.json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0c93d90e-13ed-49ae-a4a2-c6e0083a03fb"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.047 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="af6c6786-752c-4a99-958e-eb0ac5c9af4e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>content-type == application/fhir+json;charset=utf-8</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.047 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>content-type == application/fhir+json;charset=utf-8</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;content-type (application/json) == application/fhir+json;charset=utf-8&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8 - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>content-type (application/json) == application/fhir+json;charset=utf-8</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="95a2902e-239f-445b-8b85-16770e98cfe4"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.047 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="9be94a89-741f-4f5b-bdc1-976be015e39a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.047 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="fb95dd63-2779-47a6-b51c-8fa55e675cf5"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.047 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (ERROR) == FATAL&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (ERROR) == FATAL\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (ERROR) == FATAL - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity (ERROR) == FATAL</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="57b1c08e-2338-4296-9b25-665b1e5aa4b9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.047 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (1) ==&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (1) ==\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (1) == - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line (1) ==</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="61d7ad99-bce1-4ae0-8d3a-00dc6716253f"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.047 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (91) ==&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (91) ==\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (91) == - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column (91) ==</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate TestCase302.json</h2>
+        <a id="d5717569-b438-4a5f-897b-8267dcbddaf7"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate TestCase302.json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>58</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-06-24T17:14:29.261Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.165 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>7</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>1</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate TestCase302.json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="74d9f685-8b9d-496a-a57b-9a11c645c2a8"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.024 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="5b4ad375-b995-49a9-a173-1908792eebf3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>content-type == application/fhir+json;charset=utf-8</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.024 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>content-type == application/fhir+json;charset=utf-8</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;content-type (application/json) == application/fhir+json;charset=utf-8&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8\n    at /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: content-type (application/json) == application/fhir+json;charset=utf-8 - /opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.14.0/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>content-type (application/json) == application/fhir+json;charset=utf-8</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8e31185a-7168-4684-8d67-c0cf6e6a4359"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.024 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="a0feb24b-4100-4b9c-98b4-674120da1516"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.024 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="370e4ee8-c2a4-4541-bd99-d85bb81f21d2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.024 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="1b136b8c-22cb-42e7-a32b-d80fcf13da7e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.024 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f0498b6f-a5a9-4500-bec5-9b226288da21"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.024 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER</h2>
+        <a id="bc3fa1df-6e65-4ffa-b3d8-7b958f55754d"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>73</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-06-24T17:14:29.426Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-24/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.344 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>2</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle should validate and submit fhir-fixture-shinny-impl-guide-sample.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fe79f007-1b37-453c-82e5-389bc94e6aa0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.172 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="a2465561-dc4d-46e0-a0da-5a874c326062"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.172 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>
