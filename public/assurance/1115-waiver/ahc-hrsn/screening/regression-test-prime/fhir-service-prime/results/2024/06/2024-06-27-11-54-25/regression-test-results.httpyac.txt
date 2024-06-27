@@ -1,0 +1,446 @@
+
+---------------------
+
+=== /metadata endpoint should return FHIR CapabilityStatement ===
+
+GET https://synthetic.fhir.api.techbd.org/metadata
+accept-encoding: gzip, deflate, br
+accept: */*
+content-type: application/json
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-language: en-US
+content-length: 2166
+content-type: text/html;charset=UTF-8
+date: Thu, 27 Jun 2024 11:54:27 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs f145aaa6-29cc-4fa7-ba91-f4a7adcb0893] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/06/27/11/f145aaa6-29cc-4fa7-ba91-f4a7adcb0893.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <status value="active"></status>
+    <date value="27 Jun 2024 11:54"></date>
+    <publisher value="TechBD"></publisher>
+    <kind value="instance"></kind>
+    <software>
+        <name value="TechBD FHIR Server"></name>
+        <version value="0.67.2"></version>
+    </software>
+    <implementation>
+        <description value="1115-Hub FHIR"></description>
+        <url value="https://synthetic.fhir.api.techbd.org"></url>
+    </implementation>
+    <fhirVersion value="4.0.1"></fhirVersion>
+    <format value="application/fhir+xml"></format>
+    <format value="application/fhir+json"></format>
+    <rest>
+        <mode value="server"></mode>
+        <resource>
+            <type value="Bundle"></type>
+            <profile value="https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json"></profile>
+            <interaction>
+                <code value="create"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+            <searchParam>
+                <name value="name"></name>
+                <type value="string"></type>
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="OperationDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+        </resource>
+        <resource>
+            <type value="StructureDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+        </resource>
+        <operation>
+            <name value="validate"></name>
+            <definition value="https://synthetic.fhir.api.techbd.org/OperationDefinition/Bundle--validate"></definition>
+        </operation>
+    </rest>
+</CapabilityStatement>
+✓ status == 200
+✓ content-type == text/html;charset=UTF-8
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate Test​ServiceRequest.json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: PARTNER1-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 27 Jun 2024 11:54:27 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs bcf6ace6-9b62-4f4e-8990-877f4a5d1706] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/06/27/11/bcf6ace6-9b62-4f4e-8990-877f4a5d1706.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "fhirProfileVersion": "0.6.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-06-24T13:38:36.389914145Z",
+          "constructedAt": "2024-06-24T13:38:36.660804754Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-06-27T11:54:27.449016593Z",
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-06-27T11:54:27.448130946Z",
+        "valid": false
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.235.109",
+      "deviceName": "ip-10-0-235-109.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate TestTask.json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 17772
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: PARTNER1-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 27 Jun 2024 11:54:27 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 71049577-350e-43be-96af-331e7dd9c3a1] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/06/27/11/71049577-350e-43be-96af-331e7dd9c3a1.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "fhirProfileVersion": "0.6.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-06-24T13:38:36.389914145Z",
+          "constructedAt": "2024-06-24T13:38:36.660804754Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-06-27T11:54:27.681513879Z",
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-06-27T11:54:27.680725670Z",
+        "valid": false
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.235.109",
+      "deviceName": "ip-10-0-235-109.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate TestTaskCompleted.json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 10941
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: PARTNER1-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 27 Jun 2024 11:54:27 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs aae0e07d-ca88-4a4a-9102-78dc989278dc] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/06/27/11/aae0e07d-ca88-4a4a-9102-78dc989278dc.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "fhirProfileVersion": "0.6.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-06-24T13:38:36.389914145Z",
+          "constructedAt": "2024-06-24T13:38:36.660804754Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-06-27T11:54:27.886925285Z",
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-06-27T11:54:27.886270449Z",
+        "valid": false
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.235.109",
+      "deviceName": "ip-10-0-235-109.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate Test​ProcedureCompleted.json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 12618
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: PARTNER1-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 968
+content-type: application/json
+date: Thu, 27 Jun 2024 11:54:28 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs e21fcfd0-db7f-4c2d-987d-86ba2ceab138] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/06/27/11/e21fcfd0-db7f-4c2d-987d-86ba2ceab138.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "fhirProfileVersion": "0.6.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-06-24T13:38:36.389914145Z",
+          "constructedAt": "2024-06-24T13:38:36.660804754Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1861: Failed to parse JSON encoded FHIR content: Unexpected character ('}' (code 125)): was expecting double-quote to start field name\n at [line: 52, column: 9]",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-06-27T11:54:28.169236001Z",
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-06-27T11:54:28.167636792Z",
+        "valid": false
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.235.109",
+      "deviceName": "ip-10-0-235-109.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== Bundle should validate and submit Test​ServiceRequest.json.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle?include-incoming-payload-in-db=true
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: PARTNER1-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 27 Jun 2024 11:54:28 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 451e882e-5e3d-43fb-ae2f-ce9981de528a] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/06/27/11/451e882e-5e3d-43fb-ae2f-ce9981de528a.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "fhirProfileVersion": "0.6.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-06-24T13:38:36.389914145Z",
+          "constructedAt": "2024-06-24T13:38:36.660804754Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-06-27T11:54:28.411426344Z",
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-06-27T11:54:28.410804387Z",
+        "valid": false
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.235.109",
+      "deviceName": "ip-10-0-235-109.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+
+6 requests processed (6 succeeded, 0 failed)
