@@ -85,7 +85,7 @@ X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
 
 ### Bundle should validate and submit Test​ServiceRequest.json.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER
 # DO NOT use any header variables which are not required by QEs
-POST {{hostName}}/Bundle?include-incoming-payload-in-db=true HTTP/1.1
+POST {{hostName}}/Bundle HTTP/1.1
 Content-Type: {{contentType}}
 X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
 ?? status == 200
