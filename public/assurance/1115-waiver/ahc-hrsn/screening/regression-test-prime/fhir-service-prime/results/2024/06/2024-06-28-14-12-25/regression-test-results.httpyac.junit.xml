@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="httpyac" tests="39" errors="0" disabled="0" failures="12" time="95.337">
+  <testsuite name="/metadata endpoint should return FHIR CapabilityStatement" tests="3" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http" time="30.614">
+    <properties>
+      <property name="title" value="/metadata endpoint should return FHIR CapabilityStatement"/>
+      <property name="line" value="20"/>
+      <property name="timestamp" value="2024-06-28T14:14:00.090Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/metadata endpoint should return FHIR CapabilityStatement" time="10.205" assertions="1"/>
+    <testcase name="content-type == text/html;charset=UTF-8" classname="/metadata endpoint should return FHIR CapabilityStatement" time="10.205" assertions="1"/>
+    <testcase name="response.body != null" classname="/metadata endpoint should return FHIR CapabilityStatement" time="10.205" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json" tests="6" errors="0" failures="5" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http" time="0.145">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json"/>
+      <property name="line" value="28"/>
+      <property name="timestamp" value="2024-06-28T14:14:30.705Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json" time="0.024" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="status (502) == 200"/>
+      </properties>
+      <failure message="status == 200" type="AssertionError [ERR_ASSERTION]">{"message":"status (502) == 200","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json" time="0.024" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json" time="0.024" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of undefined (reading 'OperationOutcome') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:36:40"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+        <property name="line" value="36"/>
+        <property name="offset" value="40"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of undefined (reading 'OperationOutcome')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" type="TypeError">{"message":"Cannot read properties of undefined (reading 'OperationOutcome')","name":"TypeError","stack":"TypeError: Cannot read properties of undefined (reading 'OperationOutcome')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:36:40)\n    at sr (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" classname="/Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json" time="0.024" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of undefined (reading 'OperationOutcome') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:37:40"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+        <property name="line" value="37"/>
+        <property name="offset" value="40"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of undefined (reading 'OperationOutcome')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" type="TypeError">{"message":"Cannot read properties of undefined (reading 'OperationOutcome')","name":"TypeError","stack":"TypeError: Cannot read properties of undefined (reading 'OperationOutcome')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:37:40)\n    at sr (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" classname="/Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json" time="0.024" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of undefined (reading 'OperationOutcome') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:38:40"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+        <property name="line" value="38"/>
+        <property name="offset" value="40"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of undefined (reading 'OperationOutcome')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" type="TypeError">{"message":"Cannot read properties of undefined (reading 'OperationOutcome')","name":"TypeError","stack":"TypeError: Cannot read properties of undefined (reading 'OperationOutcome')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:38:40)\n    at sr (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" classname="/Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json" time="0.024" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of undefined (reading 'OperationOutcome') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:39:40"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+        <property name="line" value="39"/>
+        <property name="offset" value="40"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of undefined (reading 'OperationOutcome')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" type="TypeError">{"message":"Cannot read properties of undefined (reading 'OperationOutcome')","name":"TypeError","stack":"TypeError: Cannot read properties of undefined (reading 'OperationOutcome')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:39:40)\n    at sr (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TestServiceRequest.json with Content-Type application/json+fhir" tests="6" errors="0" failures="5" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http" time="0.376">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TestServiceRequest.json with Content-Type application/json+fhir"/>
+      <property name="line" value="43"/>
+      <property name="timestamp" value="2024-06-28T14:14:30.850Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TestServiceRequest.json with Content-Type application/json+fhir" time="0.063" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="status (502) == 200"/>
+      </properties>
+      <failure message="status == 200" type="AssertionError [ERR_ASSERTION]">{"message":"status (502) == 200","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TestServiceRequest.json with Content-Type application/json+fhir" time="0.063" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TestServiceRequest.json with Content-Type application/json+fhir" time="0.063" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of undefined (reading 'OperationOutcome') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:51:40"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+        <property name="line" value="51"/>
+        <property name="offset" value="40"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of undefined (reading 'OperationOutcome')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" type="TypeError">{"message":"Cannot read properties of undefined (reading 'OperationOutcome')","name":"TypeError","stack":"TypeError: Cannot read properties of undefined (reading 'OperationOutcome')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:51:40)\n    at sr (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" classname="/Bundle/$validate should validate TestServiceRequest.json with Content-Type application/json+fhir" time="0.063" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of undefined (reading 'OperationOutcome') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:52:40"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+        <property name="line" value="52"/>
+        <property name="offset" value="40"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of undefined (reading 'OperationOutcome')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" type="TypeError">{"message":"Cannot read properties of undefined (reading 'OperationOutcome')","name":"TypeError","stack":"TypeError: Cannot read properties of undefined (reading 'OperationOutcome')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:52:40)\n    at sr (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" classname="/Bundle/$validate should validate TestServiceRequest.json with Content-Type application/json+fhir" time="0.063" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of undefined (reading 'OperationOutcome') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:53:40"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+        <property name="line" value="53"/>
+        <property name="offset" value="40"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of undefined (reading 'OperationOutcome')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" type="TypeError">{"message":"Cannot read properties of undefined (reading 'OperationOutcome')","name":"TypeError","stack":"TypeError: Cannot read properties of undefined (reading 'OperationOutcome')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:53:40)\n    at sr (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" classname="/Bundle/$validate should validate TestServiceRequest.json with Content-Type application/json+fhir" time="0.063" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of undefined (reading 'OperationOutcome') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:54:40"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+        <property name="line" value="54"/>
+        <property name="offset" value="40"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of undefined (reading 'OperationOutcome')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" type="TypeError">{"message":"Cannot read properties of undefined (reading 'OperationOutcome')","name":"TypeError","stack":"TypeError: Cannot read properties of undefined (reading 'OperationOutcome')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http:54:40)\n    at sr (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TestTask.json" tests="6" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http" time="30.426">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TestTask.json"/>
+      <property name="line" value="57"/>
+      <property name="timestamp" value="2024-06-28T14:14:31.226Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TestTask.json" time="5.071" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TestTask.json" time="5.071" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TestTask.json" time="5.071" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" classname="/Bundle/$validate should validate TestTask.json" time="5.071" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" classname="/Bundle/$validate should validate TestTask.json" time="5.071" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" classname="/Bundle/$validate should validate TestTask.json" time="5.071" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TestTaskCompleted.json" tests="6" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http" time="2.108">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TestTaskCompleted.json"/>
+      <property name="line" value="71"/>
+      <property name="timestamp" value="2024-06-28T14:15:01.653Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TestTaskCompleted.json" time="0.351" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TestTaskCompleted.json" time="0.351" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TestTaskCompleted.json" time="0.351" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" classname="/Bundle/$validate should validate TestTaskCompleted.json" time="0.351" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" classname="/Bundle/$validate should validate TestTaskCompleted.json" time="0.351" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" classname="/Bundle/$validate should validate TestTaskCompleted.json" time="0.351" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate Test​ProcedureCompleted.json" tests="6" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http" time="30.265">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate Test​ProcedureCompleted.json"/>
+      <property name="line" value="85"/>
+      <property name="timestamp" value="2024-06-28T14:15:03.761Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate Test​ProcedureCompleted.json" time="5.044" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate Test​ProcedureCompleted.json" time="5.044" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate Test​ProcedureCompleted.json" time="5.044" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" classname="/Bundle/$validate should validate Test​ProcedureCompleted.json" time="5.044" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" classname="/Bundle/$validate should validate Test​ProcedureCompleted.json" time="5.044" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" classname="/Bundle/$validate should validate Test​ProcedureCompleted.json" time="5.044" assertions="1"/>
+  </testsuite>
+  <testsuite name="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/json" tests="2" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http" time="0.611">
+    <properties>
+      <property name="title" value="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/json"/>
+      <property name="line" value="101"/>
+      <property name="timestamp" value="2024-06-28T14:15:34.026Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/json" time="0.306" assertions="1"/>
+    <testcase name="response.body != null" classname="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/json" time="0.306" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with Content-Type application/json+fhir" tests="2" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http" time="0.402">
+    <properties>
+      <property name="title" value="/Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with Content-Type application/json+fhir"/>
+      <property name="line" value="112"/>
+      <property name="timestamp" value="2024-06-28T14:15:34.638Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with Content-Type application/json+fhir" time="0.201" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: status (415) == 200 - /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="status (415) == 200"/>
+      </properties>
+      <failure message="status == 200" type="AssertionError [ERR_ASSERTION]">{"message":"status (415) == 200","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: status (415) == 200\n    at /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.body != null" classname="/Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with Content-Type application/json+fhir" time="0.201" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with header  DATALAKE_API_CONTENT_TYPE" tests="2" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http" time="0.389">
+    <properties>
+      <property name="title" value="/Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with header  DATALAKE_API_CONTENT_TYPE"/>
+      <property name="line" value="123"/>
+      <property name="timestamp" value="2024-06-28T14:15:35.040Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-06-28/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with header  DATALAKE_API_CONTENT_TYPE" time="0.194" assertions="1">
+      <properties>
+        <property name="displayMessage" value="AssertionError [ERR_ASSERTION]: status (415) == 200 - /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053"/>
+        <property name="file" value="/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js"/>
+        <property name="line" value="2"/>
+        <property name="offset" value="47053"/>
+        <property name="errorType" value="AssertionError [ERR_ASSERTION]"/>
+        <property name="message" value="status (415) == 200"/>
+      </properties>
+      <failure message="status == 200" type="AssertionError [ERR_ASSERTION]">{"message":"status (415) == 200","name":"AssertionError","stack":"AssertionError [ERR_ASSERTION]: status (415) == 200\n    at /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/httpyac/dist/index.js:119:32241)"}</failure>
+    </testcase>
+    <testcase name="response.body != null" classname="/Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with header  DATALAKE_API_CONTENT_TYPE" time="0.194" assertions="1"/>
+  </testsuite>
+</testsuites>
