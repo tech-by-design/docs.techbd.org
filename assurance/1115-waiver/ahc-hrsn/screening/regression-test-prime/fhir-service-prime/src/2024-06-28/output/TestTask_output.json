@@ -1,0 +1,36 @@
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "initiatedAt": 1719582064.3625026,
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "fhirProfileVersion": "0.6.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+          "initAt": 1719575117.0203505,
+          "constructedAt": 1719575118.7130647
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": 1719582064.3641012,
+        "valid": false
+      }
+    ],
+    "device": {
+      "deviceId": "127.0.1.1",
+      "deviceName": "vinod-OptiPlex"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
