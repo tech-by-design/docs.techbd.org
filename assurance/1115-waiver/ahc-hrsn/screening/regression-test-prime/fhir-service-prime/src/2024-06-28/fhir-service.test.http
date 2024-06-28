@@ -4,7 +4,7 @@
 #   or httpYac CLI when executing outside of the IDE
 # * this service has 2 endpoints /Bundle/$validate & /Bundle/
 
-@hostName = http://localhost:8080
+@hostName = https://synthetic.fhir.api.devl.techbd.org
 {{
   // dotEnv is loaded by default so let's see if custom hostName is available;
   // if $HTTPYAC_HOST is available use it first otherwise use $HOST
