@@ -1,0 +1,133 @@
+# this file is for testing and verifying the FHIR service with two api endpoints
+# ------------------------------------------------------------------------
+# * requires the `vscode-httpyac` Visual Studio Code extension within IDE
+#   or httpYac CLI when executing outside of the IDE
+# * this service has 2 endpoints /Bundle/$validate & /Bundle/
+
+@hostName = http://localhost:8080
+{{
+  // dotEnv is loaded by default so let's see if custom hostName is available;
+  // if $HTTPYAC_HOST is available use it first otherwise use $HOST
+  if(process.env.HOST) exports.hostName = process.env.HOST;
+  if(process.env.HTTPYAC_HOST) exports.hostName = process.env.HTTPYAC_HOST;
+}}
+
+@contentType = application/json
+@contentTypeFHIR = application/fhir+json
+@TECH_BD_FHIR_SERVICE_QE_IDENTIFIER = QC-TEST
+
+
+### /metadata endpoint should return FHIR CapabilityStatement
+
+GET {{hostName}}/metadata
+Content-Type: {{contentType}}
+?? status == 200
+?? header content-type == text/html;charset=UTF-8
+?? response.body  != null
+
+### /Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentType}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+< TestServiceRequest.json
+
+
+### /Bundle/$validate should validate TestServiceRequest.json with Content-Type application/fhir+json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+< TestServiceRequest.json
+
+### /Bundle/$validate should validate TestTask.json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentType}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+< TestTask.json
+
+### /Bundle/$validate should validate TestTaskCompleted.json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentType}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+< TestTaskCompleted.json
+
+### /Bundle/$validate should validate Test​ProcedureCompleted.json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentType}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+?? js response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+
+< TestProcedureCompleted.json
+
+
+### Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/json
+# DO NOT use any header variables which are not required by QEs
+POST {{hostName}}/Bundle HTTP/1.1
+Content-Type: {{contentType}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+dataLakeApiBaseURL: https://40lafnwsw7.execute-api.us-east-1.amazonaws.com/dev1111111111
+?? status == 200
+?? response.body  != null
+
+< TestServiceRequest.json
+
+
+### /Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with Content-Type application/fhir+json
+
+POST {{hostName}}/Bundle HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+
+< TestServiceRequest.json
+
+
+### /Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with header  DATALAKE_API_CONTENT_TYPE
+
+POST {{hostName}}/Bundle HTTP/1.1
+Content-Type: {{contentType}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+DATALAKE_API_CONTENT_TYPE: {{contentTypeFHIR}}
+?? status == 200
+?? response.body  != null
+
+< TestServiceRequest.json
