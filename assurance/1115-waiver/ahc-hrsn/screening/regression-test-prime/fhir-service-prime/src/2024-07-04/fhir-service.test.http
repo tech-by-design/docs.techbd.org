@@ -14,6 +14,7 @@
 
 @contentType = application/json
 @contentTypeFHIR = application/fhir+json
+@contentTypeFHIR = application/json
 @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER = QC-TEST
 
 
