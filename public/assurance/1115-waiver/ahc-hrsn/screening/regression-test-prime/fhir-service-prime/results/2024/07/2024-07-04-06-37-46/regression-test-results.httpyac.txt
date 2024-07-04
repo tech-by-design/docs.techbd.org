@@ -1,0 +1,2211 @@
+
+---------------------
+
+=== /metadata endpoint should return FHIR CapabilityStatement ===
+
+GET https://synthetic.fhir.api.techbd.org/metadata
+accept-encoding: gzip, deflate, br
+accept: */*
+content-type: application/json
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-language: en-US
+content-length: 2166
+content-type: text/html;charset=UTF-8
+date: Thu, 04 Jul 2024 06:37:48 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 767255dd-1974-4403-96fa-fb120e831f31] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/767255dd-1974-4403-96fa-fb120e831f31.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <status value="active"></status>
+    <date value="04 Jul 2024 06:37"></date>
+    <publisher value="TechBD"></publisher>
+    <kind value="instance"></kind>
+    <software>
+        <name value="TechBD FHIR Server"></name>
+        <version value="0.67.2"></version>
+    </software>
+    <implementation>
+        <description value="1115-Hub FHIR"></description>
+        <url value="https://synthetic.fhir.api.techbd.org"></url>
+    </implementation>
+    <fhirVersion value="4.0.1"></fhirVersion>
+    <format value="application/fhir+xml"></format>
+    <format value="application/fhir+json"></format>
+    <rest>
+        <mode value="server"></mode>
+        <resource>
+            <type value="Bundle"></type>
+            <profile value="https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json"></profile>
+            <interaction>
+                <code value="create"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+            <searchParam>
+                <name value="name"></name>
+                <type value="string"></type>
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="OperationDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+        </resource>
+        <resource>
+            <type value="StructureDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+        </resource>
+        <operation>
+            <name value="validate"></name>
+            <definition value="https://synthetic.fhir.api.techbd.org/OperationDefinition/Bundle--validate"></definition>
+        </operation>
+    </rest>
+</CapabilityStatement>
+✓ status == 200
+✓ content-type == text/html;charset=UTF-8
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate TestCase300.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 84994
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 35691
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:48 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs f2570246-28d8-4e38-a224-34379a96d1fe] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/f2570246-28d8-4e38-a224-34379a96d1fe.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:48.349055634Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": 1,
+              "column": 91,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value '0978bab8-c510-455c-8f10-f6772c0143f6_1793' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 91,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value '0978bab8-c510-455c-8f10-f6772c0143f6_1793' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 876,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'CNYSCN~bronx-20240417-testcase1-MRN' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 876,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'CNYSCN~bronx-20240417-testcase1-MRN' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 3853,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'cnyscn~bronxxbgu1so3y4' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 3853,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'cnyscn~bronxxbgu1so3y4' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 5447,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'Consent_CNYSCN~bronx-20240417-testcase1-MRN' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 5447,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'Consent_CNYSCN~bronx-20240417-testcase1-MRN' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 6498,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 6498,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 8766,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_2' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 8766,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_2' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 11000,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_3' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 11000,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_3' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 13140,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_4' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 13140,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_4' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 15277,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_5' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 15277,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_5' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 17426,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_6' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 17426,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_6' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 19737,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_7' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 19737,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_7' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 22069,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_8' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 22069,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_8' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 24375,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_9' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 24375,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_9' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 26700,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_10' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 26700,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_10' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 29200,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_11' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 29200,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_11' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 31331,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_12' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 31331,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_12' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 33572,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_13' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 33572,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_13' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 35716,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_14' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 35716,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_14' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 37767,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_15' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 37767,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_15' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 39935,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_16' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 39935,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_16' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 42229,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_17' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 42229,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_17' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 44648,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_18' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 44648,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_18' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 47002,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_19' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 47002,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_19' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 49279,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_Grouper1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 49279,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_Grouper1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          }
+        ],
+        "operationOutcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 91
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '0978bab8-c510-455c-8f10-f6772c0143f6_1793' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[91]",
+                "Line[1] Col[91]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 91
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '0978bab8-c510-455c-8f10-f6772c0143f6_1793' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[91]",
+                "Line[1] Col[91]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 876
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'CNYSCN~bronx-20240417-testcase1-MRN' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[876]",
+                "Line[1] Col[876]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 876
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'CNYSCN~bronx-20240417-testcase1-MRN' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[876]",
+                "Line[1] Col[876]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 3853
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'cnyscn~bronxxbgu1so3y4' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[3853]",
+                "Line[1] Col[3853]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 3853
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'cnyscn~bronxxbgu1so3y4' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[3853]",
+                "Line[1] Col[3853]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 5447
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'Consent_CNYSCN~bronx-20240417-testcase1-MRN' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[5447]",
+                "Line[1] Col[5447]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 5447
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'Consent_CNYSCN~bronx-20240417-testcase1-MRN' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[5447]",
+                "Line[1] Col[5447]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 6498
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[6498]",
+                "Line[1] Col[6498]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 6498
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[6498]",
+                "Line[1] Col[6498]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 8766
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_2' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[8766]",
+                "Line[1] Col[8766]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 8766
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_2' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[8766]",
+                "Line[1] Col[8766]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 11000
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_3' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[11000]",
+                "Line[1] Col[11000]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 11000
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_3' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[11000]",
+                "Line[1] Col[11000]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 13140
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_4' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[13140]",
+                "Line[1] Col[13140]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 13140
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_4' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[13140]",
+                "Line[1] Col[13140]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 15277
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_5' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[15277]",
+                "Line[1] Col[15277]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 15277
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_5' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[15277]",
+                "Line[1] Col[15277]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 17426
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_6' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[17426]",
+                "Line[1] Col[17426]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 17426
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_6' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[17426]",
+                "Line[1] Col[17426]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 19737
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_7' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[19737]",
+                "Line[1] Col[19737]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 19737
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_7' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[19737]",
+                "Line[1] Col[19737]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 22069
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_8' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[22069]",
+                "Line[1] Col[22069]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 22069
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_8' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[22069]",
+                "Line[1] Col[22069]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 24375
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_9' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[24375]",
+                "Line[1] Col[24375]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 24375
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_9' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[24375]",
+                "Line[1] Col[24375]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 26700
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_10' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[26700]",
+                "Line[1] Col[26700]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 26700
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_10' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[26700]",
+                "Line[1] Col[26700]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 29200
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_11' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[29200]",
+                "Line[1] Col[29200]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 29200
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_11' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[29200]",
+                "Line[1] Col[29200]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 31331
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_12' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[31331]",
+                "Line[1] Col[31331]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 31331
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_12' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[31331]",
+                "Line[1] Col[31331]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 33572
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_13' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[33572]",
+                "Line[1] Col[33572]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 33572
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_13' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[33572]",
+                "Line[1] Col[33572]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 35716
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_14' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[35716]",
+                "Line[1] Col[35716]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 35716
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_14' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[35716]",
+                "Line[1] Col[35716]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 37767
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_15' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[37767]",
+                "Line[1] Col[37767]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 37767
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_15' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[37767]",
+                "Line[1] Col[37767]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 39935
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_16' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[39935]",
+                "Line[1] Col[39935]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 39935
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_16' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[39935]",
+                "Line[1] Col[39935]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 42229
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_17' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[42229]",
+                "Line[1] Col[42229]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 42229
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_17' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[42229]",
+                "Line[1] Col[42229]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 44648
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_18' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[44648]",
+                "Line[1] Col[44648]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 44648
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_18' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[44648]",
+                "Line[1] Col[44648]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 47002
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_19' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[47002]",
+                "Line[1] Col[47002]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 47002
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_19' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[47002]",
+                "Line[1] Col[47002]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 49279
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_Grouper1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[49279]",
+                "Line[1] Col[49279]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 49279
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_Grouper1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[49279]",
+                "Line[1] Col[49279]"
+              ]
+            }
+          ]
+        },
+        "completedAt": "2024-07-04T06:37:48.419652372Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == ERROR
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == 1
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == 91
+
+---------------------
+
+=== /Bundle/$validate should validate TestCase301.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 52829
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 904
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:48 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 645d0a41-01b4-47a4-b086-2dbff57e8444] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/645d0a41-01b4-47a4-b086-2dbff57e8444.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:48.583592172Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"gender\"] Invalid attribute value \"UN\": Unknown AdministrativeGender code 'UN'",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:37:48.585000597Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate TestCase302.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 51772
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 998
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:48 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 1cb82f23-3fa0-4799-9c4b-c6ccf7e701ed] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/1cb82f23-3fa0-4799-9c4b-c6ccf7e701ed.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:48.749230576Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"dateTime\"] Invalid attribute value \"2023-10-28 10:07:42.9149210\": Invalid date/time format: \"2023-10-28 10:07:42.9149210\": Expected character 'T' at index 10 but found  ",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:37:48.750696551Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:48 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 49be1e1d-aabb-47eb-86a0-ca00be061c3f] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/49be1e1d-aabb-47eb-86a0-ca00be061c3f.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:48.915949413Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:37:48.916666938Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate TestServiceRequest.json with Content-Type application/fhir+json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:49 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 483e8a02-a560-4c36-954d-1a6f8de7eb9b] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/483e8a02-a560-4c36-954d-1a6f8de7eb9b.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:49.117915054Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:37:49.119114393Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate TestTask.json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 17772
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:49 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 42aa12c7-77a3-46aa-87ef-03cd15eaf7fd] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/42aa12c7-77a3-46aa-87ef-03cd15eaf7fd.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:49.287532416Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:37:49.288307125Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate TestTaskCompleted.json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 10941
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:49 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 7be65b14-e8bc-4ff0-b3e1-230fb396b653] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/7be65b14-e8bc-4ff0-b3e1-230fb396b653.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:49.436623923Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:37:49.437273585Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate Test​ProcedureCompleted.json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 12618
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 968
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:49 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs a2dcf20b-8b59-4c42-a0c7-cad0216d3639] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/a2dcf20b-8b59-4c42-a0c7-cad0216d3639.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:49.600490483Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1861: Failed to parse JSON encoded FHIR content: Unexpected character ('}' (code 125)): was expecting double-quote to start field name\n at [line: 52, column: 9]",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:37:49.600869344Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/json
+datalakeapibaseurl: https://40lafnwsw7.execute-api.us-east-1.amazonaws.com/dev1111111111
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:49 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 7f6303d6-1c53-4e2c-bf92-e612a64cc7e1] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/7f6303d6-1c53-4e2c-bf92-e612a64cc7e1.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:49.766502140Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:37:49.767254939Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+
+---------------------
+
+=== /Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with Content-Type application/fhir+json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:50 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 23008cf6-c4b3-4c63-96ff-a215ffed13d7] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/23008cf6-c4b3-4c63-96ff-a215ffed13d7.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:50.141557218Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:37:50.142904244Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+
+---------------------
+
+=== /Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with header  DATALAKE_API_CONTENT_TYPE ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/json
+datalake_api_content_type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:37:50 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs abfc2abf-1c3a-4a7f-8337-224969629bbe] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/abfc2abf-1c3a-4a7f-8337-224969629bbe.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:37:50.381673951Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:37:50.382425036Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+
+12 requests processed (12 succeeded, 0 failed)
