@@ -1,0 +1,2111 @@
+
+---------------------
+
+=== /metadata endpoint should return FHIR CapabilityStatement ===
+
+GET https://synthetic.fhir.api.techbd.org/metadata
+accept-encoding: gzip, deflate, br
+accept: */*
+content-type: application/json
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-language: en-US
+content-length: 2166
+content-type: text/html;charset=UTF-8
+date: Thu, 04 Jul 2024 06:21:49 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs e2a8a83f-05d5-4cdd-bbef-e7c74e8ca9a2] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/e2a8a83f-05d5-4cdd-bbef-e7c74e8ca9a2.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <status value="active"></status>
+    <date value="04 Jul 2024 06:21"></date>
+    <publisher value="TechBD"></publisher>
+    <kind value="instance"></kind>
+    <software>
+        <name value="TechBD FHIR Server"></name>
+        <version value="0.67.2"></version>
+    </software>
+    <implementation>
+        <description value="1115-Hub FHIR"></description>
+        <url value="https://synthetic.fhir.api.techbd.org"></url>
+    </implementation>
+    <fhirVersion value="4.0.1"></fhirVersion>
+    <format value="application/fhir+xml"></format>
+    <format value="application/fhir+json"></format>
+    <rest>
+        <mode value="server"></mode>
+        <resource>
+            <type value="Bundle"></type>
+            <profile value="https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json"></profile>
+            <interaction>
+                <code value="create"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+            <searchParam>
+                <name value="name"></name>
+                <type value="string"></type>
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="OperationDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+        </resource>
+        <resource>
+            <type value="StructureDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+        </resource>
+        <operation>
+            <name value="validate"></name>
+            <definition value="https://synthetic.fhir.api.techbd.org/OperationDefinition/Bundle--validate"></definition>
+        </operation>
+    </rest>
+</CapabilityStatement>
+✓ status == 200
+✓ content-type == text/html;charset=UTF-8
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate TestCase300.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 84994
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 35691
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:52 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs af00bf39-fe1f-4fae-98f4-f40a1a96bf1a] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/af00bf39-fe1f-4fae-98f4-f40a1a96bf1a.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:21:50.165427915Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": 1,
+              "column": 91,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value '0978bab8-c510-455c-8f10-f6772c0143f6_1793' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 91,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value '0978bab8-c510-455c-8f10-f6772c0143f6_1793' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 876,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'CNYSCN~bronx-20240417-testcase1-MRN' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 876,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'CNYSCN~bronx-20240417-testcase1-MRN' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 3853,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'cnyscn~bronxxbgu1so3y4' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 3853,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'cnyscn~bronxxbgu1so3y4' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 5447,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'Consent_CNYSCN~bronx-20240417-testcase1-MRN' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 5447,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'Consent_CNYSCN~bronx-20240417-testcase1-MRN' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 6498,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 6498,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 8766,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_2' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 8766,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_2' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 11000,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_3' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 11000,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_3' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 13140,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_4' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 13140,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_4' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 15277,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_5' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 15277,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_5' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 17426,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_6' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 17426,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_6' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 19737,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_7' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 19737,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_7' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 22069,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_8' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 22069,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_8' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 24375,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_9' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 24375,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_9' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 26700,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_10' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 26700,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_10' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 29200,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_11' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 29200,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_11' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 31331,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_12' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 31331,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_12' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 33572,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_13' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 33572,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_13' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 35716,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_14' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 35716,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_14' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 37767,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_15' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 37767,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_15' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 39935,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_16' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 39935,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_16' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 42229,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_17' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 42229,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_17' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 44648,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_18' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 44648,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_18' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 47002,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_19' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 47002,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_19' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 49279,
+              "diagnostics": null
+            },
+            "message": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_Grouper1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+            "severity": "ERROR"
+          },
+          {
+            "location": {
+              "line": 1,
+              "column": 49279,
+              "diagnostics": null
+            },
+            "message": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_Grouper1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+            "severity": "ERROR"
+          }
+        ],
+        "operationOutcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 91
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value '0978bab8-c510-455c-8f10-f6772c0143f6_1793' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[91]",
+                "Line[1] Col[91]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 91
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value '0978bab8-c510-455c-8f10-f6772c0143f6_1793' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[91]",
+                "Line[1] Col[91]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 876
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'CNYSCN~bronx-20240417-testcase1-MRN' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[876]",
+                "Line[1] Col[876]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 876
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'CNYSCN~bronx-20240417-testcase1-MRN' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[876]",
+                "Line[1] Col[876]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 3853
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'cnyscn~bronxxbgu1so3y4' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[3853]",
+                "Line[1] Col[3853]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 3853
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'cnyscn~bronxxbgu1so3y4' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[3853]",
+                "Line[1] Col[3853]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 5447
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'Consent_CNYSCN~bronx-20240417-testcase1-MRN' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[5447]",
+                "Line[1] Col[5447]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 5447
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'Consent_CNYSCN~bronx-20240417-testcase1-MRN' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[5447]",
+                "Line[1] Col[5447]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 6498
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[6498]",
+                "Line[1] Col[6498]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 6498
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[6498]",
+                "Line[1] Col[6498]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 8766
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_2' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[8766]",
+                "Line[1] Col[8766]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 8766
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_2' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[8766]",
+                "Line[1] Col[8766]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 11000
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_3' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[11000]",
+                "Line[1] Col[11000]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 11000
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_3' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[11000]",
+                "Line[1] Col[11000]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 13140
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_4' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[13140]",
+                "Line[1] Col[13140]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 13140
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_4' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[13140]",
+                "Line[1] Col[13140]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 15277
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_5' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[15277]",
+                "Line[1] Col[15277]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 15277
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_5' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[15277]",
+                "Line[1] Col[15277]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 17426
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_6' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[17426]",
+                "Line[1] Col[17426]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 17426
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_6' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[17426]",
+                "Line[1] Col[17426]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 19737
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_7' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[19737]",
+                "Line[1] Col[19737]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 19737
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_7' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[19737]",
+                "Line[1] Col[19737]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 22069
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_8' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[22069]",
+                "Line[1] Col[22069]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 22069
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_8' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[22069]",
+                "Line[1] Col[22069]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 24375
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_9' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[24375]",
+                "Line[1] Col[24375]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 24375
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_9' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[24375]",
+                "Line[1] Col[24375]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 26700
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_10' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[26700]",
+                "Line[1] Col[26700]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 26700
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_10' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[26700]",
+                "Line[1] Col[26700]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 29200
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_11' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[29200]",
+                "Line[1] Col[29200]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 29200
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_11' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[29200]",
+                "Line[1] Col[29200]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 31331
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_12' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[31331]",
+                "Line[1] Col[31331]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 31331
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_12' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[31331]",
+                "Line[1] Col[31331]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 33572
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_13' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[33572]",
+                "Line[1] Col[33572]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 33572
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_13' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[33572]",
+                "Line[1] Col[33572]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 35716
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_14' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[35716]",
+                "Line[1] Col[35716]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 35716
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_14' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[35716]",
+                "Line[1] Col[35716]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 37767
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_15' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[37767]",
+                "Line[1] Col[37767]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 37767
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_15' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[37767]",
+                "Line[1] Col[37767]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 39935
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_16' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[39935]",
+                "Line[1] Col[39935]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 39935
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_16' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[39935]",
+                "Line[1] Col[39935]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 42229
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_17' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[42229]",
+                "Line[1] Col[42229]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 42229
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_17' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[42229]",
+                "Line[1] Col[42229]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 44648
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_18' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[44648]",
+                "Line[1] Col[44648]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 44648
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_18' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[44648]",
+                "Line[1] Col[44648]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 47002
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_19' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[47002]",
+                "Line[1] Col[47002]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 47002
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_19' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[47002]",
+                "Line[1] Col[47002]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 49279
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-pattern-valid: Value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_Grouper1' is not facet-valid with respect to pattern '[A-Za-z0-9\\-\\.]{1,64}' for type 'id-primitive'.",
+              "location": [
+                "Line[1] Col[49279]",
+                "Line[1] Col[49279]"
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                  "valueInteger": 49279
+                }
+              ],
+              "severity": "error",
+              "code": "processing",
+              "diagnostics": "cvc-attribute.3: The value 'dd9f3a5bc72ea5a576a1a9117cd2a34d_obs3_Grouper1' of attribute 'value' on element 'id' is not valid with respect to its type, 'id-primitive'.",
+              "location": [
+                "Line[1] Col[49279]",
+                "Line[1] Col[49279]"
+              ]
+            }
+          ]
+        },
+        "completedAt": "2024-07-04T06:21:51.931419511Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == ERROR
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == 1
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == 91
+
+---------------------
+
+=== /Bundle/$validate should validate TestCase301.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 52829
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 904
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:52 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 8e38a059-f361-4d3e-a5df-206f5715b747] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/8e38a059-f361-4d3e-a5df-206f5715b747.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:21:52.274775958Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"gender\"] Invalid attribute value \"UN\": Unknown AdministrativeGender code 'UN'",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:21:52.281524306Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate TestCase302.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 51772
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 998
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:52 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 2292b2fe-2b5b-4b59-bf7b-3f878b18f9f4] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/2292b2fe-2b5b-4b59-bf7b-3f878b18f9f4.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:21:52.451986201Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"dateTime\"] Invalid attribute value \"2023-10-28 10:07:42.9149210\": Invalid date/time format: \"2023-10-28 10:07:42.9149210\": Expected character 'T' at index 10 but found  ",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:21:52.457429995Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate Test​ServiceRequest.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:52 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs bdbcc159-2b36-4cef-af49-201f8991fe8a] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/bdbcc159-2b36-4cef-af49-201f8991fe8a.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:21:52.626655825Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:21:52.627604661Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate TestServiceRequest.json with Content-Type application/fhir+json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 415  - Unsupported Media Type
+accept: application/json
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:52 GMT
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{
+  "timestamp": "2024-07-04T06:21:52.810+00:00",
+  "status": 415,
+  "error": "Unsupported Media Type",
+  "trace": "org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/fhir+json' is not supported\n\tat org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:282)\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)\n\tat org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)\n\tat org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)\n\tat org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:507)\n\tat org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1283)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.ForwardedHeaderFilter.doFilterInternal(ForwardedHeaderFilter.java:173)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)\n\tat org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)\n\tat org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)\n\tat org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:189)\n\tat org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:175)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.techbd.service.http.filter.GitHubUserAuthorizationFilter.doFilterInternal(GitHubUserAuthorizationFilter.java:57)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)\n\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)\n\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)\n\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)\n\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\n\tat org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)\n\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\n\tat org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)\n\tat org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.techbd.service.http.InteractionsFilter.doFilterInternal(InteractionsFilter.java:105)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+  "message": "Content-Type 'application/fhir+json' is not supported.",
+  "path": "/Bundle/$validate"
+}
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate TestTask.json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 17772
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:52 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs d7b6b494-8813-4d3e-a6a3-b75bfcd68c54] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/d7b6b494-8813-4d3e-a6a3-b75bfcd68c54.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:21:52.964656420Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:21:52.965297321Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate TestTaskCompleted.json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 10941
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:53 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 90d37bf3-a958-4906-8dcb-728d50d3913f] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/90d37bf3-a958-4906-8dcb-728d50d3913f.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:21:53.220327732Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:21:53.220950547Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate Test​ProcedureCompleted.json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 12618
+content-type: application/json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 968
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:53 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 8bba64b4-d168-480a-b63d-5f83d98e2668] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/8bba64b4-d168-480a-b63d-5f83d98e2668.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:21:53.446147939Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1861: Failed to parse JSON encoded FHIR content: Unexpected character ('}' (code 125)): was expecting double-quote to start field name\n at [line: 52, column: 9]",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:21:53.446868368Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/json
+datalakeapibaseurl: https://40lafnwsw7.execute-api.us-east-1.amazonaws.com/dev1111111111
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 989
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:53 GMT
+expires: 0
+pragma: no-cache
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$AggregatePersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs cbdada63-0b26-4540-9981-b3de5792681d] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/04/06/cbdada63-0b26-4540-9981-b3de5792681d.json
+x-techbd-interaction-persistence-strategy-instance-issue-0: Failed to execute SQL insert: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [sql/artifact/001_WyevQ9E6L-seed-ddl.pg.sql]: CREATE TABLE IF NOT EXISTS "artifact" ( "artifact_id" TEXT PRIMARY KEY, "namespace" TEXT NOT NULL, "content" TEXT NOT NULL, "content_type" TEXT NOT NULL, "provenance" JSONB, "boundary" JSONB, "elaboration" JSONB, "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP )
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "initiatedAt": "2024-07-04T06:21:53.628667285Z",
+        "valid": false,
+        "fhirProfileVersion": "0.7.0",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version TODO (FHIR version 4.0.1)",
+          "initAt": "2024-07-04T06:21:49.800247547Z",
+          "constructedAt": "2024-07-04T06:21:50.164763331Z"
+        },
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"lastUpdated\"] Invalid attribute value \"2024-02-023T00:00:00Z\": Invalid date/time format: \"2024-02-023T00:00:00Z\": Expected character 'T' at index 10 but found 3",
+            "severity": "FATAL"
+          }
+        ],
+        "operationOutcome": null,
+        "completedAt": "2024-07-04T06:21:53.629401196Z"
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.206.114",
+      "deviceName": "ip-10-0-206-114.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+
+---------------------
+
+=== /Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with Content-Type application/fhir+json ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 415  - Unsupported Media Type
+accept: application/json
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:54 GMT
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{
+  "timestamp": "2024-07-04T06:21:54.022+00:00",
+  "status": 415,
+  "error": "Unsupported Media Type",
+  "trace": "org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/fhir+json' is not supported\n\tat org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:282)\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)\n\tat org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)\n\tat org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)\n\tat org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:507)\n\tat org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1283)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.ForwardedHeaderFilter.doFilterInternal(ForwardedHeaderFilter.java:173)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)\n\tat org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)\n\tat org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)\n\tat org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:189)\n\tat org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:175)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.techbd.service.http.filter.GitHubUserAuthorizationFilter.doFilterInternal(GitHubUserAuthorizationFilter.java:57)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)\n\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)\n\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)\n\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)\n\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\n\tat org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)\n\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\n\tat org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)\n\tat org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.techbd.service.http.InteractionsFilter.doFilterInternal(InteractionsFilter.java:105)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+  "message": "Content-Type 'application/fhir+json' is not supported.",
+  "path": "/Bundle"
+}
+✓ response.body != null
+
+---------------------
+
+=== /Bundle should validate and submit Test​ServiceRequest.json Test​ServiceRequest.json  with header  DATALAKE_API_CONTENT_TYPE ===
+
+POST https://synthetic.fhir.api.techbd.org/Bundle
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 15016
+content-type: application/fhir+json
+datalake_api_content_type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 415  - Unsupported Media Type
+accept: application/json
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-type: application/json
+date: Thu, 04 Jul 2024 06:21:54 GMT
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{
+  "timestamp": "2024-07-04T06:21:54.346+00:00",
+  "status": 415,
+  "error": "Unsupported Media Type",
+  "trace": "org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/fhir+json' is not supported\n\tat org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:282)\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)\n\tat org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)\n\tat org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)\n\tat org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)\n\tat org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:507)\n\tat org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1283)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\n\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\n\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.ForwardedHeaderFilter.doFilterInternal(ForwardedHeaderFilter.java:173)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)\n\tat org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)\n\tat org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)\n\tat org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:189)\n\tat org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:175)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.techbd.service.http.filter.GitHubUserAuthorizationFilter.doFilterInternal(GitHubUserAuthorizationFilter.java:57)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)\n\tat org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:198)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)\n\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)\n\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)\n\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\n\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)\n\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)\n\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\n\tat org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)\n\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\n\tat org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)\n\tat org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.techbd.service.http.InteractionsFilter.doFilterInternal(InteractionsFilter.java:105)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\n",
+  "message": "Content-Type 'application/fhir+json' is not supported.",
+  "path": "/Bundle"
+}
+✓ response.body != null
+
+12 requests processed (9 succeeded, 3 failed)
