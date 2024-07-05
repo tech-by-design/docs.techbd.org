@@ -141,7 +141,6 @@ X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
 POST {{hostName}}/Bundle HTTP/1.1
 Content-Type: {{contentType}}
 X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
-dataLakeApiBaseURL: https://40lafnwsw7.execute-api.us-east-1.amazonaws.com/dev1111111111
 ?? status == 200
 ?? response.body  != null
 
