@@ -1,0 +1,47 @@
+## File Evaluation Against Various Validators
+
+### Validation Instructions
+
+Validate the FHIR document using SHIN-NY IG Version 0.4.0 on the following platforms:
+1. [Legacy Public Inferno Site](https://inferno.healthit.gov/validator/)
+2. [Official Public Site](https://validator.fhir.org/)
+3. Official Local Docker Site
+4. [Custom 1115 FHIR Server](https://n9r2j0ii52.execute-api.ap-south-1.amazonaws.com/Prod/Bundle/$validate)
+
+### Updates from SHIN-NY IG Version 0.6.0 to SHIN-NY IG Version 0.7.0
+
+- Added more bundle constraints.
+- Bundle.meta
+- Bundle.type
+- Bundle.timestamp
+- Bundle.entry
+- Bundle.entry.request
+- Bundle.entry.request.method
+
+### File Tested
+
+- [TestCase300.json](TestCase300.json)
+
+### Changes Identified in Error Logs Compared to Version 0.7.0
+
+
+#### Custom 1115 FHIR Server
+
+**Most issues are related to `id-primitive` 
+
+### Resolution
+
+**Most issues are related to `id-primitive` constraints.**
+
+#### `id-primitive`
+
+- The `id` primitive in FHIR must adhere to specific constraints to ensure uniqueness and consistency:
+    - **Type**: String
+    - **Length**: 1 to 64 characters
+    - **Allowed Characters**:
+        - Lowercase alphabetic characters (a-z)
+        - Numeric characters (0-9)
+        - Hyphen (-)
+        - Dot (.)
+        - Underscore (_)
+    - **Regular Expression Pattern**: `^[A-Za-z0-9\-\.]{1,64}$`
