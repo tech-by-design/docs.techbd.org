@@ -1,4 +1,9 @@
 {
   "caption": "Developers",
-  "title": "Developer Experience"
+  "title": "Developer Experience",
+  "nav": {
+    "sequence": {
+      "weight": 50
+    }
+  }
 }

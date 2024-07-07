@@ -1,2 +1,5 @@
 caption: 1115 Hub
 title: 1115 Hub
+nav:
+  sequence:
+    weight: 10

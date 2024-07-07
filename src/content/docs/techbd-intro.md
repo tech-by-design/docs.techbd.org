@@ -1,5 +1,8 @@
 ---
 title: Technology by Design (TechBD) Overview
+nav:
+  sequence:
+    weight: 0
 ---
 
 The New York eHealth Collaborative (NYeC) is at the forefront of shaping the

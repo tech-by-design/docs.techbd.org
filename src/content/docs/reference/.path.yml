@@ -1,2 +1,5 @@
 caption: Reference
 title: Reference
+nav:
+  sequence:
+    weight: 90
