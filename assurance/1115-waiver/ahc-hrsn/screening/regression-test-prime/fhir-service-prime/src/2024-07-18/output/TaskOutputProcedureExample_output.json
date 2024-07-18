@@ -1,0 +1,35 @@
+{
+    "OperationOutcome": {
+      "validationResults": [
+        {
+          "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+          "initiatedAt": 1721308955.9504817,
+          "observability": {
+            "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+            "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+            "initAt": 1721307520.3718407,
+            "constructedAt": 1721307520.3942602
+          },
+          "issues": [
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+              },
+              "message": "HAPI-1821: [element=\"status\"] Invalid attribute value \"complete\": Unknown ProcedureStatus code 'complete'",
+              "severity": "FATAL"
+            }
+          ],
+          "operationOutcome": null,
+          "completedAt": 1721308955.9525335,
+          "valid": false
+        }
+      ],
+      "device": {
+        "deviceId": "127.0.1.1",
+        "deviceName": "vinod-OptiPlex"
+      },
+      "resourceType": "OperationOutcome"
+    }
+  }
