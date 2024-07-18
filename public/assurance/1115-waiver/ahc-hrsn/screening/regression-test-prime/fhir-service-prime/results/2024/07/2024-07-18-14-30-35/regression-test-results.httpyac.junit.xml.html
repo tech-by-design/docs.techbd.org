@@ -1,0 +1,2904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regression-test-results.httpyac.junit.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : regression-test-results.httpyac.junit.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>/metadata endpoint should return FHIR CapabilityStatement
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#83f6ab21-3625-4c1a-91c6-aa084b456c55">status == 200</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#cd46486b-83a7-46d3-b07c-6c95a7b28fab">content-type == text/html;charset=UTF-8</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#0c7618a3-56fd-4574-a3b9-6c98d14372da">response.body != null</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#b3a18f4d-857d-4493-9e78-77aacfeaaaf6">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2640838a-4c0d-445d-aaa3-8699707feba2">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#cdd54216-8434-4e2f-a067-10965f0841b3">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#46235f91-d189-4c7c-ad13-7ea7ab9b0323">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#83fe0f52-88ee-45e7-a34f-d70091493d24">response.parsedBody.OperationOutcome.validationResults[0].valid == true</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#609f96e8-66eb-432c-a08e-0cd45106b4f3">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#e880e713-3a25-4a47-95ad-a46425eef676">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#79fb0f93-1deb-4015-acde-0a3456e32586">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#949f2f82-b996-4371-95bb-2d77567b1f2f">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#d99775ac-5b05-42de-b96e-49921e81a7ef">response.parsedBody.OperationOutcome.validationResults[0].valid == true</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#6b99777e-9fba-41b2-82ad-c403685e84b3">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#8acbcc69-af15-42d9-bf16-ca8c94a53f5e">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#6620a4ea-a20d-452e-9e9f-3562a3300198">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#2f962665-af35-4e3a-a1eb-557169e91a43">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#1dfc8ab3-c1e4-43e0-8576-de6370516c71">response.parsedBody.OperationOutcome.validationResults[0].valid == true</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#0f0aaeab-4e9b-4d33-9a86-fa1bf8b856f1">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#d08290f9-b587-4e8a-b508-10fa20868ec4">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#ec9a91c0-ab84-48bb-a8f2-26a8105a20e1">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#65c31af7-f1be-4e93-9ade-40571b1556e1">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#d8d1a3b0-17d7-405e-8aae-18cdc8860c69">response.parsedBody.OperationOutcome.validationResults[0].valid == true</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#be19ace2-baa1-458e-af74-aeb306dbced0">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#aa55bce3-0a74-4b5b-b58d-9f2db8510224">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#70054fb4-3c58-42e6-94c4-e94872d92473">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#99c1b834-dd1a-4ebf-9645-8845fbd4ebeb">response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#b190c38d-a872-4d77-9142-a0bfb99f2745">response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#e949d3c8-da17-4f50-aa4a-1f488f4c9ca2">response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate TaskExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#2d02dff6-7783-4622-ad59-86a20c71983a">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#96a90f50-1bd7-4242-8125-c2ddf3033beb">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#d07ba3ae-9db6-4f5d-80ab-23fdf3b7fa53">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#c26f1a5d-b87a-4963-a4f7-950c43b07385">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#ae06181c-ddab-4654-a4cd-eb1d3fd12eee">response.parsedBody.OperationOutcome.validationResults[0].valid == true</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#3987a066-6c77-436d-ab55-81c2b3f77d72">status == 200</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#cf774a9b-fd07-4219-92a2-244e220eaad4">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#75eb41b6-e945-45ec-9a54-9276f10c3180">response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#95ac4956-7de8-4bcf-8978-74b5a678b055">response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</a></li>
+                    
+                    <li class="outcome outcome-failed"><a href="#bc9db6b3-a82c-459e-a39a-48a7eff57846">response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json
+                <ul>
+                    
+                    <li class="outcome outcome-failed"><a href="#a9d056d8-788f-4330-8b14-2d52c6892f55">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#a4a3cfa8-a659-4bd3-9b9a-2b59b8f45b89">response.body != null</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    <li><a href="#83f6ab21-3625-4c1a-91c6-aa084b456c55">[F] /metadata endpoint should return FHIR CapabilityStatement : status == 200</a></li>
+                    
+                    
+                    
+                    <li><a href="#cd46486b-83a7-46d3-b07c-6c95a7b28fab">[F] /metadata endpoint should return FHIR CapabilityStatement : content-type == text/html;charset=UTF-8</a></li>
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#b3a18f4d-857d-4493-9e78-77aacfeaaaf6">[F] /Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json : status == 200</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#cdd54216-8434-4e2f-a067-10965f0841b3">[F] /Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    
+                    
+                    <li><a href="#46235f91-d189-4c7c-ad13-7ea7ab9b0323">[F] /Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</a></li>
+                    
+                    
+                    
+                    <li><a href="#83fe0f52-88ee-45e7-a34f-d70091493d24">[F] /Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].valid == true</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#609f96e8-66eb-432c-a08e-0cd45106b4f3">[F] /Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json : status == 200</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#79fb0f93-1deb-4015-acde-0a3456e32586">[F] /Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    
+                    
+                    <li><a href="#949f2f82-b996-4371-95bb-2d77567b1f2f">[F] /Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</a></li>
+                    
+                    
+                    
+                    <li><a href="#d99775ac-5b05-42de-b96e-49921e81a7ef">[F] /Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].valid == true</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#6b99777e-9fba-41b2-82ad-c403685e84b3">[F] /Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json : status == 200</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#6620a4ea-a20d-452e-9e9f-3562a3300198">[F] /Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    
+                    
+                    <li><a href="#2f962665-af35-4e3a-a1eb-557169e91a43">[F] /Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</a></li>
+                    
+                    
+                    
+                    <li><a href="#1dfc8ab3-c1e4-43e0-8576-de6370516c71">[F] /Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].valid == true</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#0f0aaeab-4e9b-4d33-9a86-fa1bf8b856f1">[F] /Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json : status == 200</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#ec9a91c0-ab84-48bb-a8f2-26a8105a20e1">[F] /Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    
+                    
+                    <li><a href="#65c31af7-f1be-4e93-9ade-40571b1556e1">[F] /Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</a></li>
+                    
+                    
+                    
+                    <li><a href="#d8d1a3b0-17d7-405e-8aae-18cdc8860c69">[F] /Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].valid == true</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#be19ace2-baa1-458e-af74-aeb306dbced0">[F] /Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json : status == 200</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#70054fb4-3c58-42e6-94c4-e94872d92473">[F] /Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    
+                    
+                    <li><a href="#99c1b834-dd1a-4ebf-9645-8845fbd4ebeb">[F] /Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</a></li>
+                    
+                    
+                    
+                    <li><a href="#b190c38d-a872-4d77-9142-a0bfb99f2745">[F] /Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</a></li>
+                    
+                    
+                    
+                    <li><a href="#e949d3c8-da17-4f50-aa4a-1f488f4c9ca2">[F] /Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#2d02dff6-7783-4622-ad59-86a20c71983a">[F] /Bundle/$validate should validate TaskExample.json with Content-Type application/json : status == 200</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="#d07ba3ae-9db6-4f5d-80ab-23fdf3b7fa53">[F] /Bundle/$validate should validate TaskExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    
+                    
+                    <li><a href="#c26f1a5d-b87a-4963-a4f7-950c43b07385">[F] /Bundle/$validate should validate TaskExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</a></li>
+                    
+                    
+                    
+                    <li><a href="#ae06181c-ddab-4654-a4cd-eb1d3fd12eee">[F] /Bundle/$validate should validate TaskExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].valid == true</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#3987a066-6c77-436d-ab55-81c2b3f77d72">[F] /Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json : status == 200</a></li>
+                    
+                    
+                    
+                    <li><a href="#cf774a9b-fd07-4219-92a2-244e220eaad4">[F] /Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    
+                    
+                    <li><a href="#75eb41b6-e945-45ec-9a54-9276f10c3180">[F] /Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</a></li>
+                    
+                    
+                    
+                    <li><a href="#95ac4956-7de8-4bcf-8978-74b5a678b055">[F] /Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</a></li>
+                    
+                    
+                    
+                    <li><a href="#bc9db6b3-a82c-459e-a39a-48a7eff57846">[F] /Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json : response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</a></li>
+                    
+                    
+                
+            
+                
+                    
+                    
+                    <li><a href="#a9d056d8-788f-4330-8b14-2d52c6892f55">[F] Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json : status == 200</a></li>
+                    
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: /metadata endpoint should return FHIR CapabilityStatement</h2>
+        <a id="d35250b5-d8b5-460e-801e-b5d3b0d98576"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/metadata endpoint should return FHIR CapabilityStatement</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>20</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-07-18T14:30:40.408Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.354 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>3</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>2</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/metadata endpoint should return FHIR CapabilityStatement</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="83f6ab21-3625-4c1a-91c6-aa084b456c55"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.118 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status == 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;status (502) == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>status (502) == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="cd46486b-83a7-46d3-b07c-6c95a7b28fab"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>content-type == text/html;charset=UTF-8</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.118 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>content-type == text/html;charset=UTF-8</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;content-type (text/html) == text/html;charset=UTF-8&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: content-type (text/html) == text/html;charset=UTF-8\n    at /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: content-type (text/html) == text/html;charset=UTF-8 - /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>content-type (text/html) == text/html;charset=UTF-8</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0c7618a3-56fd-4574-a3b9-6c98d14372da"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.118 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json</h2>
+        <a id="15fe131f-ba78-409c-a3d0-e3009787d8d5"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>27</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-07-18T14:30:40.762Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.148 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>4</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="b3a18f4d-857d-4493-9e78-77aacfeaaaf6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status == 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;status (502) == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>status (502) == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2640838a-4c0d-445d-aaa3-8699707feba2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="cdd54216-8434-4e2f-a067-10965f0841b3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:34:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:34:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>34</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="46235f91-d189-4c7c-ad13-7ea7ab9b0323"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:35:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:35:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>35</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="83fe0f52-88ee-45e7-a34f-d70091493d24"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == true</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.03 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].valid == true</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:36:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:36:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>36</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json</h2>
+        <a id="6c69958b-b09c-4046-a87a-75aea0a74b39"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>39</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-07-18T14:30:40.910Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.303 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>4</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="609f96e8-66eb-432c-a08e-0cd45106b4f3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.061 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status == 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;status (502) == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>status (502) == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e880e713-3a25-4a47-95ad-a46425eef676"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.061 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="79fb0f93-1deb-4015-acde-0a3456e32586"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.061 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:47:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:47:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>47</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="949f2f82-b996-4371-95bb-2d77567b1f2f"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.061 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:48:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:48:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>48</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="d99775ac-5b05-42de-b96e-49921e81a7ef"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == true</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.061 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].valid == true</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:49:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:49:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>49</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json</h2>
+        <a id="ae46605d-600e-47e7-9f69-4e59cdbe1f22"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>53</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-07-18T14:30:41.213Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.46 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>4</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="6b99777e-9fba-41b2-82ad-c403685e84b3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.092 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status == 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;status (502) == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>status (502) == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8acbcc69-af15-42d9-bf16-ca8c94a53f5e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.092 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="6620a4ea-a20d-452e-9e9f-3562a3300198"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.092 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:61:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:61:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>61</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="2f962665-af35-4e3a-a1eb-557169e91a43"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.092 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:62:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:62:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>62</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="1dfc8ab3-c1e4-43e0-8576-de6370516c71"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == true</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.092 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].valid == true</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:63:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:63:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>63</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json</h2>
+        <a id="922d2c89-9241-4dc1-b90f-336b330b26af"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>67</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-07-18T14:30:41.673Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.368 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>4</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="0f0aaeab-4e9b-4d33-9a86-fa1bf8b856f1"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.074 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status == 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;status (502) == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>status (502) == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="d08290f9-b587-4e8a-b508-10fa20868ec4"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.074 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="ec9a91c0-ab84-48bb-a8f2-26a8105a20e1"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.074 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:75:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:75:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>75</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="65c31af7-f1be-4e93-9ade-40571b1556e1"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.074 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:76:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:76:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>76</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="d8d1a3b0-17d7-405e-8aae-18cdc8860c69"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == true</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.074 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].valid == true</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:77:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:77:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>77</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json</h2>
+        <a id="93e91fee-57bb-456f-bd52-3457a9df9f7b"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>80</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-07-18T14:30:42.042Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.299 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>6</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>5</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="be19ace2-baa1-458e-af74-aeb306dbced0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.05 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status == 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;status (502) == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>status (502) == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="aa55bce3-0a74-4b5b-b58d-9f2db8510224"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.05 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="70054fb4-3c58-42e6-94c4-e94872d92473"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.05 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:88:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:88:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>88</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="99c1b834-dd1a-4ebf-9645-8845fbd4ebeb"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.05 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:89:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:89:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>89</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="b190c38d-a872-4d77-9142-a0bfb99f2745"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.05 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:90:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:90:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>90</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="e949d3c8-da17-4f50-aa4a-1f488f4c9ca2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.05 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:91:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:91:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>91</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate TaskExample.json with Content-Type application/json</h2>
+        <a id="c9e11f64-7b43-4b98-bc92-8d908a269ce0"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate TaskExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>94</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-07-18T14:30:42.341Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.36 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>4</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate TaskExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="2d02dff6-7783-4622-ad59-86a20c71983a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.072 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status == 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;status (502) == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>status (502) == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="96a90f50-1bd7-4242-8125-c2ddf3033beb"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.072 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="d07ba3ae-9db6-4f5d-80ab-23fdf3b7fa53"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.072 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:102:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:102:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>102</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="c26f1a5d-b87a-4963-a4f7-950c43b07385"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.072 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:103:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:103:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>103</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="ae06181c-ddab-4654-a4cd-eb1d3fd12eee"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == true</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.072 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].valid == true</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:104:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:104:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>104</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json</h2>
+        <a id="da5aa960-4b24-421a-8261-6333dbc03e9d"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>108</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-07-18T14:30:42.701Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.351 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>5</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="3987a066-6c77-436d-ab55-81c2b3f77d72"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.07 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status == 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;status (502) == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>status (502) == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="cf774a9b-fd07-4219-92a2-244e220eaad4"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.07 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:115:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:115:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>115</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="75eb41b6-e945-45ec-9a54-9276f10c3180"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.07 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:116:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:116:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>116</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="95ac4956-7de8-4bcf-8978-74b5a678b055"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.07 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:117:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:117:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>117</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="bc9db6b3-a82c-459e-a39a-48a7eff57846"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.07 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)&#34;,&#34;name&#34;:&#34;TypeError&#34;,&#34;stack&#34;:&#34;TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:118:40)\n    at sr (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:2730)\n    at Object.qo [as evalExpression] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:3298)\n    at Object.Ti [as action] (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:48801)\n    at At.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46879\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>TypeError: Cannot read properties of undefined (reading &#39;OperationOutcome&#39;) - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http:118:40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>118</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>40</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>TypeError</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>Cannot read properties of undefined (reading &#39;OperationOutcome&#39;)</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json</h2>
+        <a id="bfa85671-9d14-43e6-b444-9ff7d38d8250"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>122</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-07-18T14:30:43.052Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.373 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>2</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>1</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-failed">
+                        <a id="a9d056d8-788f-4330-8b14-2d52c6892f55"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Failed</td></tr>
+                            <tr><th>Duration:</th><td>0.187 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>status == 200</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>{&#34;message&#34;:&#34;status (502) == 200&#34;,&#34;name&#34;:&#34;AssertionError&#34;,&#34;stack&#34;:&#34;AssertionError [ERR_ASSERTION]: status (502) == 200\n    at /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:40725\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:46814)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async cp (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:22407)\n    at async Object.action (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:20619)\n    at async n.trigger (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)\n    at async t.execute (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:53166)\n    at async cu (/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:119:32241)&#34;}</pre>
+                        
+                        
+
+                        
+                        <table class="proplist">
+                            
+                            <tr>
+                                <th>displayMessage</th><td>AssertionError [ERR_ASSERTION]: status (502) == 200 - /opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js:2:47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>file</th><td>/opt/hostedtoolcache/node/20.15.1/x64/lib/node_modules/httpyac/dist/index.js</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>line</th><td>2</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>offset</th><td>47053</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>errorType</th><td>AssertionError [ERR_ASSERTION]</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>message</th><td>status (502) == 200</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="a4a3cfa8-a659-4bd3-9b9a-2b59b8f45b89"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.187 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>

@@ -1,0 +1,251 @@
+
+---------------------
+
+=== /metadata endpoint should return FHIR CapabilityStatement ===
+
+GET https://synthetic.fhir.api.devl.techbd.org/metadata
+accept-encoding: gzip, deflate, br
+accept: */*
+content-type: application/json
+user-agent: httpyac
+
+HTTP/1.1 502  - Bad Gateway
+connection: keep-alive
+content-length: 122
+content-type: text/html
+date: Thu, 18 Jul 2024 14:30:37 GMT
+server: awselb/2.0
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 65805
+content-type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 502  - Bad Gateway
+connection: keep-alive
+content-length: 122
+content-type: text/html
+date: Thu, 18 Jul 2024 14:30:37 GMT
+server: awselb/2.0
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 172099
+content-type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 502  - Bad Gateway
+connection: keep-alive
+content-length: 122
+content-type: text/html
+date: Thu, 18 Jul 2024 14:30:37 GMT
+server: awselb/2.0
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 81252
+content-type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 502  - Bad Gateway
+connection: keep-alive
+content-length: 122
+content-type: text/html
+date: Thu, 18 Jul 2024 14:30:38 GMT
+server: awselb/2.0
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 28181
+content-type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 502  - Bad Gateway
+connection: keep-alive
+content-length: 122
+content-type: text/html
+date: Thu, 18 Jul 2024 14:30:38 GMT
+server: awselb/2.0
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 22520
+content-type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 502  - Bad Gateway
+connection: keep-alive
+content-length: 122
+content-type: text/html
+date: Thu, 18 Jul 2024 14:30:38 GMT
+server: awselb/2.0
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate TaskExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 29973
+content-type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 502  - Bad Gateway
+connection: keep-alive
+content-length: 122
+content-type: text/html
+date: Thu, 18 Jul 2024 14:30:39 GMT
+server: awselb/2.0
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 26238
+content-type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 502  - Bad Gateway
+connection: keep-alive
+content-length: 122
+content-type: text/html
+date: Thu, 18 Jul 2024 14:30:39 GMT
+server: awselb/2.0
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+
+---------------------
+
+=== Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 65805
+content-type: application/fhir+json
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 502  - Bad Gateway
+connection: keep-alive
+content-length: 122
+content-type: text/html
+date: Thu, 18 Jul 2024 14:30:39 GMT
+server: awselb/2.0
+
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+✓ response.body != null
+
+9 requests processed (0 succeeded, 9 failed)
