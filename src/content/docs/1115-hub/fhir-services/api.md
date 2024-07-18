@@ -25,4 +25,4 @@ Learn more about all of the endpoints by reviewing [TechBD's FHIR API Test Scrip
 
 ### Architecture
 
-![FHIR Server Architecture](./qcs-fhir-service.drawio.svg)
+![FHIR Server Architecture](/docs.techbd.org/content/docs/1115-hub/fhir-services/qcs-fhir-service.drawio.svg)
