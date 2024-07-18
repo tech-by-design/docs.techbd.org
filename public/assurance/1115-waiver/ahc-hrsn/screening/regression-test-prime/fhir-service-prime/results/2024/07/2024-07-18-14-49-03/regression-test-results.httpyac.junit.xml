@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="httpyac" tests="41" errors="0" disabled="0" failures="0" time="1.927">
+  <testsuite name="/metadata endpoint should return FHIR CapabilityStatement" tests="3" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http" time="0.547">
+    <properties>
+      <property name="title" value="/metadata endpoint should return FHIR CapabilityStatement"/>
+      <property name="line" value="20"/>
+      <property name="timestamp" value="2024-07-18T14:49:08.562Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.182" assertions="1"/>
+    <testcase name="content-type == text/html;charset=UTF-8" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.182" assertions="1"/>
+    <testcase name="response.body != null" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.182" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" tests="5" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http" time="0.276">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json"/>
+      <property name="line" value="27"/>
+      <property name="timestamp" value="2024-07-18T14:49:09.109Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" time="0.055" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" time="0.055" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" time="0.055" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information" classname="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" time="0.055" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == true" classname="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" time="0.055" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" tests="5" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http" time="0.252">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json"/>
+      <property name="line" value="39"/>
+      <property name="timestamp" value="2024-07-18T14:49:09.386Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" time="0.050" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" time="0.050" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" time="0.050" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information" classname="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" time="0.050" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == true" classname="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" time="0.050" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" tests="5" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http" time="0.184">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json"/>
+      <property name="line" value="53"/>
+      <property name="timestamp" value="2024-07-18T14:49:09.638Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" time="0.037" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" time="0.037" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" time="0.037" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information" classname="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" time="0.037" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == true" classname="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" time="0.037" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" tests="5" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http" time="0.162">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json"/>
+      <property name="line" value="67"/>
+      <property name="timestamp" value="2024-07-18T14:49:09.822Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" time="0.032" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" time="0.032" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" time="0.032" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information" classname="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" time="0.032" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == true" classname="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" time="0.032" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" tests="6" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http" time="0.108">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json"/>
+      <property name="line" value="80"/>
+      <property name="timestamp" value="2024-07-18T14:49:09.984Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.018" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.018" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.018" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.018" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.018" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.018" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" tests="5" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http" time="0.114">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TaskExample.json with Content-Type application/json"/>
+      <property name="line" value="94"/>
+      <property name="timestamp" value="2024-07-18T14:49:10.092Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" time="0.023" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" time="0.023" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" time="0.023" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information" classname="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" time="0.023" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == true" classname="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" time="0.023" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" tests="5" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http" time="0.102">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json"/>
+      <property name="line" value="108"/>
+      <property name="timestamp" value="2024-07-18T14:49:10.206Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" time="0.020" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" time="0.020" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL" classname="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" time="0.020" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null" classname="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" time="0.020" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null" classname="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" time="0.020" assertions="1"/>
+  </testsuite>
+  <testsuite name="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json" tests="2" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http" time="0.182">
+    <properties>
+      <property name="title" value="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json"/>
+      <property name="line" value="122"/>
+      <property name="timestamp" value="2024-07-18T14:49:10.309Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-07-18/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json" time="0.091" assertions="1"/>
+    <testcase name="response.body != null" classname="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json" time="0.091" assertions="1"/>
+  </testsuite>
+</testsuites>

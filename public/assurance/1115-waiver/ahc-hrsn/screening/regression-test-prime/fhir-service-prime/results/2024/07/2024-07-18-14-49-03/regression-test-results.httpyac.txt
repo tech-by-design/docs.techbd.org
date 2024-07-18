@@ -1,0 +1,690 @@
+
+---------------------
+
+=== /metadata endpoint should return FHIR CapabilityStatement ===
+
+GET https://synthetic.fhir.api.devl.techbd.org/metadata
+accept-encoding: gzip, deflate, br
+accept: */*
+content-type: application/json
+user-agent: httpyac
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-language: en-US
+content-length: 2177
+content-type: text/html;charset=UTF-8
+date: Thu, 18 Jul 2024 14:49:04 GMT
+expires: 0
+pragma: no-cache
+set-cookie: JSESSIONID=1A4B790FC04B6AFF3A0334B21F2EB936; Path=/; HttpOnly,Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A04.738509112Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A04.742379417Z%22%2C+%22durationMillisecs%22%3A+%223%22%2C+%22durationNanosecs%22%3A+%223870305%22+%7D; Path=/
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-observability-metric-interaction-duration-millisecs: 3870305
+x-observability-metric-interaction-duration-nanosecs: 3
+x-observability-metric-interaction-finish-time: 2024-07-18T14:49:04.742379417Z
+x-observability-metric-interaction-start-time: 2024-07-18T14:49:04.738509112Z
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$LocalFsPersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs ebd1e2a8-5b05-4d68-a95b-a764f7829414] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/18/14/ebd1e2a8-5b05-4d68-a95b-a764f7829414.json
+x-xss-protection: 0
+
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+    <status value="active"></status>
+    <date value="18 Jul 2024 14:49"></date>
+    <publisher value="TechBD"></publisher>
+    <kind value="instance"></kind>
+    <software>
+        <name value="TechBD FHIR Server"></name>
+        <version value="0.120.0"></version>
+    </software>
+    <implementation>
+        <description value="1115-Hub FHIR"></description>
+        <url value="https://synthetic.fhir.api.devl.techbd.org"></url>
+    </implementation>
+    <fhirVersion value="4.0.1"></fhirVersion>
+    <format value="application/fhir+xml"></format>
+    <format value="application/fhir+json"></format>
+    <rest>
+        <mode value="server"></mode>
+        <resource>
+            <type value="Bundle"></type>
+            <profile value="https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json"></profile>
+            <interaction>
+                <code value="create"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+            <searchParam>
+                <name value="name"></name>
+                <type value="string"></type>
+            </searchParam>
+        </resource>
+        <resource>
+            <type value="OperationDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+        </resource>
+        <resource>
+            <type value="StructureDefinition"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/StructureDefinition"></profile>
+            <interaction>
+                <code value="read"></code>
+            </interaction>
+            <interaction>
+                <code value="search-type"></code>
+            </interaction>
+        </resource>
+        <operation>
+            <name value="validate"></name>
+            <definition value="https://synthetic.fhir.api.devl.techbd.org/OperationDefinition/Bundle--validate"></definition>
+        </operation>
+    </rest>
+</CapabilityStatement>
+✓ status == 200
+✓ content-type == text/html;charset=UTF-8
+✓ response.body != null
+
+---------------------
+
+=== /Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 65805
+content-type: application/fhir+json
+cookie: JSESSIONID=1A4B790FC04B6AFF3A0334B21F2EB936; Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A04.738509112Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A04.742379417Z%22%2C+%22durationMillisecs%22%3A+%223%22%2C+%22durationNanosecs%22%3A+%223870305%22+%7D
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 1039
+content-type: application/json
+date: Thu, 18 Jul 2024 14:49:06 GMT
+expires: 0
+pragma: no-cache
+set-cookie: Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A04.918155854Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A06.694782110Z%22%2C+%22durationMillisecs%22%3A+%221776%22%2C+%22durationNanosecs%22%3A+%221776626256%22+%7D; Path=/
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-observability-metric-interaction-duration-millisecs: 1776626256
+x-observability-metric-interaction-duration-nanosecs: 1776
+x-observability-metric-interaction-finish-time: 2024-07-18T14:49:06.694782110Z
+x-observability-metric-interaction-start-time: 2024-07-18T14:49:04.918155854Z
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$LocalFsPersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs da83b73d-b666-4511-84c5-19931c433f1d] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/18/14/da83b73d-b666-4511-84c5-19931c433f1d.json
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "issues": [],
+        "completedAt": 1721314146.5655198,
+        "valid": true,
+        "initiatedAt": 1721314145.0048602,
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+          "initAt": 1721314144.9901443,
+          "constructedAt": 1721314145.0042121
+        },
+        "operationOutcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "severity": "information",
+              "code": "informational",
+              "diagnostics": "No issues detected during validation"
+            }
+          ]
+        }
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.252.226",
+      "deviceName": "ip-10-0-252-226.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information
+✓ response.parsedBody.OperationOutcome.validationResults[0].valid == true
+
+---------------------
+
+=== /Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 172099
+content-type: application/fhir+json
+cookie: JSESSIONID=1A4B790FC04B6AFF3A0334B21F2EB936; Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A04.918155854Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A06.694782110Z%22%2C+%22durationMillisecs%22%3A+%221776%22%2C+%22durationNanosecs%22%3A+%221776626256%22+%7D
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 1039
+content-type: application/json
+date: Thu, 18 Jul 2024 14:49:07 GMT
+expires: 0
+pragma: no-cache
+set-cookie: Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A06.882425037Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.153615019Z%22%2C+%22durationMillisecs%22%3A+%22271%22%2C+%22durationNanosecs%22%3A+%22271189982%22+%7D; Path=/
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-observability-metric-interaction-duration-millisecs: 271189982
+x-observability-metric-interaction-duration-nanosecs: 271
+x-observability-metric-interaction-finish-time: 2024-07-18T14:49:07.153615019Z
+x-observability-metric-interaction-start-time: 2024-07-18T14:49:06.882425037Z
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$LocalFsPersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 27cea0f2-9fe4-4e75-9889-700d3f42ebfd] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/18/14/27cea0f2-9fe4-4e75-9889-700d3f42ebfd.json
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "issues": [],
+        "completedAt": 1721314147.1522005,
+        "valid": true,
+        "initiatedAt": 1721314147.0221722,
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+          "initAt": 1721314144.9901443,
+          "constructedAt": 1721314145.0042121
+        },
+        "operationOutcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "severity": "information",
+              "code": "informational",
+              "diagnostics": "No issues detected during validation"
+            }
+          ]
+        }
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.252.226",
+      "deviceName": "ip-10-0-252-226.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information
+✓ response.parsedBody.OperationOutcome.validationResults[0].valid == true
+
+---------------------
+
+=== /Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 81252
+content-type: application/fhir+json
+cookie: JSESSIONID=1A4B790FC04B6AFF3A0334B21F2EB936; Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A06.882425037Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.153615019Z%22%2C+%22durationMillisecs%22%3A+%22271%22%2C+%22durationNanosecs%22%3A+%22271189982%22+%7D
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 1039
+content-type: application/json
+date: Thu, 18 Jul 2024 14:49:07 GMT
+expires: 0
+pragma: no-cache
+set-cookie: Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.252358128Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.302070473Z%22%2C+%22durationMillisecs%22%3A+%2249%22%2C+%22durationNanosecs%22%3A+%2249712345%22+%7D; Path=/
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-observability-metric-interaction-duration-millisecs: 49712345
+x-observability-metric-interaction-duration-nanosecs: 49
+x-observability-metric-interaction-finish-time: 2024-07-18T14:49:07.302070473Z
+x-observability-metric-interaction-start-time: 2024-07-18T14:49:07.252358128Z
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$LocalFsPersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 075f6799-b02d-4792-8a76-82bc401cd8e4] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/18/14/075f6799-b02d-4792-8a76-82bc401cd8e4.json
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "issues": [],
+        "completedAt": 1721314147.3007166,
+        "valid": true,
+        "initiatedAt": 1721314147.2537386,
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+          "initAt": 1721314144.9901443,
+          "constructedAt": 1721314145.0042121
+        },
+        "operationOutcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "severity": "information",
+              "code": "informational",
+              "diagnostics": "No issues detected during validation"
+            }
+          ]
+        }
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.252.226",
+      "deviceName": "ip-10-0-252-226.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information
+✓ response.parsedBody.OperationOutcome.validationResults[0].valid == true
+
+---------------------
+
+=== /Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 28181
+content-type: application/fhir+json
+cookie: JSESSIONID=1A4B790FC04B6AFF3A0334B21F2EB936; Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.252358128Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.302070473Z%22%2C+%22durationMillisecs%22%3A+%2249%22%2C+%22durationNanosecs%22%3A+%2249712345%22+%7D
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 1039
+content-type: application/json
+date: Thu, 18 Jul 2024 14:49:07 GMT
+expires: 0
+pragma: no-cache
+set-cookie: Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.400508224Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.425591052Z%22%2C+%22durationMillisecs%22%3A+%2225%22%2C+%22durationNanosecs%22%3A+%2225082828%22+%7D; Path=/
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-observability-metric-interaction-duration-millisecs: 25082828
+x-observability-metric-interaction-duration-nanosecs: 25
+x-observability-metric-interaction-finish-time: 2024-07-18T14:49:07.425591052Z
+x-observability-metric-interaction-start-time: 2024-07-18T14:49:07.400508224Z
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$LocalFsPersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 480e5ad2-7b54-4526-bcc4-4c6303192c8f] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/18/14/480e5ad2-7b54-4526-bcc4-4c6303192c8f.json
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "issues": [],
+        "completedAt": 1721314147.424372,
+        "valid": true,
+        "initiatedAt": 1721314147.4016302,
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+          "initAt": 1721314144.9901443,
+          "constructedAt": 1721314145.0042121
+        },
+        "operationOutcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "severity": "information",
+              "code": "informational",
+              "diagnostics": "No issues detected during validation"
+            }
+          ]
+        }
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.252.226",
+      "deviceName": "ip-10-0-252-226.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information
+✓ response.parsedBody.OperationOutcome.validationResults[0].valid == true
+
+---------------------
+
+=== /Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 22520
+content-type: application/fhir+json
+cookie: JSESSIONID=1A4B790FC04B6AFF3A0334B21F2EB936; Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.400508224Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.425591052Z%22%2C+%22durationMillisecs%22%3A+%2225%22%2C+%22durationNanosecs%22%3A+%2225082828%22+%7D
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 1147
+content-type: application/json
+date: Thu, 18 Jul 2024 14:49:07 GMT
+expires: 0
+pragma: no-cache
+set-cookie: Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.532430571Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.566822684Z%22%2C+%22durationMillisecs%22%3A+%2234%22%2C+%22durationNanosecs%22%3A+%2234392113%22+%7D; Path=/
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-observability-metric-interaction-duration-millisecs: 34392113
+x-observability-metric-interaction-duration-nanosecs: 34
+x-observability-metric-interaction-finish-time: 2024-07-18T14:49:07.566822684Z
+x-observability-metric-interaction-start-time: 2024-07-18T14:49:07.532430571Z
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$LocalFsPersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs cf2fa98d-2a09-4a11-9737-2f310af19e55] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/18/14/cf2fa98d-2a09-4a11-9737-2f310af19e55.json
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"status\"] Invalid attribute value \"complete\": Unknown ServiceRequestStatus code 'complete'",
+            "severity": "FATAL"
+          }
+        ],
+        "completedAt": 1721314147.544021,
+        "valid": false,
+        "initiatedAt": 1721314147.533538,
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+          "initAt": 1721314144.9901443,
+          "constructedAt": 1721314145.0042121
+        },
+        "operationOutcome": null
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.252.226",
+      "deviceName": "ip-10-0-252-226.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== /Bundle/$validate should validate TaskExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 29973
+content-type: application/fhir+json
+cookie: JSESSIONID=1A4B790FC04B6AFF3A0334B21F2EB936; Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.532430571Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.566822684Z%22%2C+%22durationMillisecs%22%3A+%2234%22%2C+%22durationNanosecs%22%3A+%2234392113%22+%7D
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 1039
+content-type: application/json
+date: Thu, 18 Jul 2024 14:49:07 GMT
+expires: 0
+pragma: no-cache
+set-cookie: Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.664497709Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.691678913Z%22%2C+%22durationMillisecs%22%3A+%2227%22%2C+%22durationNanosecs%22%3A+%2227181204%22+%7D; Path=/
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-observability-metric-interaction-duration-millisecs: 27181204
+x-observability-metric-interaction-duration-nanosecs: 27
+x-observability-metric-interaction-finish-time: 2024-07-18T14:49:07.691678913Z
+x-observability-metric-interaction-start-time: 2024-07-18T14:49:07.664497709Z
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$LocalFsPersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 4f6c57fb-c661-47d4-b3c2-6c464bea8342] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/18/14/4f6c57fb-c661-47d4-b3c2-6c464bea8342.json
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "issues": [],
+        "completedAt": 1721314147.6904743,
+        "valid": true,
+        "initiatedAt": 1721314147.66542,
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+          "initAt": 1721314144.9901443,
+          "constructedAt": 1721314145.0042121
+        },
+        "operationOutcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "severity": "information",
+              "code": "informational",
+              "diagnostics": "No issues detected during validation"
+            }
+          ]
+        }
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.252.226",
+      "deviceName": "ip-10-0-252-226.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.body != null
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == information
+✓ response.parsedBody.OperationOutcome.validationResults[0].valid == true
+
+---------------------
+
+=== /Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 26238
+content-type: application/fhir+json
+cookie: JSESSIONID=1A4B790FC04B6AFF3A0334B21F2EB936; Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.664497709Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.691678913Z%22%2C+%22durationMillisecs%22%3A+%2227%22%2C+%22durationNanosecs%22%3A+%2227181204%22+%7D
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 1142
+content-type: application/json
+date: Thu, 18 Jul 2024 14:49:07 GMT
+expires: 0
+pragma: no-cache
+set-cookie: Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.787860129Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.794746017Z%22%2C+%22durationMillisecs%22%3A+%226%22%2C+%22durationNanosecs%22%3A+%226885888%22+%7D; Path=/
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-observability-metric-interaction-duration-millisecs: 6885888
+x-observability-metric-interaction-duration-nanosecs: 6
+x-observability-metric-interaction-finish-time: 2024-07-18T14:49:07.794746017Z
+x-observability-metric-interaction-start-time: 2024-07-18T14:49:07.787860129Z
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$LocalFsPersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 64f9b21e-9b34-4cc2-95f5-a598b97543b9] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/18/14/64f9b21e-9b34-4cc2-95f5-a598b97543b9.json
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "validationResults": [
+      {
+        "issues": [
+          {
+            "location": {
+              "line": null,
+              "column": null,
+              "diagnostics": "ca.uhn.fhir.parser.DataFormatException"
+            },
+            "message": "HAPI-1821: [element=\"status\"] Invalid attribute value \"complete\": Unknown ProcedureStatus code 'complete'",
+            "severity": "FATAL"
+          }
+        ],
+        "completedAt": 1721314147.7939458,
+        "valid": false,
+        "initiatedAt": 1721314147.7889159,
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+          "initAt": 1721314144.9901443,
+          "constructedAt": 1721314145.0042121
+        },
+        "operationOutcome": null
+      }
+    ],
+    "device": {
+      "deviceId": "10.0.252.226",
+      "deviceName": "ip-10-0-252-226.ec2.internal"
+    },
+    "resourceType": "OperationOutcome"
+  }
+}
+✓ status == 200
+✓ response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].severity == FATAL
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.line == null
+✓ response.parsedBody.OperationOutcome.validationResults[0].issues[0].location.column == null
+
+---------------------
+
+=== Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json ===
+
+POST https://synthetic.fhir.api.devl.techbd.org/Bundle
+accept-encoding: gzip, deflate, br
+accept: */*
+content-length: 65805
+content-type: application/fhir+json
+cookie: JSESSIONID=1A4B790FC04B6AFF3A0334B21F2EB936; Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.787860129Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A07.794746017Z%22%2C+%22durationMillisecs%22%3A+%226%22%2C+%22durationNanosecs%22%3A+%226885888%22+%7D
+user-agent: httpyac
+x-techbd-tenant-id: QC-TEST
+
+HTTP/1.1 200  - OK
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+connection: keep-alive
+content-length: 1721
+content-type: application/json
+date: Thu, 18 Jul 2024 14:49:08 GMT
+expires: 0
+pragma: no-cache
+set-cookie: Observability-Metric-Interaction-Active=%7B+%22startTime%22%3A+%222024-07-18T14%3A49%3A07.890313478Z%22%2C+%22finishTime%22%3A+%222024-07-18T14%3A49%3A08.032706865Z%22%2C+%22durationMillisecs%22%3A+%22142%22%2C+%22durationNanosecs%22%3A+%22142393387%22+%7D; Path=/
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-observability-metric-interaction-duration-millisecs: 142393387
+x-observability-metric-interaction-duration-nanosecs: 142
+x-observability-metric-interaction-finish-time: 2024-07-18T14:49:08.032706865Z
+x-observability-metric-interaction-start-time: 2024-07-18T14:49:07.890313478Z
+x-techbd-interaction-persistence-strategy-args: { "nature": "fs" }
+x-techbd-interaction-persistence-strategy-factory: org.techbd.util.ArtifactStore$LocalFsPersistence
+x-techbd-interaction-persistence-strategy-instance-info-0: [persist-fs 92adfb13-b772-4606-ac57-c99113e18942] /app/polyglot-prime/hub-prime/ArtifactStore-LocalFsPersistence/2024/07/18/14/92adfb13-b772-4606-ac57-c99113e18942.json
+x-xss-protection: 0
+
+{
+  "OperationOutcome": {
+    "bundleSessionId": "92adfb13-b772-4606-ac57-c99113e18942",
+    "validationResults": [
+      {
+        "issues": [],
+        "completedAt": 1721314147.9287682,
+        "valid": true,
+        "initiatedAt": 1721314147.8938155,
+        "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+        "observability": {
+          "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+          "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+          "initAt": 1721314144.9901443,
+          "constructedAt": 1721314145.0042121
+        },
+        "operationOutcome": {
+          "resourceType": "OperationOutcome",
+          "issue": [
+            {
+              "severity": "information",
+              "code": "informational",
+              "diagnostics": "No issues detected during validation"
+            }
+          ]
+        }
+      }
+    ],
+    "statusUrl": "https://synthetic.fhir.api.devl.techbd.org/Bundle/$status/92adfb13-b772-4606-ac57-c99113e18942",
+    "isAsync": true,
+    "device": {
+      "deviceId": "10.0.252.226",
+      "deviceName": "ip-10-0-252-226.ec2.internal"
+    },
+    "resourceType": "OperationOutcome",
+    "outboundHttpMessage": "POST https://40lafnwsw7.execute-api.us-east-1.amazonaws.com/dev?processingAgent=QC-TEST HTTP/1.1\nContent-Type: application/fhir+json\n\nThe incoming FHIR payload was not stored (to save space).\nThis is not an error or warning just an FYI - if you'd like to see the incoming FHIR payload for debugging, next time just pass in the optional `?include-incoming-payload-in-db=true` to request payload storage for each request that you'd like to store."
+  }
+}
+✓ status == 200
+✓ response.body != null
+
+9 requests processed (9 succeeded, 0 failed)
