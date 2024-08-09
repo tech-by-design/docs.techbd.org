@@ -1,0 +1,34 @@
+{
+    "OperationOutcome": {
+      "validationResults": [
+        {
+          "initiatedAt": 1723184557.902093,
+          "profileUrl": "https://djq7jdt8kb490.cloudfront.net/1115/StructureDefinition-SHINNYBundleProfile.json",
+          "observability": {
+            "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+            "name": "HAPI version 7.2.0 (TODO:get from API instead of hard coding) (FHIR version 4.0.1)",
+            "initAt": 1723184171.5562012,
+            "constructedAt": 1723184171.5693698
+          },
+          "issues": [],
+          "operationOutcome": {
+            "resourceType": "OperationOutcome",
+            "issue": [
+              {
+                "severity": "information",
+                "code": "informational",
+                "diagnostics": "No issues detected during validation"
+              }
+            ]
+          },
+          "completedAt": 1723184557.9521866,
+          "valid": true
+        }
+      ],
+      "device": {
+        "deviceId": "127.0.1.1",
+        "deviceName": "vinod-OptiPlex"
+      },
+      "resourceType": "OperationOutcome"
+    }
+  }
