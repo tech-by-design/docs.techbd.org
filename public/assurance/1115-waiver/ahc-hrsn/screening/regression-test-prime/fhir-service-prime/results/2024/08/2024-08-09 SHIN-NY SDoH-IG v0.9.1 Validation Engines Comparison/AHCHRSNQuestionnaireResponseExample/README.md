@@ -13,7 +13,7 @@ Validate the FHIR document using SHIN-NY IG Version 0.9.1 on the following platf
 
 #### TechBD Validation API
 
-- No issues identified 
+- No issues identified, please refer [custom-115-fhir-server.md](custom-115-fhir-server.md)  
 
 #### Inferno Validation Engine
 
@@ -21,4 +21,4 @@ Validate the FHIR document using SHIN-NY IG Version 0.9.1 on the following platf
 
 #### Official Public Site
 
-- Official validator not returniong any referential integrity issues
+- Official validator not returniong any referential integrity issues,please refer  [official-public-site.md](official-public-site.md) 

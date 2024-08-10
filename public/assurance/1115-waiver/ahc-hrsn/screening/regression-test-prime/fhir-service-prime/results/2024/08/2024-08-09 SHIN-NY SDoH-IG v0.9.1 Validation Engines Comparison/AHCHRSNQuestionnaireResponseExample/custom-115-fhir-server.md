@@ -8,7 +8,7 @@
 
 ```json
 {
-  "testcase": 300,
+  "testcase": AHCHRSNQuestionnaireResponseExample,
   "csvoutputS3Bucket": "certification-engine-output",
   "testcasetype": "POSITIVE",
   "expectedResult": "AHCHRSNQuestionnaireResponseExample should succcessfully be processed by the QE and forwarded to NYeC.  The MPI for the patient should be added to the Patient resource."
