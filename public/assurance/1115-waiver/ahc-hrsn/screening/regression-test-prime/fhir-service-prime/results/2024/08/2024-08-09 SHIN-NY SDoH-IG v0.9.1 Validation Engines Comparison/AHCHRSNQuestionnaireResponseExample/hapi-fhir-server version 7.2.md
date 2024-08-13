@@ -1,4 +1,4 @@
-# File evaluation against Custom 1115 FHIR Server
+#  File evaluation against Hapi FHIR Server Version 7.2
 
 ## Files tested
 
