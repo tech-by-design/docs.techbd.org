@@ -13,11 +13,11 @@ Validate the FHIR document using SHIN-NY IG Version 0.9.1 on the following platf
 
 #### HAPI FHIR Server version 7.2 Validation 
 
-- No issues identified, please see the results [hapi-fhir-server version 7.2.md](hapi-fhir-server version 7.2.md) 
+- No issues identified, please see the results [hapi-fhir-server-version-7-2.md](hapi-fhir-server-version-7-2.md) 
 
 #### HAPI FHIR Server version 6.2 Validation
 
-- We are getting more validation issues using HAPI version 6.2.0 while comparing with HAPI version 7.2.0. please see the results [hapi-fhir-server version 6.2.md](hapi-fhir-server version 6.2.md) 
+- We are getting more validation issues using HAPI version 6.2.0 while comparing with HAPI version 7.2.0. please see the results [hapi-fhir-server-version-6-2.md](hapi-fhir-server-version-6-2.md) 
 
 
 #### Inferno Validation Engine
