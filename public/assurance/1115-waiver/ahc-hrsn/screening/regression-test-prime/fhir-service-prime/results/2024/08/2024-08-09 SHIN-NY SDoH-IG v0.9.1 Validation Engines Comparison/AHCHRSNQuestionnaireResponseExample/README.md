@@ -5,13 +5,13 @@
 Validate the FHIR document using SHIN-NY IG Version 0.9.1 on the following platforms:
 1. [Legacy Public Inferno Site](https://inferno.healthit.gov/validator/)
 2. [Official Public Site](https://validator.fhir.org/)
-4. [TechBD Validation API](https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate)
+4. [HAPI FHIR Server Validation ](https://synthetic.fhir.api.devl.techbd.org/Bundle/$validate)
 
 
 ### Changes Identified in Error Logs Version 0.9.1
 
 
-#### TechBD Validation API
+#### HAPI FHIR Server Validation
 
 - No issues identified, please see the results [custom-115-fhir-server.md](custom-115-fhir-server.md)  
 
