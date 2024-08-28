@@ -7,7 +7,16 @@ export default defineConfig({
 	base: 'docs.techbd.org',
 	integrations: [
 		starlight({
-			title: 'TechBD Docs',
+			title: 'Documentation',
+			logo: {
+				light: '/src/assets/tech-by-design_doc_full-color_small.png',
+				dark: '/src/assets/tech-by-design_doc_full-color_small.png',
+				replacesTitle: true,
+			},
+			customCss: [
+				// Relative path to your custom CSS file
+				'./src/styles/custom.css',
+			  ],
 			head: [{
 				tag: "script",
 				attrs: {
@@ -15,15 +24,15 @@ export default defineConfig({
 					defer: true
 				},
 				content: `
-					import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
-					mermaid.initialize({ startOnLoad: true }); 
+					import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+					mermaid.initialize({ startOnLoad: true });
 					await mermaid.run({
 						querySelector: 'pre[data-language="mermaid"]',
 				  	});`
 			}],
 			editLink: {
 				baseUrl: 'https://github.com/tech-by-design/docs.techbd.org/edit/main/',
-			},		
+			},
 			social: {
 				github: 'https://github.com/tech-by-design/docs.techbd.org',
 			},
