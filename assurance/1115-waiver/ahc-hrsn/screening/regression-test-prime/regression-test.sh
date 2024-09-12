@@ -12,7 +12,7 @@
 SCRIPT_DIR=$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
 TIMESTAMP=$(date +'%Y/%m/%Y-%m-%d-%H-%M-%S')
 
-ASSURANCE_FHIR_SRC_DIR=$(readlink -f $SCRIPT_DIR/fhir-service-prime/src/2024-08-09)
+ASSURANCE_FHIR_SRC_DIR=$(readlink -f $SCRIPT_DIR/fhir-service-prime/src/2024-09-12)
 ASSURANCE_FHIR_RESULTS_DIR=$(readlink -f $SCRIPT_DIR/../../../../../public/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results)
 TIMESTAMPPED_ASSURANCE_FHIR_RESULTS_DIR=$ASSURANCE_FHIR_RESULTS_DIR/$TIMESTAMP
 

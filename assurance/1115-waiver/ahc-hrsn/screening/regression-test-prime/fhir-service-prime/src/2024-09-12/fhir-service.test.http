@@ -1,0 +1,142 @@
+# this file is for testing and verifying the FHIR service with two api endpoints
+# ------------------------------------------------------------------------
+# * requires the `vscode-httpyac` Visual Studio Code extension within IDE
+#   or httpYac CLI when executing outside of the IDE
+# * this service has 2 endpoints /Bundle/$validate & /Bundle/
+
+@hostName = http://localhost:8080
+{{
+  // dotEnv is loaded by default so let's see if custom hostName is available;
+  // if $HTTPYAC_HOST is available use it first otherwise use $HOST
+  if(process.env.HOST) exports.hostName = process.env.HOST;
+  if(process.env.HTTPYAC_HOST) exports.hostName = process.env.HTTPYAC_HOST;
+}}
+
+@contentType = application/json
+@contentTypeFHIR = application/fhir+json
+@TECH_BD_FHIR_SERVICE_QE_IDENTIFIER = QC-TEST
+
+
+### /metadata endpoint should return FHIR CapabilityStatement
+GET {{hostName}}/metadata
+Content-Type: {{contentType}}
+?? status == 200
+?? header content-type == text/html;charset=UTF-8
+?? response.body  != null
+
+### /Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error
+?? js response.parsedBody.OperationOutcome.validationResults[0].valid == false
+
+< AHCHRSNQuestionnaireResponseExample.json
+
+### /Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error
+?? js response.parsedBody.OperationOutcome.validationResults[0].valid == false
+
+< AHCHRSNScreeningResponseExample.json
+
+
+### /Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error
+?? js response.parsedBody.OperationOutcome.validationResults[0].valid == false
+
+< NYScreeningResponseExample.json
+
+### /Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error
+?? js response.parsedBody.OperationOutcome.validationResults[0].valid == false
+
+< ObservationAssessmentFoodInsecurityExample.json
+
+
+### /Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error
+?? js response.parsedBody.OperationOutcome.validationResults[0].valid == false
+
+< ServiceRequestExample.json
+
+### /Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error
+?? js response.parsedBody.OperationOutcome.validationResults[0].valid == false
+
+< TaskCompletedExample.json
+
+### /Bundle/$validate should validate TaskExample.json with Content-Type application/json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error
+?? js response.parsedBody.OperationOutcome.validationResults[0].valid == false
+
+< TaskExample.json
+
+
+### /Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json
+
+POST {{hostName}}/Bundle/$validate HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+?? js response.parsedBody.OperationOutcome.resourceType == OperationOutcome
+?? js response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error
+?? js response.parsedBody.OperationOutcome.validationResults[0].valid == false
+
+< TaskOutputProcedureExample.json
+
+
+### Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json
+# DO NOT use any header variables which are not required by QEs
+POST {{hostName}}/Bundle HTTP/1.1
+Content-Type: {{contentTypeFHIR}}
+X-TechBD-Tenant-ID: {{TECH_BD_FHIR_SERVICE_QE_IDENTIFIER}}
+?? status == 200
+?? response.body  != null
+
+< AHCHRSNQuestionnaireResponseExample.json
