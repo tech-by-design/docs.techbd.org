@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="httpyac" tests="45" errors="0" disabled="0" failures="8" time="5.492">
+  <testsuite name="/metadata endpoint should return FHIR CapabilityStatement" tests="3" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http" time="0.175">
+    <properties>
+      <property name="title" value="/metadata endpoint should return FHIR CapabilityStatement"/>
+      <property name="line" value="20"/>
+      <property name="timestamp" value="2024-09-13T05:03:56.909Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.058" assertions="1"/>
+    <testcase name="content-type == text/html;charset=UTF-8" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.058" assertions="1"/>
+    <testcase name="response.body != null" classname="/metadata endpoint should return FHIR CapabilityStatement" time="0.058" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" tests="5" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http" time="1.440">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json"/>
+      <property name="line" value="27"/>
+      <property name="timestamp" value="2024-09-13T05:03:57.085Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" time="0.288" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" time="0.288" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" time="0.288" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" classname="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" time="0.288" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of null (reading 'issue') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:35:95"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+        <property name="line" value="35"/>
+        <property name="offset" value="95"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of null (reading 'issue')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" type="TypeError">{"message":"Cannot read properties of null (reading 'issue')","name":"TypeError","stack":"TypeError: Cannot read properties of null (reading 'issue')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:35:95)\n    at pr (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:2730)\n    at Object.Mo [as evalExpression] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:3324)\n    at Object.Di [as action] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:38170)\n    at Dt.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36248\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:30247\n    at async Object.action (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36183)\n    at async o.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == false" classname="/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json" time="0.288" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" tests="5" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http" time="0.483">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json"/>
+      <property name="line" value="39"/>
+      <property name="timestamp" value="2024-09-13T05:03:58.525Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" time="0.097" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" time="0.097" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" time="0.097" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" classname="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" time="0.097" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of null (reading 'issue') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:48:95"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+        <property name="line" value="48"/>
+        <property name="offset" value="95"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of null (reading 'issue')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" type="TypeError">{"message":"Cannot read properties of null (reading 'issue')","name":"TypeError","stack":"TypeError: Cannot read properties of null (reading 'issue')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:48:95)\n    at pr (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:2730)\n    at Object.Mo [as evalExpression] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:3324)\n    at Object.Di [as action] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:38170)\n    at Dt.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36248\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:30247\n    at async Object.action (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36183)\n    at async o.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == false" classname="/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json" time="0.097" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" tests="5" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http" time="0.467">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json"/>
+      <property name="line" value="53"/>
+      <property name="timestamp" value="2024-09-13T05:03:59.009Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" time="0.093" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" time="0.093" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" time="0.093" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" classname="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" time="0.093" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of null (reading 'issue') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:62:95"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+        <property name="line" value="62"/>
+        <property name="offset" value="95"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of null (reading 'issue')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" type="TypeError">{"message":"Cannot read properties of null (reading 'issue')","name":"TypeError","stack":"TypeError: Cannot read properties of null (reading 'issue')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:62:95)\n    at pr (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:2730)\n    at Object.Mo [as evalExpression] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:3324)\n    at Object.Di [as action] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:38170)\n    at Dt.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36248\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:30247\n    at async Object.action (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36183)\n    at async o.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == false" classname="/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json" time="0.093" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json" tests="5" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http" time="0.439">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json"/>
+      <property name="line" value="66"/>
+      <property name="timestamp" value="2024-09-13T05:03:59.476Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json" time="0.088" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json" time="0.088" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json" time="0.088" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" classname="/Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json" time="0.088" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of null (reading 'issue') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:75:95"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+        <property name="line" value="75"/>
+        <property name="offset" value="95"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of null (reading 'issue')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" type="TypeError">{"message":"Cannot read properties of null (reading 'issue')","name":"TypeError","stack":"TypeError: Cannot read properties of null (reading 'issue')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:75:95)\n    at pr (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:2730)\n    at Object.Mo [as evalExpression] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:3324)\n    at Object.Di [as action] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:38170)\n    at Dt.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36248\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:30247\n    at async Object.action (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36183)\n    at async o.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == false" classname="/Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json" time="0.088" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" tests="5" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http" time="0.463">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json"/>
+      <property name="line" value="80"/>
+      <property name="timestamp" value="2024-09-13T05:03:59.915Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" time="0.093" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" time="0.093" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" time="0.093" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" classname="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" time="0.093" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of null (reading 'issue') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:89:95"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+        <property name="line" value="89"/>
+        <property name="offset" value="95"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of null (reading 'issue')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" type="TypeError">{"message":"Cannot read properties of null (reading 'issue')","name":"TypeError","stack":"TypeError: Cannot read properties of null (reading 'issue')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:89:95)\n    at pr (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:2730)\n    at Object.Mo [as evalExpression] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:3324)\n    at Object.Di [as action] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:38170)\n    at Dt.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36248\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:30247\n    at async Object.action (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36183)\n    at async o.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == false" classname="/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json" time="0.093" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" tests="5" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http" time="0.442">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json"/>
+      <property name="line" value="93"/>
+      <property name="timestamp" value="2024-09-13T05:04:00.378Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.088" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.088" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.088" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.088" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of null (reading 'issue') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:102:95"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+        <property name="line" value="102"/>
+        <property name="offset" value="95"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of null (reading 'issue')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" type="TypeError">{"message":"Cannot read properties of null (reading 'issue')","name":"TypeError","stack":"TypeError: Cannot read properties of null (reading 'issue')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:102:95)\n    at pr (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:2730)\n    at Object.Mo [as evalExpression] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:3324)\n    at Object.Di [as action] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:38170)\n    at Dt.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36248\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:30247\n    at async Object.action (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36183)\n    at async o.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == false" classname="/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json" time="0.088" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" tests="5" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http" time="0.583">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TaskExample.json with Content-Type application/json"/>
+      <property name="line" value="106"/>
+      <property name="timestamp" value="2024-09-13T05:04:00.821Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" time="0.117" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" time="0.117" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" time="0.117" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" classname="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" time="0.117" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of null (reading 'issue') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:115:95"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+        <property name="line" value="115"/>
+        <property name="offset" value="95"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of null (reading 'issue')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" type="TypeError">{"message":"Cannot read properties of null (reading 'issue')","name":"TypeError","stack":"TypeError: Cannot read properties of null (reading 'issue')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:115:95)\n    at pr (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:2730)\n    at Object.Mo [as evalExpression] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:3324)\n    at Object.Di [as action] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:38170)\n    at Dt.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36248\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:30247\n    at async Object.action (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36183)\n    at async o.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == false" classname="/Bundle/$validate should validate TaskExample.json with Content-Type application/json" time="0.117" assertions="1"/>
+  </testsuite>
+  <testsuite name="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" tests="5" errors="0" failures="1" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http" time="0.456">
+    <properties>
+      <property name="title" value="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json"/>
+      <property name="line" value="120"/>
+      <property name="timestamp" value="2024-09-13T05:04:01.404Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" time="0.091" assertions="1"/>
+    <testcase name="response.body != null" classname="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" time="0.091" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.resourceType == OperationOutcome" classname="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" time="0.091" assertions="1"/>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" classname="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" time="0.091" assertions="1">
+      <properties>
+        <property name="displayMessage" value="TypeError: Cannot read properties of null (reading 'issue') - Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:129:95"/>
+        <property name="file" value="Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+        <property name="line" value="129"/>
+        <property name="offset" value="95"/>
+        <property name="errorType" value="TypeError"/>
+        <property name="message" value="Cannot read properties of null (reading 'issue')"/>
+      </properties>
+      <failure message="response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error" type="TypeError">{"message":"Cannot read properties of null (reading 'issue')","name":"TypeError","stack":"TypeError: Cannot read properties of null (reading 'issue')\n    at Object.userJS (/home/runner/work/docs.techbd.org/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http:129:95)\n    at pr (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:2730)\n    at Object.Mo [as evalExpression] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:120:3324)\n    at Object.Di [as action] (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:38170)\n    at Dt.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2889)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36248\n    at async /opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:30247\n    at async Object.action (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/dist/index.js:3:36183)\n    at async o.trigger (/opt/hostedtoolcache/node/20.17.0/x64/lib/node_modules/httpyac/node_modules/hookpoint/dist/index.js:1:2872)"}</failure>
+    </testcase>
+    <testcase name="response.parsedBody.OperationOutcome.validationResults[0].valid == false" classname="/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json" time="0.091" assertions="1"/>
+  </testsuite>
+  <testsuite name="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json" tests="2" errors="0" failures="0" skipped="0" package="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http" time="0.543">
+    <properties>
+      <property name="title" value="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json"/>
+      <property name="line" value="134"/>
+      <property name="timestamp" value="2024-09-13T05:04:01.860Z"/>
+      <property name="file" value="assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http"/>
+    </properties>
+    <testcase name="status == 200" classname="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json" time="0.272" assertions="1"/>
+    <testcase name="response.body != null" classname="Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json" time="0.272" assertions="1"/>
+  </testsuite>
+</testsuites>
