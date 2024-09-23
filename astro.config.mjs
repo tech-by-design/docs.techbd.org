@@ -38,7 +38,7 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Introduction to TechBD',
+					label: 'Introduction to Tech by Design',
 					link: 'techbd-intro',
 				},
 				{
@@ -59,6 +59,25 @@ export default defineConfig({
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
+				},
+				{
+					label: 'Collaboration Hub',
+					items: [
+						{
+							label: "login",
+							autogenerate: { directory: 'collaborationhub/login' }
+						},{
+							label: "Overview",
+							autogenerate: { directory: 'collaborationhub/overview' }
+						},						
+						{
+							label: "Dashboard",
+							autogenerate: { directory: 'collaborationhub/dashboard' }
+						},
+						{
+							label: "Content",
+							autogenerate: { directory: 'collaborationhub/content' }
+						}]
 				},
 			],
 		}),

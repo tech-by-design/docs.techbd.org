@@ -4,9 +4,9 @@ title: Regression Test Results
 
 **FHIR Server Base URL for Synthetic Data Exchange**: `https://synthetic.fhir.api.devl.techbd.org`. No authentication requried at this time, will be defined and deployed soon.
 
-### TechBD FHIR API test scripts and results
+### Tech by Design FHIR API test scripts and results
 
-Learn about API endpoints by reviewing [TechBD's FHIR API Test Script](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/src/fhir-service.test.http). 
+Learn about API endpoints by reviewing [Tech by Design's FHIR API Test Script](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/src/fhir-service.test.http). 
 - [Latest Test Fixtures](https://github.com/tech-by-design/docs.techbd.org/tree/main/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12) (generated test cases)
 - [Latest Test Results (HTML from httpYac)](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/regression-test-results.httpyac.junit.xml.html)
 - [Latest Test Results (httpYac raw output)](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/regression-test-results.httpyac.txt)
@@ -15,7 +15,7 @@ Learn about API endpoints by reviewing [TechBD's FHIR API Test Script](/docs.tec
 
 #### Postman-based API test scripts
 
-For developers who prefer to use Postman for API testing and debugging, instead of TechBD's [httpYac](https://httpyac.github.io/)-based strategy, you can easily convert [`fhir-service.test.http`](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/src/fhir-service.test.http) httpYac file to Postman:
+For developers who prefer to use Postman for API testing and debugging, instead of Tech by Design's [httpYac](https://httpyac.github.io/)-based strategy, you can easily convert [`fhir-service.test.http`](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/src/fhir-service.test.http) httpYac file to Postman:
 
 - Open the `fhir-service.test.http` and familiarize yourself with the structure of the file. You will see sections defining HTTP requests, including HTTP methods (GET, POST, etc.), URLs, headers, and body content.
 - Open Postman and create a new collection.

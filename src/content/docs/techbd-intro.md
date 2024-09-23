@@ -1,5 +1,5 @@
 ---
-title: Technology by Design (TechBD) Overview
+title: Technology by Design Overview
 nav:
   sequence:
     weight: 0
@@ -28,9 +28,9 @@ their mission to enhance healthcare data sharing across the state.
 - Compliance: Ensure adherence to the governance specifications set forth by
   NYeC, fostering a unified healthcare data infrastructure.
 
-## TechBD's Role
+## Tech by Design's Role
 
-- Collaboration Facilitation: TechBD serves as a facilitator for QEs to
+- Collaboration Facilitation: Tech by Design serves as a facilitator for QEs to
   collaborate effectively, focusing on consensus-based decision-making that
   aligns with NYeC's governance.
 - Shared Solutions: Encourages QEs to share code for custom software and
@@ -40,5 +40,5 @@ their mission to enhance healthcare data sharing across the state.
 
 Through this strategy, NYeC ensures that the state's health information exchange
 continues to evolve in a unified, interoperable, and efficient manner. The
-collaborative efforts facilitated by TechBD will empower QEs to meet governance
+collaborative efforts facilitated by Tech by Design will empower QEs to meet governance
 requirements while innovating in ways that strengthen the healthcare system.
