@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regression-test-results.httpyac.junit.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : regression-test-results.httpyac.junit.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>/metadata endpoint should return FHIR CapabilityStatement
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#97d100bd-c65c-47f2-be35-b6ac7f119ec2">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#55c3e224-f7fb-466b-afec-28d11e6dc914">content-type == text/html;charset=UTF-8</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#fd72fa59-5255-484e-902e-be7ebf0e817d">response.body != null</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#7386c8cc-b956-4716-b370-de72056d6bf2">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#b9a4ce67-bca6-40d8-97e9-80c0117476f4">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#0586f675-6824-43ef-8328-b9876bd8dbe6">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2dfac6a4-e18c-4871-9ebb-c39edd312268">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2951ed15-1ada-4812-a616-0a0b51ac07ae">response.parsedBody.OperationOutcome.validationResults[0].valid == false</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#5c4fe4d0-6cb7-4834-9663-01e6dc6a25a6">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#d4f1d2b9-5b66-4152-be3e-76a9b10e29df">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#fc8e0dbf-c20d-4fec-ad02-7d148a94b459">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#26f191b0-31ce-43c3-89bc-a0ca57e7ecc2">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#223ef47b-b917-40a5-b5f4-c42d22ecea6c">response.parsedBody.OperationOutcome.validationResults[0].valid == false</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#2634bc7d-50da-4f68-80e6-286f4d58f944">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#0690b61d-4351-453f-a306-f80483e700f0">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#944ba031-7adb-4402-b8ef-160c72894137">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#08834f80-0ba6-4b4d-b761-5ebac24b2c7b">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#18b6e11e-ec0b-4e7f-b0c1-ed683a9ad81f">response.parsedBody.OperationOutcome.validationResults[0].valid == false</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#06f5da6d-eaa1-4600-9ede-0fb7a36c47a6">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#fee65d9d-f775-4dbb-a939-e72da9de5196">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#9871e86e-f98f-42cc-9b59-bfb0305dd71e">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#28ffd373-06f8-452c-a1ac-1e3728c05285">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#3ed14f41-ae39-4fbe-a3cb-99346127c968">response.parsedBody.OperationOutcome.validationResults[0].valid == false</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#fb431df8-70fc-43ff-a5ac-937e0dbc7398">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#a3db7c03-b7ab-4222-a5f6-0cf767175515">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#d65127f3-4019-4984-83ff-1d8cc60e57b5">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#8d34f926-9343-4467-8272-2e637dddb3e3">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#d5b33f3e-0419-42e6-bd70-761c2badb823">response.parsedBody.OperationOutcome.validationResults[0].valid == false</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#6c60a0f2-9f1d-4dd4-aa3d-3c145d20e624">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#33a03ba1-b220-4ceb-8333-a970a251e21b">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#6fc6864a-cdb6-4a3e-8189-6f1ced88bc02">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#7341e843-8b41-44f6-893b-fc2ee7785923">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#eb7c5069-aa90-4f0c-84e7-b3a5ae8d7e6c">response.parsedBody.OperationOutcome.validationResults[0].valid == false</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate TaskExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#e70f9328-bacc-459d-b105-457d2499e1f7">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#41384909-0d1a-4ed9-8f3b-d48e0b094141">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#68b2f2da-5dcb-4ef7-81ab-0584f68af493">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#13d000a7-8842-4463-afc5-92f0177f4e1e">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#9ef422c2-7248-4668-8524-b1e4e5fed80b">response.parsedBody.OperationOutcome.validationResults[0].valid == false</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#2c290693-48ab-4ce1-b9f0-3bbbdb9c17b7">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#e65a98ef-c351-45f1-a560-a0320bd286f2">response.body != null</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#faa316b0-00ce-4c01-9eb8-bc2d30366d93">response.parsedBody.OperationOutcome.resourceType == OperationOutcome</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#fe902066-a5e4-49cb-80df-a02cf2ab2865">response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#e26328c1-3ac2-4210-b40b-e33e9d91acce">response.parsedBody.OperationOutcome.validationResults[0].valid == false</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#02ff8a25-0043-4d70-ac56-bca87f169423">status == 200</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#7b0e9fac-9ff5-4e06-a16d-760adb700a47">response.body != null</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: /metadata endpoint should return FHIR CapabilityStatement</h2>
+        <a id="ba7f75d5-86bd-4ab7-b43a-0d1c5500f378"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/metadata endpoint should return FHIR CapabilityStatement</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>20</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-09-23T04:26:48.349Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.283 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>3</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/metadata endpoint should return FHIR CapabilityStatement</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="97d100bd-c65c-47f2-be35-b6ac7f119ec2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.094 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="55c3e224-f7fb-466b-afec-28d11e6dc914"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>content-type == text/html;charset=UTF-8</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.094 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fd72fa59-5255-484e-902e-be7ebf0e817d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.094 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json</h2>
+        <a id="dbb09d72-1ec2-43b7-a6cd-51d5917e12e0"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>27</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-09-23T04:26:48.633Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>3.213 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate AHCHRSNQuestionnaireResponseExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7386c8cc-b956-4716-b370-de72056d6bf2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.643 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b9a4ce67-bca6-40d8-97e9-80c0117476f4"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.643 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0586f675-6824-43ef-8328-b9876bd8dbe6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.643 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2dfac6a4-e18c-4871-9ebb-c39edd312268"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.643 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2951ed15-1ada-4812-a616-0a0b51ac07ae"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == false</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.643 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json</h2>
+        <a id="8e8ac825-4179-4535-94ba-13dd3d1724bd"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>39</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-09-23T04:26:51.846Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>4.563 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate AHCHRSNScreeningResponseExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5c4fe4d0-6cb7-4834-9663-01e6dc6a25a6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.913 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="d4f1d2b9-5b66-4152-be3e-76a9b10e29df"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.913 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fc8e0dbf-c20d-4fec-ad02-7d148a94b459"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.913 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="26f191b0-31ce-43c3-89bc-a0ca57e7ecc2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.913 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="223ef47b-b917-40a5-b5f4-c42d22ecea6c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == false</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.913 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json</h2>
+        <a id="da711eba-484d-4710-a7f1-e84fd551383b"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>53</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-09-23T04:26:56.410Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>2.911 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate NYScreeningResponseExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2634bc7d-50da-4f68-80e6-286f4d58f944"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.582 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0690b61d-4351-453f-a306-f80483e700f0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.582 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="944ba031-7adb-4402-b8ef-160c72894137"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.582 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="08834f80-0ba6-4b4d-b761-5ebac24b2c7b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.582 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="18b6e11e-ec0b-4e7f-b0c1-ed683a9ad81f"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == false</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.582 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json</h2>
+        <a id="ae6a6042-2048-4352-a6ce-4b784c3a479c"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>66</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-09-23T04:26:59.320Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>1.869 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate ObservationAssessmentFoodInsecurityExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="06f5da6d-eaa1-4600-9ede-0fb7a36c47a6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.374 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fee65d9d-f775-4dbb-a939-e72da9de5196"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.374 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="9871e86e-f98f-42cc-9b59-bfb0305dd71e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.374 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="28ffd373-06f8-452c-a1ac-1e3728c05285"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.374 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="3ed14f41-ae39-4fbe-a3cb-99346127c968"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == false</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.374 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json</h2>
+        <a id="d8be3e87-f7df-4690-99c6-84e773e0b705"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>80</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-09-23T04:27:01.189Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>1.928 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate ServiceRequestExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fb431df8-70fc-43ff-a5ac-937e0dbc7398"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.386 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="a3db7c03-b7ab-4222-a5f6-0cf767175515"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.386 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="d65127f3-4019-4984-83ff-1d8cc60e57b5"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.386 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8d34f926-9343-4467-8272-2e637dddb3e3"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.386 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="d5b33f3e-0419-42e6-bd70-761c2badb823"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == false</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.386 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json</h2>
+        <a id="3e6295d2-da84-446d-ad50-576c29ca0469"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>93</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-09-23T04:27:03.118Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>1.645 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate TaskCompletedExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6c60a0f2-9f1d-4dd4-aa3d-3c145d20e624"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.329 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="33a03ba1-b220-4ceb-8333-a970a251e21b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.329 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6fc6864a-cdb6-4a3e-8189-6f1ced88bc02"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.329 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7341e843-8b41-44f6-893b-fc2ee7785923"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.329 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="eb7c5069-aa90-4f0c-84e7-b3a5ae8d7e6c"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == false</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.329 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate TaskExample.json with Content-Type application/json</h2>
+        <a id="7b844693-c54b-461b-b40d-b46897f8a37e"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate TaskExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>106</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-09-23T04:27:04.764Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>1.753 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate TaskExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e70f9328-bacc-459d-b105-457d2499e1f7"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.351 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="41384909-0d1a-4ed9-8f3b-d48e0b094141"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.351 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="68b2f2da-5dcb-4ef7-81ab-0584f68af493"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.351 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="13d000a7-8842-4463-afc5-92f0177f4e1e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.351 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="9ef422c2-7248-4668-8524-b1e4e5fed80b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == false</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.351 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: /Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json</h2>
+        <a id="706f488d-b7ee-4c12-b955-3625ba8115f9"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>120</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-09-23T04:27:06.517Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>1.621 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>5</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/Bundle/$validate should validate TaskOutputProcedureExample.json with Content-Type application/json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2c290693-48ab-4ce1-b9f0-3bbbdb9c17b7"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.324 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e65a98ef-c351-45f1-a560-a0320bd286f2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.324 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="faa316b0-00ce-4c01-9eb8-bc2d30366d93"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.resourceType == OperationOutcome</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.324 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fe902066-a5e4-49cb-80df-a02cf2ab2865"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].operationOutcome.issue[0].severity == error</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.324 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e26328c1-3ac2-4210-b40b-e33e9d91acce"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.parsedBody.OperationOutcome.validationResults[0].valid == false</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.324 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json</h2>
+        <a id="cd97c72b-18b8-48a7-a563-16588e593a20"></a>
+        
+        <span>Package: assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</span>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>title</th><td>Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json</td>
+            </tr>
+            
+            <tr>
+                <th>line</th><td>134</td>
+            </tr>
+            
+            <tr>
+                <th>timestamp</th><td>2024-09-23T04:27:08.138Z</td>
+            </tr>
+            
+            <tr>
+                <th>file</th><td>assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-12/fhir-service.test.http</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>3.223 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>2</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>Bundle should validate and submit Test​ServiceRequest.json as @TECH_BD_FHIR_SERVICE_QE_IDENTIFIER -  with Content-Type application/fhir+json</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="02ff8a25-0043-4d70-ac56-bca87f169423"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>status == 200</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>1.612 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="7b0e9fac-9ff5-4e06-a16d-760adb700a47"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>response.body != null</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>1.612 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>
