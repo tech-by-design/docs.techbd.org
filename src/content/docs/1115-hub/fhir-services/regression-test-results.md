@@ -10,7 +10,7 @@ Learn about API endpoints by reviewing [Tech by Design's FHIR API Test Script](/
 - [Latest Test Fixtures](https://github.com/tech-by-design/docs.techbd.org/tree/main/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/src/2024-09-27) (generated test cases)
 - [Latest Test Results (HTML from httpYac)](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/regression-test-results.httpyac.junit.xml.html)
 - [Latest Test Results (httpYac raw output)](/docs.techbd.org/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/latest/regression-test-results.httpyac.txt)
-- [Previous Test Results](https://github.com/tech-by-design/docs.techbd.org/tree/main/public/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/2024/08)
+- [Previous Test Results](https://github.com/tech-by-design/docs.techbd.org/tree/main/public/assurance/1115-waiver/ahc-hrsn/screening/regression-test-prime/fhir-service-prime/results/2024/09)
 
 
 #### Postman-based API test scripts
