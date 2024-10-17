@@ -1,0 +1,19 @@
+MSH|^~\&||12bc4567^Good Health Clinic^123 Main St^^Springfield^IL^62701^USA||Dr. Tom Recipient^Recipient Clinic^125 Main St^^Springfield^IL^62701^USA|20240923||ORU^R01^ORU_R01|9c44d6b0-279b-4b12-8c57-8b563c0b02d5|P|2.7|<cr> 
+PID|1||123456^^^HOSPITAL^MR||Doe^John^A||19800101|M|||123 Main St^^Anytown^NY^12345||555-1234|||M||123456789|987654321<cr>
+PV1|1|O|Virtual||||||||||||||||V123456|||||||||||||||||||||||||20240923|||||||V|<cr>
+OBR|1|||AHCHRSN^AHC-HRSN modified screening tool|<cr>
+OBX|1|CE|59284-0^Consent Document^LN||LA33-6^Yes^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|2|ST|^Questionnaire details||The questionnaire from which these responses are drawn is based on LOINC 96777-8 (Accountable health communities (AHC) health-related social needs screening (HRSN) tool) plus 2 questions drawn from LOINC 97023-6 (Accountable health communities (AHC) health-related social needs (HRSN) supplemental questions).||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|3|CE|71802-3^What is your living situation today?^LN||LA31993-1^I have a steady place to live^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|4|CE|96778-6^Think about the place you live. Do you have problems with any of the following?^LN||LA28580-1^Mold^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|5|CE|96779-4^In the past 12 months has the electric, gas, oil, or water company threatened to shut off services in your home?^LN||LA32002-0^Already shut off^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|6|CE|88122-7^Within the past 12 months, you worried that your food would run out before you got money to buy more^LN||LA6729-3^Sometimes true^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|7|CE|88123-5^Within the past 12 months, the food you bought just didn't last and you didn't have money to get more.^LN||LA6729-3^Sometimes true^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|8|CE|93030-5^In the past 12 months, has lack of reliable transportation kept you from medical appointments, meetings, work or from getting things needed for daily living?^LN||LA32-8^No^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|9|CE|96780-2^Do you want help finding or keeping work or a job?^LN||LA32-8^No^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|10|CE|96782-8^Do you want help with school or training?^LN||LA32-8^No^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|11|CE|95618-5^How often does anyone, including family and friends, physically hurt you?^LN||LA10066-1^Rarely^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|12|CE|95617-7^How often does anyone, including family and friends, insult or talk down to you?^LN||LA10066-1^Rarely^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|13|CE|95616-9^How often does anyone, including family and friends, threaten you with harm?^LN||LA10066-1^Rarely^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|14|CE|95615-1^How often does anyone, including family and friends, scream or curse at you?^LN||LA10082-8^Sometimes^LN||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
+OBX|15|NM|95614-4^Safety total score^LN||9||||||F|||20240923||1234567^Levin^Henry|||||||Good Health Clinic|<cr>
