@@ -3,7 +3,7 @@
   "id" : "ObservationAssessmentFoodInsecurityExample",
   "meta" : {
     "lastUpdated" : "2024-02-23T00:00:00Z",
-    "profile" : ["http://shinny.org/us/ny/hrsn/StructureDefinition/SHINNYBundleProfile"]
+    "profile" : ["http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/SHINNYBundleProfile"]
   },
   "type" : "transaction",
   "timestamp" : "2024-02-23T00:00:00Z",
@@ -14,12 +14,12 @@
       "id" : "PatientExample",
       "meta" : {
         "lastUpdated" : "2024-02-23T00:00:00.00Z",
-        "profile" : ["http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-patient"]
+        "profile" : ["http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/shinny-patient"]
       },
       "language" : "en",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><a name=\"Patient_PatientExample\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient PatientExample</b></p><a name=\"PatientExample\"> </a><a name=\"hcPatientExample\"> </a><a name=\"PatientExample-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-23 00:00:00+0000; Language: en</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-shinny-patient.html\">SHINNY Patient Profile</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Jon Doe  Male, DoB: 1981-07-16 ( Medical record number)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li>Patient Medicaid number/AA12345C</li><li>Social Security Number/999-34-2964</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 555-120-6047(Home)</li><li>115 Broadway Apt2 New York, NY 10032</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Language spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes:{urn:ietf:bcp:47 en}\">English</span> (preferred)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Mother\">Mother:</td><td colspan=\"3\"><ul><li>Joyce Doe </li><li><a href=\"tel:+1234567890\">+1234567890</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.\">US Core Ethnicity Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://hl7.org/fhir/us/core/STU3.1.1/CodeSystem-cdcrec.html#cdcrec-2135-2\">Race &amp; Ethnicity - CDC</a> 2135-2: Hispanic or Latino</li><li>text: Hispanic or Latino</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc). This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).\"><a href=\"http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-birthsex.html\">US Core Birth Sex Extension</a></td><td colspan=\"3\">M</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.\">US Core Race Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://hl7.org/fhir/us/core/STU3.1.1/CodeSystem-cdcrec.html#cdcrec-2028-9\">Race &amp; Ethnicity - CDC</a> 2028-9: Asian</li><li>text: Asian</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension represents an individual's sense of being a man, woman, boy, girl, nonbinary, or something else, ascertained by asking them what that identity is.\"><a href=\"StructureDefinition-shinny-gender-identity.html\">SHINNYGenderIdentityExtension</a></td><td colspan=\"3\"><span title=\"Codes:{http://loinc.org LA22878-5}\">Identifies as male</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Personal Pronouns\"><a href=\"StructureDefinition-shinny-personal-pronouns.html\">SHINNY Personal Pronouns</a></td><td colspan=\"3\"><span title=\"Codes:{http://loinc.org LA29518-0}\">he/him/his/his/himself</span></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><a name=\"Patient_PatientExample\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient PatientExample</b></p><a name=\"PatientExample\"> </a><a name=\"hcPatientExample\"> </a><a name=\"PatientExample-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-23 00:00:00+0000; Language: en</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-shinny-patient.html\">SHINNY Patient Profile</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Jon Doe  Male, DoB: 1981-07-16 ( Medical record number)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li>Patient Medicaid number/AA12345C</li><li>Social Security Number/999-34-2964</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 555-120-6047(Home)</li><li>115 Broadway Apt2 New York, NY 10032</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Language spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes:{urn:iso:std:iso:639 EN}\">EN</span> (preferred)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Personal Pronouns\"><a href=\"StructureDefinition-shinny-personal-pronouns.html\">SHINNY Personal Pronouns</a></td><td colspan=\"3\"><span title=\"Codes:{http://loinc.org LA29518-0}\">he/him/his/his/himself</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension represents an individual's sense of being a man, woman, boy, girl, nonbinary, or something else, ascertained by asking them what that identity is.\"><a href=\"StructureDefinition-shinny-gender-identity.html\">SHINNYGenderIdentityExtension</a></td><td colspan=\"3\"><span title=\"Codes:{http://loinc.org LA22878-5}\">Identifies as male</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.\">US Core Ethnicity Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://hl7.org/fhir/us/core/STU3.1.1/CodeSystem-cdcrec.html#cdcrec-2135-2\">Race &amp; Ethnicity - CDC</a> 2135-2: Hispanic or Latino</li><li>text: Hispanic or Latino</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc). This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).\"><a href=\"http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-birthsex.html\">US Core Birth Sex Extension</a></td><td colspan=\"3\">M</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.\">US Core Race Extension:</td><td colspan=\"3\"><ul><li>ombCategory: <a href=\"http://hl7.org/fhir/us/core/STU3.1.1/CodeSystem-cdcrec.html#cdcrec-2028-9\">Race &amp; Ethnicity - CDC</a> 2028-9: Asian</li><li>text: Asian</li></ul></td></tr></table></div>"
       },
       "extension" : [{
         "extension" : [{
@@ -56,7 +56,7 @@
         "valueCode" : "M"
       },
       {
-        "url" : "http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-personal-pronouns",
+        "url" : "http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/shinny-personal-pronouns",
         "valueCodeableConcept" : {
           "coding" : [{
             "system" : "http://loinc.org",
@@ -66,7 +66,7 @@
         }
       },
       {
-        "url" : "http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-gender-identity",
+        "url" : "http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/shinny-gender-identity",
         "valueCodeableConcept" : {
           "coding" : [{
             "system" : "http://loinc.org",
@@ -112,7 +112,7 @@
       }],
       "name" : [{
         "extension" : [{
-          "url" : "http://shinny.org/us/ny/hrsn/StructureDefinition/middle-name",
+          "url" : "http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/middle-name",
           "valueString" : "Bob"
         }],
         "family" : "Doe",
@@ -139,28 +139,11 @@
         "state" : "NY",
         "postalCode" : "10032"
       }],
-      "contact" : [{
-        "relationship" : [{
-          "coding" : [{
-            "system" : "http://terminology.hl7.org/CodeSystem/v2-0063",
-            "code" : "MTH",
-            "display" : "Mother"
-          }]
-        }],
-        "name" : {
-          "family" : "Doe",
-          "given" : ["Joyce"]
-        },
-        "telecom" : [{
-          "system" : "phone",
-          "value" : "+1234567890"
-        }]
-      }],
       "communication" : [{
         "language" : {
           "coding" : [{
-            "system" : "urn:ietf:bcp:47",
-            "code" : "en"
+            "system" : "urn:iso:std:iso:639",
+            "code" : "EN"
           }]
         },
         "preferred" : true
@@ -178,7 +161,7 @@
       "id" : "SexualOrientationExample",
       "meta" : {
         "lastUpdated" : "2024-02-23T00:00:00Z",
-        "profile" : ["http://shinny.org/us/ny/hrsn/StructureDefinition/shin-ny-observation-sexual-orientation"]
+        "profile" : ["http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/shin-ny-observation-sexual-orientation"]
       },
       "text" : {
         "status" : "generated",
@@ -215,11 +198,11 @@
       "id" : "EncounterExample",
       "meta" : {
         "lastUpdated" : "2024-02-23T00:00:00Z",
-        "profile" : ["http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-encounter"]
+        "profile" : ["http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/shinny-encounter"]
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_EncounterExample\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter EncounterExample</b></p><a name=\"EncounterExample\"> </a><a name=\"hcEncounterExample\"> </a><a name=\"EncounterExample-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-23 00:00:00+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-shinny-encounter.html\">SHINNY Encounter Profile</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-FLD\">ActCode</a> FLD: field</p><p><b>type</b>: <span title=\"Codes:\">Direct questioning (procedure)</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Jon Doe  Male, DoB: 1981-07-16 ( Medical record number)</a></p><p><b>period</b>: 2024-02-23 00:00:00+0000 --&gt; 2024-02-23 01:00:00+0000</p><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Location-LocationExample-SCN.html\">Location downtown location</a></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_EncounterExample\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter EncounterExample</b></p><a name=\"EncounterExample\"> </a><a name=\"hcEncounterExample\"> </a><a name=\"EncounterExample-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-23 00:00:00+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-shinny-encounter.html\">SHINNY Encounter Profile</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-FLD\">ActCode</a> FLD: field</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 405672008}\">Direct questioning (procedure)</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Jon Doe  Male, DoB: 1981-07-16 ( Medical record number)</a></p><p><b>period</b>: 2024-02-23 00:00:00+0000 --&gt; 2024-02-23 01:00:00+0000</p><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Location-LocationExample-SCN.html\">Location downtown location</a></td></tr></table></div>"
       },
       "status" : "finished",
       "class" : {
@@ -228,7 +211,9 @@
       },
       "type" : [{
         "coding" : [{
-          "code" : "405672008"
+          "system" : "http://snomed.info/sct",
+          "code" : "405672008",
+          "display" : "Direct questioning (procedure)"
         }],
         "text" : "Direct questioning (procedure)"
       }],
@@ -257,11 +242,11 @@
       "id" : "AssessmentFoodInsecurityExample",
       "meta" : {
         "lastUpdated" : "2024-02-23T00:00:00Z",
-        "profile" : ["http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-observation-assessment"]
+        "profile" : ["http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/shinny-observation-assessment"]
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_AssessmentFoodInsecurityExample\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation AssessmentFoodInsecurityExample</b></p><a name=\"AssessmentFoodInsecurityExample\"> </a><a name=\"hcAssessmentFoodInsecurityExample\"> </a><a name=\"AssessmentFoodInsecurityExample-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-23 00:00:00+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-shinny-observation-assessment.html\">SHINNY Observation Assessment Profile</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes food-insecurity}\">Food Insecurity</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category social-history}\">Social History</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 699653008}\">Inadequate oral food intake for physiological needs</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Jon Doe  Male, DoB: 1981-07-16 ( Medical record number)</a></p><p><b>encounter</b>: <a href=\"Encounter-EncounterExample.html\">Encounter: status = finished; class = field (ActCode#FLD); type = 405672008; period = 2024-02-23 00:00:00+0000 --&gt; 2024-02-23 01:00:00+0000</a></p><p><b>effective</b>: 2024-05-10 21:56:54+0000</p><p><b>performer</b>: <a href=\"Practitioner-PractitionerExampleCBO.html\">Practitioner Bob Kelso MD</a></p><p><b>value</b>: true</p><p><b>derivedFrom</b>: <a href=\"Observation-FoodInsecurity88122-7.html\">Observation Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]</a></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_AssessmentFoodInsecurityExample\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation AssessmentFoodInsecurityExample</b></p><a name=\"AssessmentFoodInsecurityExample\"> </a><a name=\"hcAssessmentFoodInsecurityExample\"> </a><a name=\"AssessmentFoodInsecurityExample-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-23 00:00:00+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-shinny-observation-assessment.html\">SHINNY Observation Assessment Profile</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes food-insecurity}\">Food Insecurity</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category social-history}\">Social History</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 699653008}\">Inadequate oral food intake for physiological needs</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Jon Doe  Male, DoB: 1981-07-16 ( Medical record number)</a></p><p><b>encounter</b>: <a href=\"Encounter-EncounterExample.html\">Encounter: status = finished; class = field (ActCode#FLD); type = Direct questioning (procedure); period = 2024-02-23 00:00:00+0000 --&gt; 2024-02-23 01:00:00+0000</a></p><p><b>effective</b>: 2024-05-10 21:56:54+0000</p><p><b>performer</b>: <a href=\"Practitioner-PractitionerExampleCBO.html\">Practitioner Bob Kelso MD</a></p><p><b>value</b>: true</p><p><b>derivedFrom</b>: <a href=\"Observation-FoodInsecurity88122-7.html\">Observation Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]</a></p></div>"
       },
       "status" : "final",
       "category" : [{
@@ -312,7 +297,7 @@
       "id" : "FoodInsecurity88122-7",
       "meta" : {
         "lastUpdated" : "2024-02-23T00:00:00Z",
-        "profile" : ["http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-observation-screening-response"]
+        "profile" : ["http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/shinny-observation-screening-response"]
       },
       "language" : "en",
       "text" : {
@@ -380,11 +365,11 @@
       "id" : "ConditionFoodInsecurityExample",
       "meta" : {
         "lastUpdated" : "2024-02-23T00:00:00Z",
-        "profile" : ["http://shinny.org/us/ny/hrsn/StructureDefinition/SHINNY-SDOHCC-Condition"]
+        "profile" : ["http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/SHINNY-SDOHCC-Condition"]
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_ConditionFoodInsecurityExample\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition ConditionFoodInsecurityExample</b></p><a name=\"ConditionFoodInsecurityExample\"> </a><a name=\"hcConditionFoodInsecurityExample\"> </a><a name=\"ConditionFoodInsecurityExample-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-23 00:00:00+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-SHINNY-SDOHCC-Condition.html\">SHINNY SDOHCC Condition Profile</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/core/CodeSystem/condition-category health-concern}\">Health Concern</span>, <span title=\"Codes:{http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes food-insecurity}\">Food Insecurity</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 733423003}, {http://hl7.org/fhir/sid/icd-10-cm Z59.4}\">Food insecurity</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Jon Doe  Male, DoB: 1981-07-16 ( Medical record number)</a></p><p><b>encounter</b>: <a href=\"Encounter-EncounterExample.html\">Encounter: status = finished; class = field (ActCode#FLD); type = 405672008; period = 2024-02-23 00:00:00+0000 --&gt; 2024-02-23 01:00:00+0000</a></p><p><b>onset</b>: 2023-07-12 16:08:00+0000 --&gt; (ongoing)</p><p><b>asserter</b>: <a href=\"Practitioner-PractitionerExampleCBO.html\">Practitioner Bob Kelso MD</a></p><blockquote><p><b>evidence</b></p><p><b>detail</b>: </p><ul><li><a href=\"Observation-AssessmentFoodInsecurityExample.html\">Observation Inadequate oral food intake for physiological needs</a></li><li><a href=\"Observation-FoodInsecurity88122-7.html\">Observation Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]</a></li></ul></blockquote></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_ConditionFoodInsecurityExample\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition ConditionFoodInsecurityExample</b></p><a name=\"ConditionFoodInsecurityExample\"> </a><a name=\"hcConditionFoodInsecurityExample\"> </a><a name=\"ConditionFoodInsecurityExample-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2024-02-23 00:00:00+0000</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-SHINNY-SDOHCC-Condition.html\">SHINNY SDOHCC Condition Profile</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/core/CodeSystem/condition-category health-concern}\">Health Concern</span>, <span title=\"Codes:{http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes food-insecurity}\">Food Insecurity</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 733423003}, {http://hl7.org/fhir/sid/icd-10-cm Z59.4}\">Food insecurity</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Jon Doe  Male, DoB: 1981-07-16 ( Medical record number)</a></p><p><b>encounter</b>: <a href=\"Encounter-EncounterExample.html\">Encounter: status = finished; class = field (ActCode#FLD); type = Direct questioning (procedure); period = 2024-02-23 00:00:00+0000 --&gt; 2024-02-23 01:00:00+0000</a></p><p><b>onset</b>: 2023-07-12 16:08:00+0000 --&gt; (ongoing)</p><p><b>asserter</b>: <a href=\"Practitioner-PractitionerExampleCBO.html\">Practitioner Bob Kelso MD</a></p><blockquote><p><b>evidence</b></p><p><b>detail</b>: </p><ul><li><a href=\"Observation-AssessmentFoodInsecurityExample.html\">Observation Inadequate oral food intake for physiological needs</a></li><li><a href=\"Observation-FoodInsecurity88122-7.html\">Observation Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]</a></li></ul></blockquote></div>"
       },
       "clinicalStatus" : {
         "coding" : [{
@@ -459,7 +444,7 @@
       "id" : "PractitionerExampleCBO",
       "meta" : {
         "lastUpdated" : "2024-02-23T00:00:00Z",
-        "profile" : ["http://shinny.org/us/ny/hrsn/StructureDefinition/shin-ny-practitioner"]
+        "profile" : ["http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/shin-ny-practitioner"]
       },
       "text" : {
         "status" : "generated",
@@ -500,7 +485,7 @@
       "id" : "OrganizationExampleOther-SCN1",
       "meta" : {
         "lastUpdated" : "2024-02-23T00:00:00Z",
-        "profile" : ["http://shinny.org/us/ny/hrsn/StructureDefinition/shin-ny-organization"]
+        "profile" : ["http://shinny.org/ImplementationGuide/HRSN/StructureDefinition/shin-ny-organization"]
       },
       "text" : {
         "status" : "generated",
