@@ -1,0 +1,1659 @@
+{
+    "OperationOutcome": {
+      "validationResults": [
+        {
+          "operationOutcome": {
+            "resourceType": "OperationOutcome",
+            "issue": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 5722
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Extension_EXT_Unknown"
+                  }
+                ],
+                "severity": "information",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Extension_EXT_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Unknown extension http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-personal-pronouns",
+                "location": [
+                  "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.extension[3]",
+                  "Line[1] Col[5722]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 5920
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Extension_EXT_Unknown"
+                  }
+                ],
+                "severity": "information",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Extension_EXT_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Unknown extension http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-gender-identity",
+                "location": [
+                  "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.extension[4]",
+                  "Line[1] Col[5920]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 6242
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Terminology_TX_NoValid_2_CC"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Terminology_TX_NoValid_2_CC"
+                    }
+                  ]
+                },
+                "diagnostics": "None of the codings provided are in the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://terminology.hl7.org/CodeSystem/v2-0203#MA)",
+                "location": [
+                  "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.identifier[1].type",
+                  "Line[1] Col[6242]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 6412
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Extension_EXT_Unknown"
+                  }
+                ],
+                "severity": "information",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Extension_EXT_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Unknown extension http://shinny.org/us/ny/hrsn/StructureDefinition/middle-name",
+                "location": [
+                  "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.name[0].extension[0]",
+                  "Line[1] Col[6412]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 6864
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Terminology_PassThrough_TX_Message"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Terminology_PassThrough_TX_Message"
+                    }
+                  ]
+                },
+                "diagnostics": "Inappropriate CodeSystem URL \"urn:iso:std:iso:639\" for ValueSet: http://hl7.org/fhir/ValueSet/languages",
+                "location": [
+                  "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.communication[0].language",
+                  "Line[1] Col[6864]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 6864
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Terminology_TX_NoValid_3_CC"
+                  }
+                ],
+                "severity": "information",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Terminology_TX_NoValid_3_CC"
+                    }
+                  ]
+                },
+                "diagnostics": "None of the codings provided are in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages|4.0.1), and a coding is recommended to come from this value set (codes = urn:iso:std:iso:639#EN)",
+                "location": [
+                  "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.communication[0].language",
+                  "Line[1] Col[6864]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 6884
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-patient' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.meta.profile[0]",
+                  "Line[1] Col[6884]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 8625
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "All_observations_should_have_a_performer"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "All_observations_should_have_a_performer"
+                    }
+                  ]
+                },
+                "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+                "location": [
+                  "Bundle.entry[1].resource/*Observation/SexualOrientationExample*/",
+                  "Line[1] Col[8625]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 8625
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "All_observations_should_have_an_effectiveDateTime_or_an_effectivePeriod"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "All_observations_should_have_an_effectiveDateTime_or_an_effectivePeriod"
+                    }
+                  ]
+                },
+                "diagnostics": "Best Practice Recommendation: In general, all observations should have an effective[x] ()",
+                "location": [
+                  "Bundle.entry[1].resource/*Observation/SexualOrientationExample*/",
+                  "Line[1] Col[8625]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 8625
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shin-ny-observation-sexual-orientation' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[1].resource/*Observation/SexualOrientationExample*/.meta.profile[0]",
+                  "Line[1] Col[8625]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 10709
+                  }
+                ],
+                "severity": "information",
+                "code": "processing",
+                "diagnostics": "Details for Patient/CBOPatientExample matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1 - Bundle.entry[0].resource/*Patient/CBOPatientExample*/.communication[0].language: Inappropriate CodeSystem URL &quot;urn:iso:std:iso:639&quot; for ValueSet: http://hl7.org/fhir/ValueSet/languages",
+                "location": [
+                  "Bundle.entry[2].resource/*Encounter/EncounterExampleCBO*/.subject",
+                  "Line[1] Col[10709]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 10852
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-encounter' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[2].resource/*Encounter/EncounterExampleCBO*/.meta.profile[0]",
+                  "Line[1] Col[10852]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 14196
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "All_observations_should_have_a_performer"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "All_observations_should_have_a_performer"
+                    }
+                  ]
+                },
+                "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+                "location": [
+                  "Bundle.entry[3].resource/*Observation/FoodInsecurity88122-7*/",
+                  "Line[1] Col[14196]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 13277
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Terminology_TX_NoValid_3_CC"
+                  }
+                ],
+                "severity": "information",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Terminology_TX_NoValid_3_CC"
+                    }
+                  ]
+                },
+                "diagnostics": "None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set (codes = http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes#food-insecurity)",
+                "location": [
+                  "Bundle.entry[3].resource/*Observation/FoodInsecurity88122-7*/.category[0]",
+                  "Line[1] Col[13277]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 14196
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-observation-screening-response' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[3].resource/*Observation/FoodInsecurity88122-7*/.meta.profile[0]",
+                  "Line[1] Col[14196]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 17525
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "All_observations_should_have_a_performer"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "All_observations_should_have_a_performer"
+                    }
+                  ]
+                },
+                "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+                "location": [
+                  "Bundle.entry[4].resource/*Observation/FoodInsecurity88123-5*/",
+                  "Line[1] Col[17525]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 16626
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Terminology_TX_NoValid_3_CC"
+                  }
+                ],
+                "severity": "information",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Terminology_TX_NoValid_3_CC"
+                    }
+                  ]
+                },
+                "diagnostics": "None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set (codes = http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes#food-insecurity)",
+                "location": [
+                  "Bundle.entry[4].resource/*Observation/FoodInsecurity88123-5*/.category[0]",
+                  "Line[1] Col[16626]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 17525
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-observation-screening-response' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[4].resource/*Observation/FoodInsecurity88123-5*/.meta.profile[0]",
+                  "Line[1] Col[17525]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 18881
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Terminology_TX_NoValid_2_CC"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Terminology_TX_NoValid_2_CC"
+                    }
+                  ]
+                },
+                "diagnostics": "None of the codings provided are in the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://terminology.hl7.org/CodeSystem/v2-0203#NPI)",
+                "location": [
+                  "Bundle.entry[5].resource/*Practitioner/PractitionerExampleCBO*/.identifier[0].type",
+                  "Line[1] Col[18881]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 19140
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shin-ny-practitioner' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[5].resource/*Practitioner/PractitionerExampleCBO*/.meta.profile[0]",
+                  "Line[1] Col[19140]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 20600
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "diagnostics": "Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided",
+                "location": [
+                  "Bundle.entry[6].resource/*Organization/OrganizationExampleCBO*/.identifier[0].type",
+                  "Line[1] Col[20600]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 20600
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Terminology_TX_NoValid_2_CC"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Terminology_TX_NoValid_2_CC"
+                    }
+                  ]
+                },
+                "diagnostics": "None of the codings provided are in the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = null#null)",
+                "location": [
+                  "Bundle.entry[6].resource/*Organization/OrganizationExampleCBO*/.identifier[0].type",
+                  "Line[1] Col[20600]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 21013
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shin-ny-organization' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[6].resource/*Organization/OrganizationExampleCBO*/.meta.profile[0]",
+                  "Line[1] Col[21013]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 0 matches the reference Patient/CBOPatientExample by type and id but it's fullUrl http://shinny.org/Patient/CBOPatientExample does not match the full target URL http://Patient/CBOPatientExample by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.for"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 6 matches the reference Organization/OrganizationExampleCBO by type and id but it's fullUrl http://shinny.org/Organization/OrganizationExampleCBO does not match the full target URL http://Organization/OrganizationExampleCBO by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.owner"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 0 matches the reference Patient/CBOPatientExample by type and id but it's fullUrl http://shinny.org/Patient/CBOPatientExample does not match the full target URL http://Patient/CBOPatientExample by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.restriction.recipient[0]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 8 matches the reference Procedure/ProcedureExample by type and id but it's fullUrl http://shinny.org/ProcedureExample does not match the full target URL http://Procedure/ProcedureExample by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.output[0].value.ofType(Reference)"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 24838
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/SHINNYSDOHTaskForReferralManagement' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.meta.profile[0]",
+                  "Line[1] Col[24838]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 24838
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/StructureDefinition//SHINNYSDOHTaskForReferralManagement' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.meta.profile[1]",
+                  "Line[1] Col[24838]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 5 matches the reference Practitioner/PractitionerExampleCBO by type and id but it's fullUrl http://shinny.org/Practitioner/PractitionerExampleCBO does not match the full target URL http://Practitioner/PractitionerExampleCBO by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[8].resource/*Procedure/ProcedureExample*/.performer[0].actor"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 6 matches the reference Organization/OrganizationExampleCBO by type and id but it's fullUrl http://shinny.org/Organization/OrganizationExampleCBO does not match the full target URL http://Organization/OrganizationExampleCBO by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[8].resource/*Procedure/ProcedureExample*/.performer[0].onBehalfOf"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 3 matches the reference Observation/FoodInsecurity88122-7 by type and id but it's fullUrl http://shinny.org/Observation/FoodInsecurity88122-7 does not match the full target URL http://Observation/FoodInsecurity88122-7 by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[8].resource/*Procedure/ProcedureExample*/.reasonReference[0]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 4 matches the reference Observation/FoodInsecurity88123-5 by type and id but it's fullUrl http://shinny.org/Observation/FoodInsecurity88123-5 does not match the full target URL http://Observation/FoodInsecurity88123-5 by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[8].resource/*Procedure/ProcedureExample*/.reasonReference[1]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 28001
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-sdoh-procedure' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[8].resource/*Procedure/ProcedureExample*/.meta.profile[0]",
+                  "Line[1] Col[28001]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 6 matches the reference Organization/OrganizationExampleCBO by type and id but it's fullUrl http://shinny.org/Organization/OrganizationExampleCBO does not match the full target URL http://Organization/OrganizationExampleCBO by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[9].resource/*ServiceRequest/ServiceRequestActiveExample*/.performer[0]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 10 matches the reference Location/LocationExample-CBO by type and id but it's fullUrl http://shinny.org/Location/LocationExample-CBO does not match the full target URL http://Location/LocationExample-CBO by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[9].resource/*ServiceRequest/ServiceRequestActiveExample*/.locationReference[0]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 3 matches the reference Observation/FoodInsecurity88122-7 by type and id but it's fullUrl http://shinny.org/Observation/FoodInsecurity88122-7 does not match the full target URL http://Observation/FoodInsecurity88122-7 by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[9].resource/*ServiceRequest/ServiceRequestActiveExample*/.reasonReference[0]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"
+                    }
+                  ]
+                },
+                "diagnostics": "Entry 4 matches the reference Observation/FoodInsecurity88123-5 by type and id but it's fullUrl http://shinny.org/Observation/FoodInsecurity88123-5 does not match the full target URL http://Observation/FoodInsecurity88123-5 by Bundle resolution rules",
+                "location": [
+                  "Bundle.entry[9].resource/*ServiceRequest/ServiceRequestActiveExample*/.reasonReference[1]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 32231
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/SHINNYSDOHServiceRequest' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.entry[9].resource/*ServiceRequest/ServiceRequestActiveExample*/.meta.profile[0]",
+                  "Line[1] Col[32231]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 8625
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "All_observations_should_have_a_performer"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "All_observations_should_have_a_performer"
+                    }
+                  ]
+                },
+                "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+                "location": [
+                  "Bundle.entry[1].resource",
+                  "Line[1] Col[8625]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 8625
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "All_observations_should_have_an_effectiveDateTime_or_an_effectivePeriod"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "All_observations_should_have_an_effectiveDateTime_or_an_effectivePeriod"
+                    }
+                  ]
+                },
+                "diagnostics": "Best Practice Recommendation: In general, all observations should have an effective[x] ()",
+                "location": [
+                  "Bundle.entry[1].resource",
+                  "Line[1] Col[8625]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 14196
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "All_observations_should_have_a_performer"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "All_observations_should_have_a_performer"
+                    }
+                  ]
+                },
+                "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+                "location": [
+                  "Bundle.entry[3].resource",
+                  "Line[1] Col[14196]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 17525
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "All_observations_should_have_a_performer"
+                  }
+                ],
+                "severity": "warning",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "All_observations_should_have_a_performer"
+                    }
+                  ]
+                },
+                "diagnostics": "Best Practice Recommendation: In general, all observations should have a performer",
+                "location": [
+                  "Bundle.entry[4].resource",
+                  "Line[1] Col[17525]"
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col",
+                    "valueInteger": 34192
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+                    "valueString": "Validation_VAL_Profile_Unknown"
+                  }
+                ],
+                "severity": "error",
+                "code": "processing",
+                "details": {
+                  "coding": [
+                    {
+                      "system": "http://hl7.org/fhir/java-core-messageId",
+                      "code": "Validation_VAL_Profile_Unknown"
+                    }
+                  ]
+                },
+                "diagnostics": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/SHINNYBundleProfile' has not been checked because it could not be found",
+                "location": [
+                  "Bundle.meta.profile[0]",
+                  "Line[1] Col[34192]"
+                ]
+              }
+            ]
+          },
+          "initiatedAt": 1730096107.3361268,
+          "observability": {
+            "identity": "org.techbd.orchestrate.fhir.OrchestrationEngine$HapiValidationEngine",
+            "name": "HAPI version 7.4.0 (FHIR version 4.0.1)",
+            "initAt": 1730095800.2263784,
+            "constructedAt": 1730095800.2402248
+          },
+          "issues": [
+            {
+              "location": {
+                "line": 1,
+                "column": 5722,
+                "diagnostics": "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.extension[3]"
+              },
+              "message": "Unknown extension http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-personal-pronouns",
+              "severity": "INFORMATION"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 5920,
+                "diagnostics": "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.extension[4]"
+              },
+              "message": "Unknown extension http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-gender-identity",
+              "severity": "INFORMATION"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 6242,
+                "diagnostics": "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.identifier[1].type"
+              },
+              "message": "None of the codings provided are in the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://terminology.hl7.org/CodeSystem/v2-0203#MA)",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 6412,
+                "diagnostics": "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.name[0].extension[0]"
+              },
+              "message": "Unknown extension http://shinny.org/us/ny/hrsn/StructureDefinition/middle-name",
+              "severity": "INFORMATION"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 6864,
+                "diagnostics": "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.communication[0].language"
+              },
+              "message": "Inappropriate CodeSystem URL \"urn:iso:std:iso:639\" for ValueSet: http://hl7.org/fhir/ValueSet/languages",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 6864,
+                "diagnostics": "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.communication[0].language"
+              },
+              "message": "None of the codings provided are in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages|4.0.1), and a coding is recommended to come from this value set (codes = urn:iso:std:iso:639#EN)",
+              "severity": "INFORMATION"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 6884,
+                "diagnostics": "Bundle.entry[0].resource/*Patient/CBOPatientExample*/.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-patient' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 8625,
+                "diagnostics": "Bundle.entry[1].resource/*Observation/SexualOrientationExample*/"
+              },
+              "message": "Best Practice Recommendation: In general, all observations should have a performer",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 8625,
+                "diagnostics": "Bundle.entry[1].resource/*Observation/SexualOrientationExample*/"
+              },
+              "message": "Best Practice Recommendation: In general, all observations should have an effective[x] ()",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 8625,
+                "diagnostics": "Bundle.entry[1].resource/*Observation/SexualOrientationExample*/.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shin-ny-observation-sexual-orientation' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 10709,
+                "diagnostics": "Bundle.entry[2].resource/*Encounter/EncounterExampleCBO*/.subject"
+              },
+              "message": "Details for Patient/CBOPatientExample matching against profile http://hl7.org/fhir/StructureDefinition/Patient|4.0.1",
+              "severity": "INFORMATION"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 10852,
+                "diagnostics": "Bundle.entry[2].resource/*Encounter/EncounterExampleCBO*/.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-encounter' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 14196,
+                "diagnostics": "Bundle.entry[3].resource/*Observation/FoodInsecurity88122-7*/"
+              },
+              "message": "Best Practice Recommendation: In general, all observations should have a performer",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 13277,
+                "diagnostics": "Bundle.entry[3].resource/*Observation/FoodInsecurity88122-7*/.category[0]"
+              },
+              "message": "None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set (codes = http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes#food-insecurity)",
+              "severity": "INFORMATION"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 14196,
+                "diagnostics": "Bundle.entry[3].resource/*Observation/FoodInsecurity88122-7*/.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-observation-screening-response' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 17525,
+                "diagnostics": "Bundle.entry[4].resource/*Observation/FoodInsecurity88123-5*/"
+              },
+              "message": "Best Practice Recommendation: In general, all observations should have a performer",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 16626,
+                "diagnostics": "Bundle.entry[4].resource/*Observation/FoodInsecurity88123-5*/.category[0]"
+              },
+              "message": "None of the codings provided are in the value set 'Observation Category Codes' (http://hl7.org/fhir/ValueSet/observation-category|4.0.1), and a coding is recommended to come from this value set (codes = http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes#food-insecurity)",
+              "severity": "INFORMATION"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 17525,
+                "diagnostics": "Bundle.entry[4].resource/*Observation/FoodInsecurity88123-5*/.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-observation-screening-response' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 18881,
+                "diagnostics": "Bundle.entry[5].resource/*Practitioner/PractitionerExampleCBO*/.identifier[0].type"
+              },
+              "message": "None of the codings provided are in the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://terminology.hl7.org/CodeSystem/v2-0203#NPI)",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 19140,
+                "diagnostics": "Bundle.entry[5].resource/*Practitioner/PractitionerExampleCBO*/.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shin-ny-practitioner' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 20600,
+                "diagnostics": "Bundle.entry[6].resource/*Organization/OrganizationExampleCBO*/.identifier[0].type"
+              },
+              "message": "Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 20600,
+                "diagnostics": "Bundle.entry[6].resource/*Organization/OrganizationExampleCBO*/.identifier[0].type"
+              },
+              "message": "None of the codings provided are in the value set 'IdentifierType' (http://hl7.org/fhir/ValueSet/identifier-type|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = null#null)",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 21013,
+                "diagnostics": "Bundle.entry[6].resource/*Organization/OrganizationExampleCBO*/.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shin-ny-organization' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.for"
+              },
+              "message": "Entry 0 matches the reference Patient/CBOPatientExample by type and id but it's fullUrl http://shinny.org/Patient/CBOPatientExample does not match the full target URL http://Patient/CBOPatientExample by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.owner"
+              },
+              "message": "Entry 6 matches the reference Organization/OrganizationExampleCBO by type and id but it's fullUrl http://shinny.org/Organization/OrganizationExampleCBO does not match the full target URL http://Organization/OrganizationExampleCBO by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.restriction.recipient[0]"
+              },
+              "message": "Entry 0 matches the reference Patient/CBOPatientExample by type and id but it's fullUrl http://shinny.org/Patient/CBOPatientExample does not match the full target URL http://Patient/CBOPatientExample by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.output[0].value.ofType(Reference)"
+              },
+              "message": "Entry 8 matches the reference Procedure/ProcedureExample by type and id but it's fullUrl http://shinny.org/ProcedureExample does not match the full target URL http://Procedure/ProcedureExample by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 24838,
+                "diagnostics": "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/SHINNYSDOHTaskForReferralManagement' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 24838,
+                "diagnostics": "Bundle.entry[7].resource/*Task/TaskReferralInProgressExample*/.meta.profile[1]"
+              },
+              "message": "Profile reference 'http://shinny.org/StructureDefinition//SHINNYSDOHTaskForReferralManagement' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[8].resource/*Procedure/ProcedureExample*/.performer[0].actor"
+              },
+              "message": "Entry 5 matches the reference Practitioner/PractitionerExampleCBO by type and id but it's fullUrl http://shinny.org/Practitioner/PractitionerExampleCBO does not match the full target URL http://Practitioner/PractitionerExampleCBO by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[8].resource/*Procedure/ProcedureExample*/.performer[0].onBehalfOf"
+              },
+              "message": "Entry 6 matches the reference Organization/OrganizationExampleCBO by type and id but it's fullUrl http://shinny.org/Organization/OrganizationExampleCBO does not match the full target URL http://Organization/OrganizationExampleCBO by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[8].resource/*Procedure/ProcedureExample*/.reasonReference[0]"
+              },
+              "message": "Entry 3 matches the reference Observation/FoodInsecurity88122-7 by type and id but it's fullUrl http://shinny.org/Observation/FoodInsecurity88122-7 does not match the full target URL http://Observation/FoodInsecurity88122-7 by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[8].resource/*Procedure/ProcedureExample*/.reasonReference[1]"
+              },
+              "message": "Entry 4 matches the reference Observation/FoodInsecurity88123-5 by type and id but it's fullUrl http://shinny.org/Observation/FoodInsecurity88123-5 does not match the full target URL http://Observation/FoodInsecurity88123-5 by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 28001,
+                "diagnostics": "Bundle.entry[8].resource/*Procedure/ProcedureExample*/.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/shinny-sdoh-procedure' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[9].resource/*ServiceRequest/ServiceRequestActiveExample*/.performer[0]"
+              },
+              "message": "Entry 6 matches the reference Organization/OrganizationExampleCBO by type and id but it's fullUrl http://shinny.org/Organization/OrganizationExampleCBO does not match the full target URL http://Organization/OrganizationExampleCBO by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[9].resource/*ServiceRequest/ServiceRequestActiveExample*/.locationReference[0]"
+              },
+              "message": "Entry 10 matches the reference Location/LocationExample-CBO by type and id but it's fullUrl http://shinny.org/Location/LocationExample-CBO does not match the full target URL http://Location/LocationExample-CBO by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[9].resource/*ServiceRequest/ServiceRequestActiveExample*/.reasonReference[0]"
+              },
+              "message": "Entry 3 matches the reference Observation/FoodInsecurity88122-7 by type and id but it's fullUrl http://shinny.org/Observation/FoodInsecurity88122-7 does not match the full target URL http://Observation/FoodInsecurity88122-7 by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": null,
+                "column": null,
+                "diagnostics": "Bundle.entry[9].resource/*ServiceRequest/ServiceRequestActiveExample*/.reasonReference[1]"
+              },
+              "message": "Entry 4 matches the reference Observation/FoodInsecurity88123-5 by type and id but it's fullUrl http://shinny.org/Observation/FoodInsecurity88123-5 does not match the full target URL http://Observation/FoodInsecurity88123-5 by Bundle resolution rules",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 32231,
+                "diagnostics": "Bundle.entry[9].resource/*ServiceRequest/ServiceRequestActiveExample*/.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/SHINNYSDOHServiceRequest' has not been checked because it could not be found",
+              "severity": "ERROR"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 8625,
+                "diagnostics": "Bundle.entry[1].resource"
+              },
+              "message": "Best Practice Recommendation: In general, all observations should have a performer",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 8625,
+                "diagnostics": "Bundle.entry[1].resource"
+              },
+              "message": "Best Practice Recommendation: In general, all observations should have an effective[x] ()",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 14196,
+                "diagnostics": "Bundle.entry[3].resource"
+              },
+              "message": "Best Practice Recommendation: In general, all observations should have a performer",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 17525,
+                "diagnostics": "Bundle.entry[4].resource"
+              },
+              "message": "Best Practice Recommendation: In general, all observations should have a performer",
+              "severity": "WARNING"
+            },
+            {
+              "location": {
+                "line": 1,
+                "column": 34192,
+                "diagnostics": "Bundle.meta.profile[0]"
+              },
+              "message": "Profile reference 'http://shinny.org/us/ny/hrsn/StructureDefinition/SHINNYBundleProfile' has not been checked because it could not be found",
+              "severity": "ERROR"
+            }
+          ],
+          "completedAt": 1730096118.7035396,
+          "profileUrl": "https://shinny.org/ImplementationGuide/HRSN/StructureDefinition-SHINNYBundleProfile.json",
+          "igVersion": "1.0.0",
+          "valid": false
+        }
+      ],
+      "device": {
+        "deviceId": "127.0.1.1",
+        "deviceName": "vinod-OptiPlex"
+      },
+      "resourceType": "OperationOutcome"
+    }
+  }
